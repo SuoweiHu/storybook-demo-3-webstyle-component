@@ -1,0 +1,182 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from './TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Layout/Page Tabs" />
+
+<Unstyled>
+
+# Page Tabs
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>
+              {`Just like `}<a href="https://webpublishing.anu.edu.au/web-style-guide/collapsible">{`Collapsible sections`}</a>{`, page tab is a great solution when you are dealing with long and complex contents. The main difference between them is collapsible sections are stacked vertically and page tabs are stacked horizontally.`}
+            </p>
+            <p>{`Only use page tabs when the reader is not expected to read all contents - they may only need information from selected sections.`}</p>
+            <p className="msg-warn">{`DO NOT use page tabs for sequential content, it may frustrate your readers.`}</p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Overview`}</h2>
+              <p>{`Page tabs can be used for additional navigation, but `}<strong>{`must`}</strong>{` appear within content area of the page, not above the menu or underneath the banner.`}</p>
+              <p>{`Page tabs must be within a `}<a href="https://webpublishing.anu.edu.au/web-style-guide/grid-layouts">{`grid class`}</a>{` to ensure all margins align correctly.`}</p>
+              <p>{`The heading which applies to the whole page/all tabs should appear above the tab bar. Any headings which apply to the content within the tab should appear underneath the tab bar. The use of `}<a href="https://webpublishing.anu.edu.au/web-style-guide/headings">{`headings`}</a>{` is important for accessibility, but if this causes repetition you can `}<a href="https://webpublishing.anu.edu.au/web-style-guide/headings#scrnhide">{`hide the heading`}</a>{` from display by using the `}<code>{`scrnhide`}</code>{` class.`}</p>
+              <div className="pt-2">
+                <h3 className="bdr-left-gold box bdr-thick">{`Implementation`}</h3>
+                <p>{`In order to create a page tab, you will use `}<code>{`.pagetabs-nav-tint`}</code>{` to create this specific layout.`}</p>
+                <div className="row">
+                  <p><strong>{`To create tabs:`}</strong></p>
+                  <div className="col-lg-4 col-md-6 col-sm-12">
+                    <p className="mt-0">{`Use `}<code>{`<ul>`}</code>{` to implement tabs, please note you need to have at least 1 tab. Among the all tabs, using class `}<code>{`.pagetabs-select`}</code>{` to make 1 tab to be 'active', this will make the selected tab expanded by default.`}</p>
+                  </div>
+                  <div className="col-lg-8 col-md-6 col-sm-12">
+                    <div className="box-header-black">
+                      <span className="large">{`Code structure`}</span>
+                    </div>
+                    <div className="box-bdr-black">
+                      <pre style={{overflowX: "auto"}}>
+                        <code>{`<div class="pagetabs-nav-tint">
+    <ul>
+        <li><a>...</a></li>
+        <li><a class="pagetabs-select">...</a></li>
+            ...
+    </ul>     //end tab list
+    ...`}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+                <div className="row">
+                  <p><strong>{`To create tab contents:`}</strong></p>
+                  <div className="col-lg-4 col-md-6 col-sm-12">
+                    <p className="mt-0">{`All tab contents need to be stored in `}<code>{`.tab-content`}</code>{` container, and you should have corresponding number of `}<code>{`.tab-pane`}</code>{` containers based on the number of tab items you created in `}<code>{`<ul>`}</code>{`. Add class `}<code>{`.active`}</code>{` to the corresponding `}<code>{`.tab-pane`}</code>{`.`}</p>
+                  </div>
+                  <div className="col-lg-8 col-md-6 col-sm-12">
+                    <div className="box-header-black">
+                      <span className="large">{`Code structure`}</span>
+                    </div>
+                    <div className="box-bdr-black">
+                      <pre style={{overflowX: "auto"}}>
+                        <code>{`<div class="tab-content">
+    <div className="tab-pane">
+        ...
+    </div>
+    <div className="tab-pane active">
+        <h3> 2009</h3>
+        ...
+    </div>`}</code>
+                      </pre>
+                    </div>
+                  </div>
+                  <div className="pt-2">
+                    <h2 className="accordion" tabIndex={0}>{`View complete code structure for page tabs`}</h2>
+                    <div className="panel" tabIndex={0}>
+                      <p>{`The example below helps you to understand the code structure better, the 2nd tab will be opened by default, because we define `}<code>{`pagetabs-select`}</code>{` in the list, and we define the 2nd tab-pane to be `}<code>{`active`}</code>{`.`}</p>
+                      <pre style={{overflowX: "auto"}}>
+                        <code>{`<div class="pagetabs-nav-tint">
+    <ul>
+        <li><a>...</a></li>
+        <li><a class="pagetabs-select">...</a></li>
+            ...
+    </ul>     //end tab list
+    <div className="tab-content">
+        <div className="tab-pane">
+            ...
+        </div>
+        <div className="tab-pane active">
+            <h3> 2009</h3>
+            ...
+        </div>
+            ...
+    </div>    //end tab-content
+</div>    //end pagetabs-nav-tint`}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Customisation">
+              <h2 className="pt-2">{`Customisation`}</h2>
+              <p>{`We created 2 versions of page tabs, one is in tint and one is in black.`}</p>
+              <ul>
+                <li><code>{`.pagetabs-nav-tint`}</code></li>
+                <li><code>{`.pagetabs-nav-black`}</code></li>
+              </ul>
+              <section>
+                <div className="pagetabs-nav-tint">
+                  <ul>
+                    <li><a>{`2010`}</a></li>
+                    <li><a className="pagetabs-select">{`2009`}</a></li>
+                    <li><a>{`2008`}</a></li>
+                  </ul>
+                  <div className="tab-content">
+                    <div className="tab-pane">
+                      <h3 className="padtop">{`2010 releases`}</h3>
+                      <ul>
+                        <li><cite>{`A theory of information architecture`}</cite>{`, John Smyth`}</li>
+                        <li><cite>{`Practical applications of chaos theory`}</cite>{`, Paul Nerk`}</li>
+                      </ul>
+                    </div>
+                    <div className="tab-pane active">
+                      <h3 className="padtop">{`2009 releases`}</h3>
+                      <ul>
+                        <li><cite>{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}</cite>{`, John Smyth`}</li>
+                        <li><cite>{`Lorem Ipsum has been the industry's standard dummy text ever since the 1500`}</cite>{`, Paul Nerk`}</li>
+                      </ul>
+                    </div>
+                    <div className="tab-pane">
+                      <h3 className="padtop">{`2008 releases`}</h3>
+                      <ul>
+                        <li><cite>{`When an unknown printer took a galley of type and scrambled it to make a type specimen book.`}</cite>{`, John Smyth`}</li>
+                        <li><cite>{`It has survived not only five centuries`}</cite>{`, Paul Nerk`}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="pagetabs-nav-black">
+                  <ul>
+                    <li><a>{`2010`}</a></li>
+                    <li><a className="pagetabs-select">{`2009`}</a></li>
+                    <li><a>{`2008`}</a></li>
+                  </ul>
+                </div>
+              </section>
+              <pre style={{overflowX: "auto"}}>
+                <code>{`<div class="pagetabs-nav-tint">
+    <ul>
+        <li><a>2010</a></li>
+        <li><a class="pagetabs-select">2009</a></li>
+        <li><a>2008</a></li>
+    </ul>     //end tab list
+    <div className="tab-content">
+        <div className="tab-pane">
+            <h3> 2010</h3>
+            ...
+        </div>
+        <div className="tab-pane active">
+            <h3> 2009</h3>
+            ...
+        </div>
+        <div className="tab-pane">
+            <h3> 2008</h3>
+            ...
+        </div>
+    </div>    //end tab-content
+</div>    //end pagetabs-nav-tint`}</code>
+              </pre>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</Unstyled>

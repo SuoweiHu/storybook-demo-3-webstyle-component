@@ -1,0 +1,413 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Text/Heading" />
+
+
+<Unstyled>
+
+# Heading
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <div className="row pt-2">
+              <div className="col-md-6 col-sm-12">
+                <h3>{`Capitalisation`}</h3>
+                <p className="pb-1">
+                  {`Headings should use sentence case - only the first letter and any proper nouns should be capitalised.`}
+                </p>
+                <h3>{`Tags & hierarchy`}</h3>
+                <p>
+                  {`To make pages easier to scan, and to improve the accessibility of your content, headings should be used and marked up with heading tags (`}
+                  <code>{`<h1>`}</code>
+                  {`, `}
+                  <code>{`<h2>`}</code>
+                  {`, etc). Headings tags should be applied in a hierarchy, and levels should not be skipped for appearance.`}
+                </p>
+              </div>
+              <div className="col-md-6 col-sm-12">
+                <div className="box-bdr-gold">
+                  <ul className="nobullet">
+                    <li>
+                      <h1>
+                        {`1 Title - `}
+                        <code>{`<h1>`}</code>
+                      </h1>
+                      <ul className="nobullet">
+                        <li>
+                          <h2>
+                            {`1.1 Section - `}
+                            <code>{`<h2>`}</code>
+                          </h2>
+                          <ul className="nobullet">
+                            <li>
+                              <h3 className="mb-0">
+                                {`1.1.1 Subsection - `}
+                                <code>{`<h3>`}</code>
+                              </h3>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h2>
+                            {`1.2 Section - `}
+                            <code>{`<h2>`}</code>
+                          </h2>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Current available heading tags:`}</h2>
+              <table className="tbl-cell-bdr">
+                <tbody>
+                  <tr>
+                    <th className="tbl40">{`Heading tags`}</th>
+                    <th>{`Font size`}</th>
+                    <th>{`Font style`}</th>
+                    <th>{`Letter spacing`}</th>
+                    <th>{`Margin bottom`}</th>
+                  </tr>
+                  <tr>
+                    <td>{`<h1>`}</td>
+                    <td>{`2.1em`}</td>
+                    <td>{`normal`}</td>
+                    <td>{`0.01em`}</td>
+                    <td>{`10px`}</td>
+                  </tr>
+                  <tr>
+                    <td>{`<h2>`}</td>
+                    <td>{`1.9em`}</td>
+                    <td>{`normal`}</td>
+                    <td>{`0.01em`}</td>
+                    <td>{`10px`}</td>
+                  </tr>
+                  <tr>
+                    <td>{`<h3>`}</td>
+                    <td>{`1.4em`}</td>
+                    <td>{`normal`}</td>
+                    <td>{`0.01em`}</td>
+                    <td>{`10px`}</td>
+                  </tr>
+                  <tr>
+                    <td>{`<h4>`}</td>
+                    <td>{`1.2em`}</td>
+                    <td>{`normal`}</td>
+                    <td>{`0.01em`}</td>
+                    <td>{`10px`}</td>
+                  </tr>
+                  <tr>
+                    <td>{`<h5>`}</td>
+                    <td>{`0.83em`}</td>
+                    <td>{`normal`}</td>
+                    <td>{`0.01em`}</td>
+                    <td>{`10px`}</td>
+                  </tr>
+                  <tr>
+                    <td>{`<h6>`}</td>
+                    <td>{`0.67em`}</td>
+                    <td>{`normal`}</td>
+                    <td>{`0.01em`}</td>
+                    <td>{`10px`}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className="mt-2 divider-gold">{`\u00A0`}</div>
+              <h3 className="pt-1">{`Font colours`}</h3>
+              <p>
+                {`Please view the `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/accessibility" target="_blank">
+                  {`'Accessibility'`}
+                </a>
+                {` section for all approved colour combinations.`}
+              </p>
+              <table className="tbl-cell-bdr mb-2">
+                <tbody>
+                  <tr>
+                    <th>{`Class name`}</th>
+                    <th>{`Colour`}</th>
+                    <th>{`Output`}</th>
+                    <th>{`Description`}</th>
+                  </tr>
+                  {/*text-black*/}
+                  <tr>
+                    <td>
+                      <code>{`.text-black`}</code>
+                    </td>
+                    <td>{`#000000`}</td>
+                    <td className="text-black">
+                      {`This text is using `}
+                      <code>{`.text-black`}</code>
+                      {` class.`}
+                    </td>
+                    <td>{`By default, our font colour is black on white and tinted background.`}</td>
+                  </tr>
+                  {/*text-unigrey*/}
+                  <tr>
+                    <td>
+                      <code>{`.text-unigrey`}</code>
+                    </td>
+                    <td>{`#333333`}</td>
+                    <td className="text-unigrey">
+                      {`This text is using `}
+                      <code>{`.text-unigrey`}</code>
+                      {` class.`}
+                    </td>
+                    <td>{`This class will change the font colour to #333333, it is suitable for white and tinted background.`}</td>
+                  </tr>
+                  {/*text-gold*/}
+                  <tr>
+                    <td>
+                      <code>{`.text-gold`}</code>
+                    </td>
+                    <td>{`#be830e`}</td>
+                    <td className="text-gold bg-black">
+                      {`This text is using `}
+                      <span className="bg-white">
+                        <code>{` .text-gold `}</code>
+                      </span>
+                      {` class.`}
+                    </td>
+                    <td>
+                      {`In order for gold text on a white background to pass WCAG 2.1, the font size should be larger than 19px semibold or 24px regular, even under small screens like tablets and phones.`}
+                    </td>
+                  </tr>
+                  {/*text-white*/}
+                  <tr>
+                    <td>
+                      <code>{`.text-white`}</code>
+                    </td>
+                    <td>{`#ffffff`}</td>
+                    <td className="text-white bg-black">
+                      {`This text is using `}
+                      <span className="bg-white">
+                        <code>{` .text-white `}</code>
+                      </span>
+                      {` class.`}
+                    </td>
+                    <td>{`By default, our font colour is white on black background.`}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className="mt-2 divider-gold">{`\u00A0`}</div>
+              <div className="pt-1">
+                {/* Hiding headings */}
+                <div id="scrnhide">
+                  <h3>{`Hiding headings`}</h3>
+                </div>
+                <p className="mb-0">
+                  {`There might be times when a visible heading is not desirable, but you would still like to convey the structure of the page to people using assistive technologies such as screen readers. In this case, you can use the `}
+                  <code>{`scrnhide`}</code>
+                  {` class to hide the heading. For example, the following code will add an invisible heading to the page which will be read by screen readers:`}
+                </p>
+                <pre className="mb-0" style={{ overflowX: "auto" }}>
+                  <code>{`<h2 class="scrnhide">Invisible heading</h2>`}</code>
+                </pre>
+              </div>
+              {/* Linked headings */}
+              <div className="mt-2 divider-gold">{`\u00A0`}</div>
+              <div className="pt-1">
+                <h3>{`Linked headings`}</h3>
+                <p>
+                  {`We've created a full set of default & approved customised linked heading styles, please view `}
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/links" target="_blank">
+                    {`links`}
+                  </a>
+                  {` section for all available styles. By default, the linked heading is followed by a '»', with an underline effect while on hover.`}
+                </p>
+                <h3 className="box-bdr-black p-2">
+                  <a draggable={false} href="#" tabIndex={-1}>
+                    {`Example linked heading h3`}
+                  </a>
+                </h3>
+                <pre className="mb-0" style={{ overflowX: "auto" }}>
+                  <code>{`<h3><a href="#">Example linked heading h3 </a></h3>`}</code>
+                </pre>
+              </div>
+              {/* Page headers */}
+              <div className="mt-2 divider-gold">{`\u00A0`}</div>
+              <div className="pt-1">
+                <h3>{`Page headers`}</h3>
+                <div id="page-header">{`example of the page header class`}</div>
+                <p>
+                  {`Page header is a special heading style that can only be used once per page and is intended for elements such as the name of a school or unit (that does not appear in the banner), or for chapter headings and other 'sub-headings'.`}
+                </p>
+                <p className="mb-0">{`The code should be placed directly above the first item on the page in the form of:`}</p>
+                <pre className="mb-0" style={{ overflowX: "auto" }}>
+                  <code>{`<div id="page-header">Text of header</div>`}</code>
+                </pre>
+                <p>
+                  {`If your homepage contains a banner image or feature bar, the page header may be placed underneath - on the homepage only, not on subsequent pages. As with all other content area elements, the page-header div must be included within a grid class.`}
+                </p>
+                <p>
+                  {`Links may be included within the page header - these will be formatted in the same style as plain text, with an underline on the hover action.`}
+                </p>
+              </div>
+            </Tab>
+            <Tab label="Use cases">
+              <h2 className="pt-2">{`Use cases`}</h2>
+              {/*h1*/}
+              <div className="pt-2 row">
+                <div className="col-sm-6">
+                  <h1>{`This sentence is using h1 tag.`}</h1>
+                </div>
+                <div className="col-sm-6">
+                  <pre className="mb-0" style={{ overflowX: "auto" }}>
+                    <code>{`<h1>This sentence is using h1 tag.</h1>`}</code>
+                  </pre>
+                </div>
+                <div className="divider-solid">{`\u00A0`}</div>
+              </div>
+              {/*h2*/}
+              <div className="pt-2 row">
+                <div className="col-sm-6">
+                  <h2>{`This sentence is using h2 tag.`}</h2>
+                </div>
+                <div className="col-sm-6">
+                  <pre className="mb-0" style={{ overflowX: "auto" }}>
+                    <code>{`<h2>This sentence is using h2 tag.</h2>`}</code>
+                  </pre>
+                </div>
+                <div className="divider-solid">{`\u00A0`}</div>
+              </div>
+              {/*h3*/}
+              <div className="pt-2 row">
+                <div className="col-sm-6">
+                  <h3>{`This sentence is using h3 tag.`}</h3>
+                </div>
+                <div className="col-sm-6">
+                  <pre className="mb-0" style={{ overflowX: "auto" }}>
+                    <code>{`<h3>This sentence is using h3 tag.</h3>`}</code>
+                  </pre>
+                </div>
+                <div className="divider-solid">{`\u00A0`}</div>
+              </div>
+              {/*h4*/}
+              <div className="pt-2 row">
+                <div className="col-sm-6">
+                  <h4>{`This sentence is using h4 tag.`}</h4>
+                </div>
+                <div className="col-sm-6">
+                  <pre className="mb-0" style={{ overflowX: "auto" }}>
+                    <code>{`<h4>This sentence is using h4 tag.</h4>`}</code>
+                  </pre>
+                </div>
+                <div className="divider-solid">{`\u00A0`}</div>
+              </div>
+              {/*h5*/}
+              <div className="pt-2 row">
+                <div className="col-sm-6">
+                  <h5>{`This sentence is using h5 tag.`}</h5>
+                </div>
+                <div className="col-sm-6">
+                  <pre className="mb-0" style={{ overflowX: "auto" }}>
+                    <code>{`<h5>This sentence is using h5 tag.</h5>`}</code>
+                  </pre>
+                </div>
+                <div className="divider-solid">{`\u00A0`}</div>
+              </div>
+              {/*h6*/}
+              <div className="pt-2 row">
+                <div className="col-sm-6">
+                  <h6>{`This sentence is using h6 tag.`}</h6>
+                </div>
+                <div className="col-sm-6">
+                  <pre className="mb-0" style={{ overflowX: "auto" }}>
+                    <code>{`<h6>This sentence is using h6 tag.</h6>`}</code>
+                  </pre>
+                </div>
+                <div className="divider-solid">{`\u00A0`}</div>
+              </div>
+            </Tab>
+            <Tab label="Accessibility">
+              <h2 className="mt-2 box bdr-left-gold bdr-thick">{`For design purposes`}</h2>
+              <p>
+                {`Please view the `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/accessibility" target="_blank">
+                  {`'Accessibility'`}
+                </a>
+                {` section for a full set of approved colour combinations of font colours & background colours.`}
+              </p>
+              <h2 className="mt-2 box bdr-left-gold bdr-thick">{`For SEO purposes`}</h2>
+              <div>
+                <p>
+                  {`Search engine optimisation (SEO) is the process of ensuring that your website is properly indexed by search engines and consequently that it has the best chance of ranking well on relevant keywords. The goal is to have your site listed high in search results so that it is seen by more people, thus driving more traffic to your site.`}
+                </p>
+                <p>
+                  {`In order to improve a webpage's SEO ranking, heading tags actually play an important role in this. By putting text into a heading tag, you're signalling that this text is important (think as keywords of the page), and search engines like Google will actually scan heading tags to determine the context of the page.`}
+                </p>
+                <p className="msg-info">
+                  {`You should use heading tags consciously, `}
+                  <strong>{`each page should have only 1 <h1> tag`}</strong>
+                  {`, and each page should contain a range of <h1> to <h3> heading tags minimum.`}
+                </p>
+                <p>{`In case where your design contains more than 1 <h1> headings (see example below):`}</p>
+                <img
+                  alt="Heading example"
+                  className="shadow-light"
+                  src="https://picsum.photos/seed/heading/800/400"
+                />
+                <p>{`Program and Orientation Week are both using h1 style, and you can use the following code to solve your problem:`}</p>
+                <p className="pr-2">
+                  <code>{`<h2 class="h1">Orientation Week </h2>`}</code>
+                </p>
+                <p>{`This indicates: although Orientation Week is using the style of an h1 heading, it is actually an h2 heading.`}</p>
+                <p>
+                  <strong>{`More examples (but not limited to):`}</strong>
+                </p>
+                <table className="tbl-cell-bdr bg-white">
+                  <tbody>
+                    <tr>
+                      <th>{`HTML source code`}</th>
+                      <th>{`Description`}</th>
+                      <th>{`Output`}</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`<h3 class="h2">Example heading </h3>`}</code>
+                      </td>
+                      <td>{`It is using the style of a h2 heading, it is actually a h3 heading.`}</td>
+                      <td>
+                        <h3 className="h2">{`Example heading`}</h3>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`<h2 class="h4">Example heading </h2>`}</code>
+                      </td>
+                      <td>{`It is using the style of a h4 heading, it is actually a h2 heading.`}</td>
+                      <td>
+                        <h2 className="h4">{`Example heading`}</h2>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`<h4 class="h3">Example heading </h4>`}</code>
+                      </td>
+                      <td>{`It is using the style of a h3 heading, it is actually a h4 heading.`}</td>
+                      <td>
+                        <h4 className="h3">{`Example heading`}</h4>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

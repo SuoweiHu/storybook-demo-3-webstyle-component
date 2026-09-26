@@ -1,0 +1,154 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Text/Message" />
+
+
+<Unstyled>
+
+# Message
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          {/* The main area of the webpage */}
+          <div className="container pb-2">
+            {/* Top introduction */}
+            <p>
+              {`We support a number of different message styles. For proper styling, please use one of the six classes that we provided. They can be applied to elements such as `}
+              <code>{`p`}</code>
+              {` and `}
+              <code>{`div`}</code>
+              {`.`}
+            </p>
+            <p className="msg-warn">
+              <strong>{`Please note:`}</strong>
+              {` each message style has its corresponding colour and icon, which cannot be changed.`}
+            </p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Available classes`}</h2>
+              {/* Examples: Error message */}
+              <div className="row pt-1 pb-2">
+                <div className="col">
+                  <h3>{`Error message:`}</h3>
+                  <p className="msg-error">{`<p class="msg-error"> ... </p>`}</p>
+                </div>
+              </div>
+              {/* Examples: Warning message */}
+              <div className="row pb-2">
+                <div className="col">
+                  <h3>{`Warning message:`}</h3>
+                  <p className="msg-warn">{`<p class="msg-warn"> ... </p>`}</p>
+                </div>
+              </div>
+              {/* Examples: Information message */}
+              <div className="row pb-2">
+                <div className="col">
+                  <h3>{`Information message:`}</h3>
+                  <p className="msg-info">{`<p class="msg-info"> ... </p>`}</p>
+                </div>
+              </div>
+              {/* Examples: Success message */}
+              <div className="row pb-2">
+                <div className="col">
+                  <h3>{`Success message:`}</h3>
+                  <p className="msg-success">{`<p class="msg-success"> ... </p>`}</p>
+                </div>
+              </div>
+              {/* Examples: Inline message */}
+              <div className="row pb-2">
+                <div className="col">
+                  <h3>{`Inline message:`}</h3>
+                  <p className="msg-inline">{`<p class="msg-inline"> ... </p>`}</p>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Customisation">
+              <div className="row">
+                <div className="col">
+                  <h2 className="pt-2 pb-2">{`Customisation`}</h2>
+                  <h3 className="box bdr-left-gold bdr-thick">{`Font size & Colours`}</h3>
+                  <p>
+                    {`As the error messages are written inside tag `}
+                    <code>{`<p>`}</code>
+                    {`, you are able to combine different styles with it. For example, by adding `}
+                    <code>{`class="large"`}</code>
+                    {` to the `}
+                    <code>{`<p>`}</code>
+                    {`, you can make the message in larger font; by adding `}
+                    <code>{` class="text-unigrey"`}</code>
+                    {` you can change the font colour to dark grey. Please refer to the `}
+                    <a href="https://dp9-sandbox-dev.anu.edu.au/web-style-guide/text">{`Text`}</a>
+                    {` documentation for all the available styles.`}
+                  </p>
+                  <p className="msg-warn">
+                    <strong>{`Please note:`}</strong>
+                    {` Gold and white font colour are prohibited on any message styles because those combinations are not fully accessible. Please view the `}
+                    <a className="underline" href="https://dp9-sandbox-dev.anu.edu.au/web-style-guide/accessibility">{`Accessibility`}</a>
+                    {` section for a full set of approved colour combinations.`}
+                  </p>
+                  <div className="mt-4">
+                    <div className="box-header-tint">
+                      <span className="large">
+                        {`Example 1: `}
+                        <code>{`<p class="msg-error large">`}</code>
+                      </span>
+                    </div>
+                    <div className="box-bdr-gold">
+                      <p className="msg-error large">
+                        {`This is a larger error message. Note that please don't use gold or white text on any message, because the combinations, will not pass WCAG 2.1.`}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-4 mb-4">
+                    <div className="box-header-tint">
+                      <span className="large">
+                        {`Example 2: `}
+                        <code>{`<p class="msg-info text-unigrey">`}</code>
+                      </span>
+                    </div>
+                    <div className="box-bdr-gold">
+                      <p className="msg-info text-unigrey">
+                        {`This is a normal-size error message with dark grey text.`}
+                      </p>
+                    </div>
+                  </div>
+                  <h3 className="box bdr-left-gold bdr-thick">{`Width`}</h3>
+                  <p>
+                    {`You can also add width class, such as `}
+                    <code>{`w50, w60, w80`}</code>
+                    {` to change the width of the message. For more available classes, please view the `}
+                    <a href="https://webpublishing.anu.edu.au/web-style-guide/width" target="_blank">{`Width`}</a>
+                    {` section.`}
+                  </p>
+                  <div className="mt-4">
+                    <div className="box-header-tint">
+                      <span className="large">
+                        {`Example 3: `}
+                        <code>{`<p class="msg-info w80">`}</code>
+                      </span>
+                    </div>
+                    <div className="box-bdr-gold">
+                      <p className="msg-info w80">
+                        {`This is a message with class `}
+                        <code>{`w80`}</code>
+                        {`, which makes the width of this message will always be 80% wide of its parent container.`}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

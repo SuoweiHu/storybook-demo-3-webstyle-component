@@ -1,0 +1,220 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Graphics/Button" />
+
+
+<Unstyled>
+
+# Button
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <div className="row">
+              <div className="col-sm-8">
+                <p>
+                  {`As per the new brand guidelines, all call to action buttons for university is changed. The following are the options for buttons which can be used. If you have any special requests for call -to-action button and goal setup, please `}
+                  <a href="https://webpublishing.anu.edu.au/contacts-support/">{`let us know`}</a>
+                  {`.`}
+                </p>
+              </div>
+              <div className="col-sm-4">
+                <div className="box-header-tint">
+                  <span className="large">{`Related styles`}</span>
+                </div>
+                <div className="box-bdr-gold">
+                  <ul className="linklist">
+                    <li>
+                      <a href="https://webpublishing.anu.edu.au/web-style-guide/forms#buttons">{`Form buttons`}</a>
+                    </li>
+                    <li>
+                      <a href="https://webpublishing.anu.edu.au/web-style-guide/colours">{`Colours`}</a>
+                    </li>
+                    <li>
+                      <a href="https://webpublishing.anu.edu.au/web-style-guide/grid-layouts">{`Grid`}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <div className="row">
+                <div className="col-12">
+                  <h2 className="pb-2 pt-2">{`Overview`}</h2>
+                  <p>
+                    {`The default class for buttons is `}
+                    <code>{`anu-btn`}</code>
+                    {`, which is a white background button with gold border. Note that the class name should be added to a `}
+                    <code>{`<a>`}</code>
+                    {`. We also provide two extra designs for buttons to use in different background, adding class name `}
+                    <code>{`anu-btn-black`}</code>
+                    {` or `}
+                    <code>{`anu-btn-white`}</code>
+                    {` will change the styles accordingly.`}
+                  </p>
+                </div>
+                <div className="col-sm-6 col-md-4">
+                  <a className="anu-btn w80" href="#">
+                    {`Apply now`}
+                  </a>
+                </div>
+                <div className="col-sm-6 col-md-4">
+                  <a className="anu-btn-black w80" href="#">
+                    {`Apply now`}
+                  </a>
+                </div>
+                <div className="col-sm-6 col-md-4">
+                  <a className="anu-btn-white w80" href="#">
+                    {`Apply now`}
+                  </a>
+                </div>
+                <div className="col-12 mt-4">
+                  <table className="tbl-cell-bdr">
+                    <tbody>
+                      <tr>
+                        <th>{`Class name`}</th>
+                        <th>{`Border colour`}</th>
+                        <th>{`Border width`}</th>
+                        <th>{`Background colour`}</th>
+                        <th>{`Note`}</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.anu-btn`}</code>
+                        </td>
+                        <td>{`#be830e`}</td>
+                        <td>{`3px`}</td>
+                        <td>{`#ffffff`}</td>
+                        <td>{`\u00A0`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.anu-btn-black`}</code>
+                        </td>
+                        <td>{`#000000`}</td>
+                        <td>{`3px`}</td>
+                        <td>{`#000000`}</td>
+                        <td>{`Should only be used on light background.;`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.anu-btn-white`}</code>
+                        </td>
+                        <td>{`#000000`}</td>
+                        <td>{`3px`}</td>
+                        <td>{`#ffffff`}</td>
+                        <td>{`Should only be used on dark background.`}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="col-12">
+                  <h3 className="mt-3">{`Button width`}</h3>
+                  <p>
+                    {`By default, The width of the button is equal to the width of the text on it plus the padding(2em) and the border(3px)of the button. If the text is too long, making the total width exceed the limit of the button's parent container, the text will automatically become two or more lines. `}
+                    <strong>
+                      {`However, you can also control the width of the button by adding class name such as w20, w30, w40, w50, w60, w70, w80, w90 & w100 based on the width needed for the page. And the width of buttons will change to the corresponding percentage factor as the class names defined.`}
+                    </strong>
+                  </p>
+                  <p>
+                    {`For button tracking and goal conversion setup. Please raise a `}
+                    <a href="https://servicedesk.anu.edu.au/sp">{`Service Desk ticket`}</a>
+                    {` to setup correct formID.`}
+                  </p>
+                </div>
+              </div>
+            </Tab>
+            {/*Customisation*/}
+            {/* <div className="tab-pane"><div className="row"></div></div> */}
+            {/*Use cases*/}
+            <Tab label="Style usage">
+              <div className="row">
+                <div className="col-12">
+                  <h2 className="pb-2 pt-2">{`Style usage`}</h2>
+                  <h3 className="pb-1">{`Example 1: General information page, Call-to-action button on the top of the sidebar`}</h3>
+                  <p className="mt-0">
+                    {`We recommend that the Call-to-action button be placed in a more prominent position. You could also add class `}
+                    <strong>{`w100`}</strong>
+                    {` to the button to make it full width of its parent container.`}
+                  </p>
+                </div>
+                <div className="col-12 pb-1">
+                  <h3>{`Title of the page`}</h3>
+                </div>
+                <div className="col-sm-8">
+                  <p>
+                    {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`}
+                  </p>
+                  <p>
+                    {`Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.`}
+                  </p>
+                </div>
+                <div className="col-sm-4">
+                  <a className="anu-btn w100 mb-3">{`Call-to-action button`}</a>
+                  <div className="box-header-tint">
+                    <span className="large">{`Related articals or pages`}</span>
+                  </div>
+                  <div className="box-bdr-gold">
+                    <ul className="linklist">
+                      <li>
+                        <a href="https://webpublishing.anu.edu.au/web-style-guide/forms#buttons">{`Artical 1 or link 1`}</a>
+                      </li>
+                      <li>
+                        <a href="https://webpublishing.anu.edu.au/web-style-guide/colours">{`Artical 2 or link 2`}</a>
+                      </li>
+                      <li>
+                        <a href="https://webpublishing.anu.edu.au/web-style-guide/grid-layouts">{`Artical 3 or link 3`}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="col-12 divider-gold pt-2">{`\u00A0`}</div>
+                <div className="col-12">
+                  <h3 className="pb-1">{`Example 2: Call-to-action button inside Features`}</h3>
+                  <p className="mt-0">{`You can also use a Call-to-action button inside a featured section.`}</p>
+                </div>
+                <div className="row equal g-0 bg-tint p-0">
+                  <div className="col-md-6 col-lg-8 col-12">
+                    <img
+                      alt="Placeholder images"
+                      draggable={false}
+                      src="https://picsum.photos/seed/button/920/600"
+                    />
+                  </div>
+                  <div className="col-md-6 col-lg-4 col-12">
+                    <div className="p-3 mb-0">
+                      <p className="small uppercase text-unigrey">
+                        <strong>{`FEATURED`}</strong>
+                      </p>
+                      <h2>
+                        <strong>{`New scholarship opportunity for Indigenous public servants`}</strong>
+                      </h2>
+                      <p className="small uppercase text-unigrey">{`SCHOLARSHIPS`}</p>
+                      <p>
+                        {`The Sir Roland Wilson Foundation has launched a new scholarship that aims to develop the skills of Indigenous public servants to become Australia's...`}
+                      </p>
+                      <div className="text-right mb-0">
+                        <a className="anu-btn-white w60" href="#">
+                          {`Apply now`}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

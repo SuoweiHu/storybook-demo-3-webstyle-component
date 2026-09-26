@@ -1,0 +1,335 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Text/Text" />
+
+
+<Unstyled>
+
+# Text
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <div className="row">
+              <div className="col-lg-6 col-12">
+                <h3>{`ANU Typeface - Public Sans`}</h3>
+                <p>
+                  {`Our brand typeface is Public Sans - a Google web font that is free to use for anyone. It should be used consistently across all ANU websites. This typeface has been specifically crafted for accessibility, while also having the added benefit of high load speeds online.`}
+                </p>
+                <h3 className="pt-1">{`Alignment`}</h3>
+                <p>
+                  {`Text should be left-aligned unless there is a compelling reason to use another alignment style. Left-aligned texts ensure a high level of accessibility and readability to all users. Classes for alternative alignments are described under `}
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/alignment" target="_blank">
+                    {`'Alignment'`}
+                  </a>
+                  {` section.`}
+                </p>
+                <p className="msg-error">
+                  {`Please note: justified text should not be used on ANU websites as it can be very difficult to read on screens.`}
+                </p>
+                <h3 className="pt-1">{`Font colours`}</h3>
+                <p>
+                  {`By default, the font colour is set to black: #000000. We have several alternative font colours that are approved to use on ANU websites. See the sections below for corresponding class names. Please note, your colour combination of font colour and background colour should pass WCAG 2.1 accessibility check. You can use the image here as a quick reference guide, for a more comprehensive document, please visit `}
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/accessibility" target="_blank">
+                    {`'Accessibility'`}
+                  </a>
+                  {` section for all approved colour combinations.`}
+                </p>
+              </div>
+              <div className="col-lg-6 col-12">
+                <img src="https://picsum.photos/seed/colours/800/500" />
+                {/*Image needs to be updated*/}
+              </div>
+            </div>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2 pb-2">{`Available classes`}</h2>
+              <h3 className="box bdr-left-gold bdr-thick">{`Size & Cases`}</h3>
+              <p>
+                {`The default font size is set in our global stylesheets, our default font size for text body `}
+                <code>{`<p>`}</code>
+                {` is 1em (16px). You should not use inline CSS styles to define the font size, you should use style classes from our global stylesheets.`}
+              </p>
+              <table className="tbl-cell-bdr mb-2">
+                <tbody>
+                  <tr>
+                    <th>{`Class name`}</th>
+                    <th>{`Font size`}</th>
+                    <th>{`Output`}</th>
+                    <th>{`Description`}</th>
+                  </tr>
+                  {/*large*/}
+                  <tr>
+                    <td>
+                      <code>{`.large`}</code>
+                    </td>
+                    <td>{`1.25em`}</td>
+                    <td className="large">{`This text is using `}<code>{`.large`}</code>{` class.`}</td>
+                    <td>{`This class can be used as introductory paragraphs or some homepage texts, but generally should not be used in conjunction with headings.`}</td>
+                  </tr>
+                  {/*small*/}
+                  <tr>
+                    <td>
+                      <code>{`.small`}</code>
+                    </td>
+                    <td>{`0.85em`}</td>
+                    <td className="small">{`This text is using `}<code>{`.small`}</code>{` class.`}</td>
+                    <td>{`This class can be used for disclaimers, notes and similar text, etc.`}</td>
+                  </tr>
+                  {/*uppercase*/}
+                  <tr>
+                    <td>
+                      <code>{`.uppercase`}</code>
+                    </td>
+                    <td>{`1em`}</td>
+                    <td className="uppercase">{`This text is using `}<code>{`.uppercase`}</code>{` class.`}</td>
+                    <td>{`This will turn texts into uppercases. Uppercase text is generally not recommended as it can be hard to read, and may be read as letter-by-letter by screen readers.`}</td>
+                  </tr>
+                  {/*captions*/}
+                  <tr>
+                    <td>
+                      <code>{`.caption`}</code>
+                    </td>
+                    <td>{`0.85em`}</td>
+                    <td className="caption">{`This text is using `}<code>{`.caption`}</code>{` class.`}</td>
+                    <td>
+                      {`Caption style is available for `}
+                      <a href="https://webpublishing.anu.edu.au/web-style-guide/tables">{`tables`}</a>
+                      {` via the `}
+                      <code>{`<caption>`}</code>
+                      {` tag, but for other elements please use this class.`}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 className="box bdr-left-gold bdr-thick">{`Font colours`}</h3>
+              <p>
+                {`Please view `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/accessibility" target="_blank">
+                  {`'Accessibility'`}
+                </a>
+                {` section for all approved colour combinations.`}
+              </p>
+              <table className="tbl-cell-bdr mb-2">
+                <tbody>
+                  <tr>
+                    <th>{`Class name`}</th>
+                    <th>{`Colour`}</th>
+                    <th>{`Output`}</th>
+                    <th>{`Description`}</th>
+                  </tr>
+                  {/*text-black*/}
+                  <tr>
+                    <td>
+                      <code>{`.text-black`}</code>
+                    </td>
+                    <td>{`#000000`}</td>
+                    <td className="text-black">
+                      {`This text is using `}
+                      <code>{`.text-black`}</code>
+                      {` class.`}
+                    </td>
+                    <td>{`By default, our font colour is black on white and tinted background.`}</td>
+                  </tr>
+                  {/*text-unigrey*/}
+                  <tr>
+                    <td>
+                      <code>{`.text-unigrey`}</code>
+                    </td>
+                    <td>{`#333333`}</td>
+                    <td className="text-unigrey">
+                      {`This text is using `}
+                      <code>{`.text-unigrey`}</code>
+                      {` class.`}
+                    </td>
+                    <td>{`This class will change the font colour to #333333, it is suitable for white and tinted background.`}</td>
+                  </tr>
+                  {/*text-gold*/}
+                  <tr>
+                    <td>
+                      <code>{`.text-gold`}</code>
+                    </td>
+                    <td>{`#be830e`}</td>
+                    <td className="text-gold bg-black">
+                      {`This text is using `}
+                      <span className="bg-white">
+                        <code>{` .text-gold `}</code>
+                      </span>
+                      {` class.`}
+                    </td>
+                    <td>
+                      {`In order for gold text on a white background to pass WCAG 2.1, the font size should be larger than 19px semibold or 24px regular, even under small screens like tablets and phones.`}
+                    </td>
+                  </tr>
+                  {/*text-white*/}
+                  <tr>
+                    <td>
+                      <code>{`.text-white`}</code>
+                    </td>
+                    <td>{`#ffffff`}</td>
+                    <td className="text-white bg-black">
+                      {`This text is using `}
+                      <span className="bg-white">
+                        <code>{` .text-white `}</code>
+                      </span>
+                      {` class.`}
+                    </td>
+                    <td>{`By default, our font colour is white on black background.`}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 className="box bdr-left-gold bdr-thick">{`Other HTML text formatting elements`}</h3>
+              <p>
+                {`The table below is not exhaustive - it only shows some of the most common text formatting elements. You should refer to an HTML text formatting document for a more complete guide.`}
+              </p>
+              <p className="msg-error">
+                {`DO NOT use underline to emphasise text. Underlining should be reserved for hyperlinks.`}
+              </p>
+              <table className="tbl-cell-bdr mb-2">
+                <tbody>
+                  <tr>
+                    <th scope="col">{`Tag name`}</th>
+                    <th scope="col">{`Description`}</th>
+                    <th scope="col">{`Example`}</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>{`<em>`}</code>
+                    </td>
+                    <td>{`To emphasise text, usually appears as italics`}</td>
+                    <td>
+                      <code>{`<em>`}</code>
+                      <em>{`This text appears italicised`}</em>
+                      <code>{`</em>`}</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>{`<strong>`}</code>
+                    </td>
+                    <td>{`To highlight text, usually appears as bold`}</td>
+                    <td>
+                      <code>{`<strong>`}</code>
+                      <strong>{`This text appears bold`}</strong>
+                      <code>{`</strong>`}</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>{`<code>`}</code>
+                    </td>
+                    <td>{`to highlight blocks of code within text`}</td>
+                    <td>
+                      <code>{`<code><div class="normal"></code>`}</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>{`<cite>`}</code>
+                    </td>
+                    <td>{`To indicate a citation, such as the name of a book or periodical`}</td>
+                    <td>
+                      <code>{`<cite>`}</code>
+                      <cite>{`This is a citation`}</cite>
+                      <code>{`</cite>`}</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>{`<pre>`}</code>
+                    </td>
+                    <td>{`To present pre-formatted text. Whitespace is honoured and the font is usually non-proportional.`}</td>
+                    <td>
+                      <code>{`<pre>`}</code>
+                      <pre>
+                        {`                    This text is preformatted. 
+                    Spaces are honoured.
+                    - - ---   ---   ---  -- - - `}
+                      </pre>
+                      <code>{`</pre>`}</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>{`<blockquote>`}</code>
+                    </td>
+                    <td>{`To indicate a large block of quoted material. While a blockquote usually appears indented, the blockquote tag should not be used just to provide indentation.`}</td>
+                    <td>
+                      <code>{`<blockquote>`}</code>
+                      <blockquote>
+                        {`This is a large block of quoted text from a magazine that needs to be referenced properly.`}
+                      </blockquote>
+                      <code>{`</blockquote>`}</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>{`<sub>`}</code>
+                    </td>
+                    <td>{`To indicate subtext - text that appears slightly below the line`}</td>
+                    <td>
+                      <p>
+                        {`To understand tectonic evolution, we need to know when events occur, and how fast they take place. H`}
+                        <sub>{`2`}</sub>
+                        {`O.`}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>{`<sup>`}</code>
+                    </td>
+                    <td>{`To indicate supertext - text that appears slightly above the line`}</td>
+                    <td>
+                      {`The `}
+                      <sup>{`40`}</sup>
+                      {`Ar/`}
+                      <sup>{`39`}</sup>
+                      {`Ar system allows both geochronology and geospeedometry, and direct dating of fabrics...`}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 className="pt-2">{`See also:`}</h2>
+              <ul>
+                <li>
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/headings">{`Headings`}</a>
+                </li>
+                <li>
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/links">{`Links`}</a>
+                </li>
+                <li>
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/lists">{`Lists`}</a>
+                </li>
+                <li>
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/dates">{`Dates`}</a>
+                </li>
+                <li>
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/pull-quotes">{`Pull quotes`}</a>
+                </li>
+              </ul>
+            </Tab>
+            <Tab label="Accessibility">
+              <h2 className="pt-2">{`Accessibility`}</h2>
+              <p>
+                {`Please view `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/accessibility" target="_blank">
+                  {`'Accessibility'`}
+                </a>
+                {` section for a full set of approved colour combinations.`}
+              </p>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

@@ -1,0 +1,195 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Graphics/Features" />
+
+
+<Unstyled>
+
+# Features
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          {/* Introduction */}
+          <div className="container pb-2">
+            <div className="row">
+              <div className="col-sm-8">
+                <p>
+                  {`Websites may use feature blocks to highlight news, events or interesting stories, and they usually link to a webpage on your site with further details.`}
+                </p>
+                <p>
+                  {`Content should change regularly (at least once a month) and should be relevant to the website and its activities. Features are a means to highlight information, but should not normally be the only location on your website where that information appears.`}
+                </p>
+                <p>
+                  {`The feature block may be turned on and off if feature stories are only available during certain times. For example, if you have a feature story that is only relevant for two weeks of the year, the feature bar can appear on the homepage for those two weeks only.`}
+                </p>
+              </div>
+              <div className="col-sm-4">
+                <div className="box-header-tint">
+                  <span className="large">{`Inappropriate use`}</span>
+                </div>
+                <div className="box-bdr-gold">
+                  <p>
+                    {`The feature block should not be used for primary website navigation, static images, or stories which appear permanently or for long periods of time (as these aren't really features).`}
+                  </p>
+                  <p>{`Images should not contain logos.`}</p>
+                  <p>
+                    {`If still using the standard feature with ANU window overlay, feature images should not include any text other than the ANU window.`}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <div className="row">
+                <div className="col-12">
+                  <h2>{`Homepage promotional messages`}</h2>
+                  <div className="row p-3 bg-tint">
+                    <div className="col-sm-8">
+                      <img
+                        alt="example image"
+                        src="https://picsum.photos/seed/hero/1200/800"
+                      />
+                    </div>
+                    <div className="col-sm-4">
+                      <h2>
+                        <a href="#">{`Title 1 sed turpis urna blandit adipiscing`}</a>
+                      </h2>
+                      <p>
+                        {`"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."`}
+                      </p>
+                    </div>
+                  </div>
+                  <p>
+                    {`Promotional messages can only be used on the homepage and should be the first item of content on the page, alongside the site menu. Each feature must include a title, summary and an image. You are able to have `}
+                    <strong>{`up to seven promotional messages`}</strong>
+                    {`.`}
+                  </p>
+                </div>
+                <div className="col-12">
+                  <div className="box-header-black">
+                    <span className="large">{`Code structure`}</span>
+                  </div>
+                  <div className="box-bdr-black">
+                    <pre style={{ overflowX: "auto" }}>
+                      <code>{`<div class="row">
+    <div className="col-sm-8">
+        <img>
+    </div>
+    <div className="col-sm-4">
+        <h2>Your title </h2>
+        <p>Your content </p>
+    </div>
+</div>`}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Style usage">
+              {/*Style Usage example 1*/}
+              <h2 className="pt-2">{`1.Featured box (image left)`}</h2>
+              <div className="row equal g-0 bg-tint p-0">
+                <div className="col-md-6 col-lg-8 col-12">
+                  <img
+                    alt="Placeholder images"
+                    data-entity-type="file"
+                    data-entity-uuid="8cfeec38-66e3-4667-aee7-c8d0b67f057e"
+                    draggable={false}
+                    height="518"
+                    loading="lazy"
+                    src="https://picsum.photos/seed/campus/800/500"
+                    width="920"
+                  />
+                </div>
+                <div className="col-md-6 col-lg-4 col-12">
+                  <div className="p-3 mb-0">
+                    <p className="small uppercase text-unigrey">
+                      <strong>{`FEATURED`}</strong>
+                    </p>
+                    <h2>
+                      <strong>{`Reds Under the Bed: 100 Years of Communism in Australia`}</strong>
+                    </h2>
+                    <p className="small uppercase text-unigrey">{`ONLINE EXHIBITION`}</p>
+                    <p>
+                      {`In August 1946 the Australian National University Act 1946 was passed, establishing the ANU as the only Australian university instituted by a ....`}
+                    </p>
+                    <p className="text-right mb-0">
+                      <a draggable={false} href="#" tabIndex={-1}>
+                        {`Read More `}
+                      </a>
+                      {`»`}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/*Style Usage example 2*/}
+              <h2 className="pt-2">{`2.Featured box (image right)`}</h2>
+              <div className="row equal g-0 box-bdr-gold p-0">
+                <div className="col-md-6 col-lg-4 col-12">
+                  <div className="mb-0 p-3">
+                    <p className="small uppercase text-unigrey">
+                      <strong>{`FEATURED`}</strong>
+                    </p>
+                    <h2>
+                      <strong>{`Reds Under the Bed: 100 Years of Communism in Australia`}</strong>
+                    </h2>
+                    <p className="small uppercase text-unigrey">{`ONLINE EXHIBITION`}</p>
+                    <p>
+                      {`In August 1946 the Australian National University Act 1946 was passed, establishing the ANU as the only Australian university instituted by a ....`}
+                    </p>
+                    <p className="text-right mb-0">
+                      <a draggable={false} href="#" tabIndex={-1}>
+                        {`Read More `}
+                      </a>
+                      {`»`}
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-8 col-12">
+                  <img
+                    alt="Placeholder images"
+                    data-entity-type="file"
+                    data-entity-uuid="8cfeec38-66e3-4667-aee7-c8d0b67f057e"
+                    draggable={false}
+                    height="518"
+                    loading="lazy"
+                    src="https://picsum.photos/seed/campus/800/500"
+                    width="920"
+                  />
+                </div>
+              </div>
+              {/*Style Usage example 3*/}
+              <h2 className="pt-2">{`3.Featured grid`}</h2>
+              <div className="row">
+                <div className="col-md-6 col-lg-4 col-12 bg-tint p-3">
+                  <p className="small text-unigrey">
+                    <strong>{`FEATURED`}</strong>
+                  </p>
+                  <h2>
+                    <strong>{`Reds Under the Bed: 100 Years of Communism in Australia`}</strong>
+                  </h2>
+                  <p className="small text-unigrey">{`ONLINE EXHIBITION`}</p>
+                  <p>
+                    {`In August 1946 the Australian National University Act 1946 was passed, establishing the ANU as the only Australian university instituted by a ....`}
+                  </p>
+                  <p className="text-right mb-0">
+                    <a href="#">{`Read More `}</a>
+                    {`»`}
+                  </p>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

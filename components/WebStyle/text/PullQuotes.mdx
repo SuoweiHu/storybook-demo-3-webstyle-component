@@ -1,0 +1,225 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Text/Pull Quotes" />
+
+
+<Unstyled>
+
+# Pull Quotes
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>{`Pull quotes can be used to highlight text or to indicate a quote.`}</p>
+            <p className="msg-info">
+              {`Pull quotes are not the same as the HTML tags `}
+              <code>{`<cite>`}</code>
+              {` and `}
+              <code>{`<blockquote>`}</code>
+              {`. However, these HTML tags can still be used within ANU webpages, please view our `}
+              <a href="https://webpublishing.anu.edu.au/web-style-guide/text" target="_blank">{`text overview`}</a>
+              {` section.`}
+            </p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Overview`}</h2>
+              {/*width*/}
+              <div className="mb-2 mt-2">
+                <h3>{`Width`}</h3>
+                <p>
+                  {`The width for a pull quote by default is 50% of its parent container. For example, if the pull quote is put in a col-12 container (container width: 12 columns), the pull quote will take up 6 columns. If the pull quote is put in a col-6 container, the pull quote will take up 3 columns. You can add a `}
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/width" target="_blank">{`width class`}</a>
+                  {` to override this default width. Please see 'Use cases' tab for examples.`}
+                </p>
+              </div>
+              <div className="divider-gold mb-1">{`\u00A0`}</div>
+              {/*float*/}
+              <div className="mb-2">
+                <h3>{`Float`}</h3>
+                <p>
+                  {`Since the pull quote only takes up 50% of its parent container's width, by adding `}
+                  <code>{`.left`}</code>
+                  {` or `}
+                  <code>{`.right`}</code>
+                  {` to the pull quote container, will make it left or right-aligned. In addition, the following text content will wrap around the pull quote. If no float class has been specified, the following text content will not wrap around.`}
+                </p>
+                <table className="tbl-cell-bdr">
+                  <caption>{`Available float classes`}</caption>
+                  <tbody>
+                    <tr>
+                      <th>{`Class name`}</th>
+                      <th>{`Description`}</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`.left`}</code>
+                      </td>
+                      <td>{`Float the pull quote to left, and add a 20px margin to the right.`}</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`.right`}</code>
+                      </td>
+                      <td>{`Float the pull quote to right, and add a 20px margin to the left.`}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="divider-gold mb-1">{`\u00A0`}</div>
+              {/*code structure*/}
+              <div className="row">
+                <h3>{`Implementation`}</h3>
+                <p className="msg-success">
+                  {`Unlike most classes, pull quotes have a specific code structure. You must add the `}
+                  <code>{`pullquote`}</code>
+                  {` class to a DIV for it to work properly.`}
+                </p>
+                <div className="col-md-6 col-12">
+                  <div className="pullquote left w100 pt-1 pb-1">
+                    <p>{`This is an example of a pull quote. The text is slightly larger than regular text, centre-aligned, and contained in quotation marks.`}</p>
+                  </div>
+                </div>
+                <div className="col-md-6 col-12">
+                  <div>
+                    <div className="box-header-black">
+                      <span className="large">{`Code Structure`}</span>
+                    </div>
+                    <div className="box-bdr-black">
+                      <pre className="mb-0" style={{ overflowX: "auto" }}>
+                        <code>{`<div class="pullquote left">
+    <p>This is an example of a pull quote. The text is slightly larger than regular text, centre-aligned, and contained in quotation marks.</p>
+</div>`}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Use cases">
+              <h2 className="pt-2">{`Use cases`}</h2>
+              <p>
+                {`You can override the default width (50%) and the font colour (black) by using our `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/width" target="_blank">{`width and `}</a>
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/text" target="_blank">{`font colour`}</a>
+                {` classes.`}
+              </p>
+              {/*example 1*/}
+              <div className="row pb-1">
+                <h3 className="pt-2 pb-1">
+                  {`Example 1: Pull quote with `}
+                  <code>{`.w80`}</code>
+                </h3>
+                <div className="col-md-6 col-12">
+                  <div className="pullquote left w80">
+                    <p>{`Sit amet dictum sit amet justo donec enim diam.`}</p>
+                  </div>
+                  <p>
+                    {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque.`}
+                  </p>
+                </div>
+                <div className="col-md-6 col-12">
+                  <div>
+                    <div className="box-header-black">
+                      <span className="large">{`Code Structure`}</span>
+                    </div>
+                    <div className="box-bdr-black">
+                      <pre className="mb-0" style={{ overflowX: "auto" }}>
+                        <code>{`<div class="pullquote left w80">
+    <p> Sit amet dictum sit amet justo donec enim diam.</p>
+</div>
+<p> 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
+</p>`}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold mt-2">{`\u00A0`}</div>
+              {/*example 2*/}
+              <div className="row pb-1">
+                <h3 className="pt-2 pb-1">
+                  {`Example 2: Pull quote with `}
+                  <code>{`.text-unigrey`}</code>
+                </h3>
+                <div className="col-md-6 col-12">
+                  <div className="pullquote left text-unigrey">
+                    <p>{`Sit amet dictum sit amet justo donec enim diam.`}</p>
+                  </div>
+                  <p>
+                    {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque.`}
+                  </p>
+                </div>
+                <div className="col-md-6 col-12">
+                  <div>
+                    <div className="box-header-black">
+                      <span className="large">{`Code Structure`}</span>
+                    </div>
+                    <div className="box-bdr-black">
+                      <pre className="mb-0" style={{ overflowX: "auto" }}>
+                        <code>{`<div class="pullquote left text-unigrey">
+    <p> Sit amet dictum sit amet justo donec enim diam.</p>
+</div>
+<p> 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
+</p>`}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold mt-2">{`\u00A0`}</div>
+              {/*example 3*/}
+              <div className="row pb-1">
+                <h3 className="pt-2 pb-1">
+                  {`Example 3: Pull quote with `}
+                  <code>{`.text-gold`}</code>
+                </h3>
+                <p className="msg-warn">
+                  {`In order to pass WA, please add `}
+                  <code>{`<strong>`}</code>
+                  {` tag to the text.`}
+                </p>
+                <div className="col-md-6 col-12">
+                  <div className="pullquote left text-gold">
+                    <p>
+                      <strong>{`Sit amet dictum sit amet justo donec enim diam.`}</strong>
+                    </p>
+                  </div>
+                  <p>
+                    {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque.`}
+                  </p>
+                </div>
+                <div className="col-md-6 col-12">
+                  <div>
+                    <div className="box-header-black">
+                      <span className="large">{`Code Structure`}</span>
+                    </div>
+                    <div className="box-bdr-black">
+                      <pre className="mb-0" style={{ overflowX: "auto" }}>
+                        <code>{`<div class="pullquote left text-gold">
+    <p> <strong>  Sit amet dictum sit amet justo donec enim diam. </strong> </p>
+</div>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
+</p>`}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

@@ -1,0 +1,96 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Text/Breadcrumb" />
+
+
+<Unstyled>
+
+# Breadcrumb
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>{`Breadcrumb is a type of secondary navigation scheme that reveals the user's current location on a website. It allows the user to follow the trail back to the homepage. Breadcrumb helps to demonstrate the current page's hierarchical level, each text link is for a page that is one level higher than the one on its right.`}</p>
+            <p>{`Consider breadcrumb as an extra feature, it should not replace the primary navigation menus, and it should always appear at the top of the page content, above the page title and below the header section.`}</p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Standard breadcrumb design`}</h2>
+              <div className="box bg-tint">
+                <div className="d-flex mb-0" id="breadcrumb">
+                  <a href="homepage">
+                    <img
+                      alt="Home"
+                      className="w16px absmiddle"
+                      src="https://marketing-pages.anu.edu.au/_anu/images/icons/web/home.png"
+                    />
+                  </a>
+                  {` » `}
+                  <a href="#">{`Menu item a`}</a>
+                  {` » Current page title`}
+                </div>
+              </div>
+              <div className="box-header-black mt-2">
+                <span className="large">{`Code structure`}</span>
+              </div>
+              <div className="box-bdr-black">
+                <pre style={{ overflowX: "auto" }}>
+                  <code>{`<div id="breadcrumb" class="d-flex">
+    <a href="homepage">
+        <img src="https://marketing-pages.anu.edu.au/_anu/images/icons/web/home.png"
+            class="w16px absmiddle"
+            alt="Home">
+    </a> »
+    <a href="item-a">Menu item a </a> »
+    Current page title
+</div>`}</code>
+                </pre>
+              </div>
+              <p className="msg-warn">
+                {`You must include the alt attribute in image `}
+                <code>{`(alt="Home")`}</code>
+                {` to meet `}
+                <a href="https://webpublishing.anu.edu.au/step-by-step-guide/building-site/accessibility">
+                  {`accessibility requirements`}
+                </a>
+                {`. The style of breadcrumb must also be used consistently throughout the site.`}
+              </p>
+              <p>{`The current page title should be included in the breadcrumb, but it should not be clickable (not a link), and therefore, it will be presented in a different font colour than the rest links in the breadcrumb.`}</p>
+            </Tab>
+            <Tab label="Customisation">
+              <h2 className="pt-2">{`Customisation`}</h2>
+              <p>{`Alternatively, you can use the breadcrumb style below`}</p>
+              <div className="box bg-tint">
+                <div className="d-flex mb-0" id="breadcrumb">
+                  <a href="homepage">{`Sitename`}</a>
+                  {` » `}
+                  <a href="#">{`Menu item a`}</a>
+                  {` » Current page title`}
+                </div>
+              </div>
+              <div className="box-header-black mt-2">
+                <span className="large">{`Code structure`}</span>
+              </div>
+              <div className="box-bdr-black">
+                <pre style={{ overflowX: "auto" }}>
+                  <code>{`<div id="breadcrumb">
+    <a href="homepage"> Sitename  </a> »
+    <a href="item-a">Menu item a </a> »
+    Current page title
+</div>`}</code>
+                </pre>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

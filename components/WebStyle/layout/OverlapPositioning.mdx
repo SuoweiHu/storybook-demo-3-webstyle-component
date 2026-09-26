@@ -1,0 +1,164 @@
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from './TabGroup';
+
+<Meta title="WebStyle/Layout/Overlap Positioning" />
+
+
+<Unstyled>
+# Overlap Positioning
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>
+              {`In order to provide our users with the full power to move the `}<code>{`overlap-child`}</code>{` divs freely, we implemented 2 sets of positioning classes. These 2 sets of positioning classes were built based on different units:`}
+            </p>
+            <ul>
+              <li>{`by absolute unit: pixel (px), and`}</li>
+              <li>{`by relative unit: percentage (%)`}</li>
+            </ul>
+          </div>
+          <TabGroup>
+            <Tab label="Position by pixel">
+              <h2 className="pt-2">{`Absolute positioning classes`}</h2>
+              <p>
+                {`Pixel (px) is an absolute sizing unit, as their values are `}<strong>{`fixed`}</strong>{` regardless of the viewport size. These classes are named using the format {side}-{size}, such as `}<code>{`.t-1`}</code>{` or `}<code>{`.b-4`}</code>{`.`}
+              </p>
+              <p>{`Where `}<em>{`side`}</em>{` is one of:`}</p>
+              <ul>
+                <li><code>{`t`}</code>{` - for classes that set top`}</li>
+                <li><code>{`b`}</code>{` - for classes that set bottom`}</li>
+                <li><code>{`l`}</code>{` - for classes that set left`}</li>
+                <li><code>{`r`}</code>{` - for classes that set right`}</li>
+              </ul>
+              <p>{`Where `}<em>{`size`}</em>{` is one of:`}</p>
+              <ul>
+                <li><code>{`0`}</code>{` - to eliminate spacing by setting it to 0px`}</li>
+                <li><code>{`1`}</code>{` - to set the spacing to 10px`}</li>
+                <li><code>{`2`}</code>{` - to set the spacing to 20px`}</li>
+                <li><code>{`3`}</code>{` - to set the spacing to 30px`}</li>
+                <li><code>{`4`}</code>{` - to set the spacing to 40px`}</li>
+                <li><code>{`5`}</code>{` - to set the spacing to 50px`}</li>
+              </ul>
+              <div className="divider-gold mt-2">{' '}</div>
+              <h3>{`Example: using `}<code>{`.b-1`}</code></h3>
+              <div className="row g-4">
+                <div className="col-lg-6 col-md-12 col-sm-12">
+                  <div className="overlap">
+                    <img alt="placeholder" className="w100 ratio-16-9" src="https://picsum.photos/seed/overlap/920/518" />
+                    <h3 className="bg-black p-2 b-1 overlap-child">{`Lorem ipsum dolor sit amet`}</h3>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-12 col-sm-12">
+                  <div>
+                    <div className="box-header-black">
+                      <span className="large">{`Code structure`}</span>
+                    </div>
+                    <div className="box-bdr-black">
+                      <pre style={{overflowX: "auto"}}>
+                        <code>{`
+<div className="overlap">
+    <img class="w100 ratio-16-9" src="...">
+    <h3 class="bg-black p-2 b-1 overlap-child">
+        Lorem ipsum dolor sit amet
+    </h3>
+    //this overlap-child div has a 10px padding from the bottom.
+</div>
+                        `}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Position by percentage">
+              <h2 className="pt-2">{`Relative positioning classes`}</h2>
+              <p>
+                {`Percentage (%) is a relative sizing unit, as it shows the relevancy with its parent element. These classes are named using the format {side}-{size}, such as `}<code>{`.r-10`}</code>{` or `}<code>{`.l-30`}</code>{`.`}
+              </p>
+              <p>{`Where `}<em>{`side`}</em>{` is one of:`}</p>
+              <ul>
+                <li><code>{`t`}</code>{` - for classes that set top`}</li>
+                <li><code>{`b`}</code>{` - for classes that set bottom`}</li>
+                <li><code>{`l`}</code>{` - for classes that set left`}</li>
+                <li><code>{`r`}</code>{` - for classes that set right`}</li>
+              </ul>
+              <p>{`Where `}<em>{`size`}</em>{` is one of:`}</p>
+              <ul>
+                <li><code>{`10`}</code>{` - to set the spacing to 10%`}</li>
+                <li><code>{`20`}</code>{` - to set the spacing to 20%`}</li>
+                <li><code>{`30`}</code>{` - to set the spacing to 30%`}</li>
+                <li><code>{`40`}</code>{` - to set the spacing to 40%`}</li>
+                <li><code>{`50`}</code>{` - to set the spacing to 50%`}</li>
+                <li><code>{`60`}</code>{` - to set the spacing to 60%`}</li>
+                <li><code>{`70`}</code>{` - to set the spacing to 70%`}</li>
+                <li><code>{`80`}</code>{` - to set the spacing to 80%`}</li>
+                <li><code>{`90`}</code>{` - to set the spacing to 90%`}</li>
+                <li><code>{`100`}</code>{` - to set the spacing to 100%`}</li>
+              </ul>
+              <div className="divider-gold mt-2">{' '}</div>
+              <h3>{`Example: using `}<code>{`.r-10 .b-0`}</code></h3>
+              <div className="row g-4">
+                <div className="col-lg-6 col-md-12 col-sm-12">
+                  <div className="overlap">
+                    <img alt="placeholder" className="w100 ratio-16-9" src="https://picsum.photos/seed/overlap/920/518" />
+                    <h3 className="bg-black p-2 r-10 b-0 overlap-child">{`Lorem ipsum dolor sit amet`}</h3>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-12 col-sm-12">
+                  <div>
+                    <div className="box-header-black">
+                      <span className="large">{`Code structure`}</span>
+                    </div>
+                    <div className="box-bdr-black">
+                      <pre style={{overflowX: "auto"}}>
+                        <code>{`
+<div className="overlap">
+    <img class="w100 ratio-16-9" src="...">
+    <h3 class="bg-black p-2 r-10 b-0 overlap-child">
+        Lorem ipsum dolor sit amet
+    </h3>
+    //this overlap-child div has a 10% padding from the right and bottom-aligned.
+</div>
+                        `}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Use cases">
+              <h2 className="pt-2">{`Use cases`}</h2>
+              <p>{`For readers who are new to the concept of absolute and relative sizing, we've included a side-by-side comparison to demonstrate the difference between these 2 units.`}</p>
+              <p className="msg-info">
+                {`Reduce the screen size to see how relative sizing is changing its spacing based on the viewport size. `}<span className="small">{`*When the screen size is < 992px, the responsive mode of the overlap class will be triggered, and all overlap child divs will be vertically aligned below the parent class.`}</span>
+              </p>
+              <div className="row g-4">
+                <div className="col-lg-6 col-md-12 col-sm-12">
+                  <p>{`Using absolute positioning classes: `}<code>{`.r-1 .b-0`}</code></p>
+                  <div className="overlap">
+                    <img alt="placeholder" className="w100 ratio-16-9" src="https://picsum.photos/seed/overlap/920/518" />
+                    <h3 className="bg-black p-2 r-1 b-0 overlap-child">{`Lorem ipsum dolor sit amet`}</h3>
+                  </div>
+                  <p className="caption">{`10px spacing from the right (r-1) and bottom-aligned (b-0)`}</p>
+                </div>
+                <div className="col-lg-6 col-md-12 col-sm-12">
+                  <p>{`Using relative positioning classes: `}<code>{`.r-10 .b-0`}</code></p>
+                  <div className="overlap">
+                    <img alt="placeholder" className="w100 ratio-16-9" src="https://picsum.photos/seed/overlap/920/518" />
+                    <h3 className="bg-black p-2 r-10 b-0 overlap-child">{`Lorem ipsum dolor sit amet`}</h3>
+                  </div>
+                  <p className="caption">{`10% spacing from the right (r-10) and bottom-aligned (b-0)`}</p>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

@@ -1,0 +1,681 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from './TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+<Meta title="WebStyle/Layout/Forms" />
+
+
+<Unstyled>
+
+# Forms
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>{`Forms are used to collect user input, and the user input is normally sent to a server to process data.`}</p>
+            <h3>{`Glossary - commonly used form elements`}</h3>
+            <p className="small">{`The list below is not comprehensive - it only shows some of the most common elements. You should refer to an HTML form documentation for a more complete guide.`}</p>
+            <ol>
+              <li><strong><code>{`<form>`}</code>{`:`}</strong>{` The container for different types of input elements.`}</li>
+              <li><strong><code>{`<fieldset>`}</code>{`:`}</strong>{` Is used to group related elements in a form.`}</li>
+              <li><strong><code>{`<legend>`}</code>{`:`}</strong>{` Is used to define a caption for the `}<code>{`<fieldset>`}</code>{` element.`}</li>
+              <li><strong><code>{`<input>`}</code>{`:`}</strong>{` Is the most used form elements, some examples of different types of input elements - text fields, checkboxes, submit buttons, etc.`}</li>
+              <li><strong><code>{`<label>`}</code>{`:`}</strong>{` Is used to define a text label for a `}<code>{`<input>`}</code>{`.`}</li>
+            </ol>
+            <p>{`All of these elements will be explained in the section below.`}</p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Overview`}</h2>
+              {/* forms */}
+              <div className="pt-2">
+                <h3>{`Forms`}</h3>
+                <p>{`We've developed 3 different form themes, navigate to Use cases to see individual form themes:`}</p>
+                <ul>
+                  <li><code>{`.anuform`}</code></li>
+                  <li><code>{`.anuform-inline-tint`}</code></li>
+                  <li><code>{`.anuform-inline-black`}</code></li>
+                </ul>
+              </div>
+              <div className="divider-gold">{' '}</div>
+              {/* fieldsets */}
+              <div className="pt-2">
+                <h3>{`Fieldsets`}</h3>
+                <p className="mb-0">{`Fieldsets divide a form into sections, with an optional heading for each section using `}<code>{`<legend>`}</code>{`. The form styling adds a box around each fieldset and makes the fieldset heading match the heading colours on the rest of your site. As an example, your form may have the following layout:`}</p>
+                <div className="row">
+                  <div className="col-lg-5 col-md-5 col-sm-12">
+                    <pre className="mb-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+<fieldset>
+  <legend>First heading</legend>
+  ...Some inputs and buttons...
+</fieldset>
+                      `}</code>
+                    </pre>
+                  </div>
+                  <div className="col-lg-7 col-md-7 col-sm-12">
+                    <form className="anuform pb-0">
+                      <fieldset>
+                        <legend>{`First heading`}</legend>
+                        <div className="field">
+                          <label className="req" htmlFor="requester-name">{`Name`}</label>
+                          <span>
+                            <input aria-required="true" className="text tfull" id="requester-name" name="requester-name" placeholder="Your full name" required type="text" />
+                          </span>
+                        </div>
+                        <div className="field">
+                          <label className="req" htmlFor="requester-email">{`Email address`}</label>
+                          <span>
+                            <input aria-required="true" className="text tfull" id="requester-email" name="requester-email" placeholder="example@example.com.au" required type="text" />
+                          </span>
+                        </div>
+                      </fieldset>
+                    </form>
+                    <p className="small text-center mt-0">{`Example form of a fieldset with legend`}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold">{' '}</div>
+              {/* Labels */}
+              <div className="pt-2">
+                <h3>{`Labels`}</h3>
+                <p>{`For each input field, you should use a `}<code>{`<label>`}</code>{` to describe it. It is useful for screen-reader users, because the screen-reader will read out the label when the user focuses on the input element. Labels also provide a usability improvement to users as the input field will be toggled to when the label text is selected.`}</p>
+                <p className="msg-warn">{`Please note: the `}<code>{`for`}</code>{` attribute of the `}<code>{`<label>`}</code>{` should be equal to the `}<code>{`id`}</code>{` attribute of the related input field to bind them together.`}</p>
+                <p className="mb-0">{`The label and input should be grouped together in a `}<code>{`<p>`}</code>{` tag. For added emphasis, you can add a `}<code>{`<strong>`}</code>{` tag to the label, but this is optional. For example:`}</p>
+                <div className="row">
+                  <div className="col-lg-5 col-md-5 col-sm-12">
+                    <pre className="mb-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+<div className="field">
+    <label class="req" for="requester"><strong>Name</strong></label>
+    <span>
+        <input type="text" class="text tfull" id="requester" name="requester" aria-required="true"
+        required />
+    </span>
+</div>
+                      `}</code>
+                    </pre>
+                  </div>
+                  <div className="col-lg-7 col-md-7 col-sm-12">
+                    <form className="anuform pb-0">
+                      <fieldset>
+                        <div className="field">
+                          <label className="req" htmlFor="requester">{`Name`}</label>
+                          <span>
+                            <input aria-required="true" className="text tfull" id="requester" name="requester" placeholder="Your full name" required type="text" />
+                          </span>
+                        </div>
+                      </fieldset>
+                    </form>
+                    <p className="small text-center mt-0">{`Example form of a binded label and text field`}</p>
+                  </div>
+                </div>
+                <h4 className="box bdr-left-gold bdr-thick">{`Label widths`}</h4>
+                <p>{`The default label width is 20% of the form area for larger screens and 100% for smaller screens.`}</p>
+                <p>{`If you would like more room for your labels, you can append one of the classes below to your `}<code>{`<form>`}</code>{` tag. E.g. `}<code>{`<form class="anuform `}<span className="bg-tint">{`labelfull`}</span>{`">`}</code></p>
+                <div className="row">
+                  <div className="col-lg-5 col-md-5 col-sm-12">
+                    <ul>
+                      <li><code>{`labelwide`}</code>{`: give you 40% of the form width for your labels on larger screens.`}</li>
+                      <li><code>{`labelfull`}</code>{`: give you 100% of the form width for your labels on larger screens.`}</li>
+                    </ul>
+                  </div>
+                  <div className="col-lg-7 col-md-7 col-sm-12">
+                    <form className="anuform labelfull pb-0">
+                      <fieldset>
+                        <div className="field">
+                          <label className="req" htmlFor="requester-labelfull">{`Name`}</label>
+                          <span>
+                            <input aria-required="true" className="text tfull" id="requester-labelfull" name="requester" placeholder="Your full name" required type="text" />
+                          </span>
+                        </div>
+                      </fieldset>
+                    </form>
+                    <p className="small text-center mt-0">{`Example form of `}<code>{`.labelfull`}</code></p>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold">{' '}</div>
+              {/* Required fields */}
+              <div className="pt-2">
+                <h3>{`Required fields`}</h3>
+                <p>{`For mandatory input fields, both the label indicator and input field attributes must be used together to clearly convey what is required for uses.`}</p>
+                <div className="row">
+                  <div className="col-lg-5 col-md-5 col-sm-12">
+                    <h4 className="box bdr-left-gold bdr-thick">{`Label indicator`}</h4>
+                    <p>{`Use `}<code>{`<label class="req">`}</code>{` will give the label a red asterisk highlight. This is typically used to indicate required/compulsory fields. When Javascript is off, '(required)' will be displayed instead.`}</p>
+                    <h4 className="box bdr-left-gold bdr-thick">{`Input fields`}</h4>
+                    <p>{`Use `}<code>{`<input aria-required="true" required>`}</code>{`to indicate that this field must be filled out before submitting the form. As not all browsers/assistive technologies support the `}<code>{`required`}</code>{` attribute, `}<code>{`aria-required`}</code>{` provides reinforcement.`}</p>
+                  </div>
+                  <div className="col-lg-7 col-md-7 col-sm-12">
+                    <div className="box-bdr-gold">
+                      <pre className="mb-0" style={{"overflowX": "auto"}}>
+                        <code>{`
+<div className="field">
+    <label `}<span className="bg-tint">{`class="req"`}</span>{` for="requester"><strong>Name</strong></label>
+    <span>
+        <input type="text" class="text wide" id="requester" name="requester" `}<span className="bg-tint">{`aria-required="true"
+        required `}</span>{`/>
+    </span>
+</div>
+                        `}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+                <p className="msg-info"><strong>{`Novalidate`}</strong>{`: Some browsers will give users error messages if they have not filled out the required fields. If you would like to disable this (e.g. you are performing your own form validation), you can use the `}<a className="link-ext" href="https://www.w3schools.com/tags/att_form_novalidate.asp"><code>{`novalidate`}</code>{` attribute`}</a>{` in the `}<code>{`<form>`}</code>{` tag.`}</p>
+              </div>
+              <div className="divider-gold">{' '}</div>
+              {/* Available input types */}
+              <div className="pt-2">
+                <h3>{`Available input types`}</h3>
+                <p>{`Please view the full list of supported input types in the 'Input type' section`}</p>
+              </div>
+            </Tab>
+            <Tab label="Input types">
+              <h2 className="pt-2">{`Input types`}</h2>
+              <p>{`Below is a list of supported input types & attributes:`}</p>
+              {/* text input */}
+              <div className="pt-2" id="textinput">
+                <h3>{`Text input and textarea width`}</h3>
+                <p className="mb-0">{`If you are using the ANU-styled form, you can add the class `}<code>{`tfull`}</code>{` to your text input or textareas - this will automatically set the width to a sensible value, based on the size of the form, labels and screen size. For example, the following form code has a text input and a textarea, both with the `}<code>{`tfull`}</code>{` class applied:`}</p>
+                <div className="row">
+                  <div className="col-lg-5 col-md-5 col-sm-12">
+                    <pre className="mb-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+<div className="field">
+    <label for="sub1name">Something else</label>
+    <span>
+        <input type="text" class="text tfull" id="sub1name" name="sub1name" />
+    </span>
+</div>
+                      `}</code>
+                    </pre>
+                  </div>
+                  <div className="col-lg-7 col-md-7 col-sm-12">
+                    <form className="anuform pb-0">
+                      <fieldset>
+                        <div className="field">
+                          <label htmlFor="sub1name">{`Something else`}</label>
+                          <span>
+                            <input className="text tfull" id="sub1name" name="sub1name" type="text" />
+                          </span>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold">{' '}</div>
+              {/* Instructions */}
+              <div className="pt-2">
+                <h3>{`Instructions`}</h3>
+                <p>{`To help users fill in the form, you can add instructional text below each input box with the class `}<code>{`.instruction`}</code>{`:`}</p>
+                <p>{`Generally you will want to put the instruction below the corresponding field, but you can use the instruction class on paragraphs anywhere in the form.`}</p>
+                <div className="row">
+                  <div className="col-lg-5 col-md-5 col-sm-12">
+                    <pre className="mb-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+<div className="field">
+    <label for="sub1name">Something else</label>
+    <span>
+        <input type="text" class="text tfull" id="sub1name" name="sub1name" />
+        <p class="instruction">Some instructions about something. </p>
+    </span>
+</div>
+                      `}</code>
+                    </pre>
+                  </div>
+                  <div className="col-lg-7 col-md-7 col-sm-12">
+                    <form action="#" className="anuform" method="post">
+                      <fieldset>
+                        <div className="field">
+                          <label htmlFor="sub1name-instr">{`Something else`}</label>
+                          <div className="field-span">
+                            <input className="text tfull" id="sub1name-instr" name="sub1name" type="text" />
+                            <p className="instruction">{`Some instructions about something.`}</p>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold">{' '}</div>
+              {/* Input hints */}
+              <div className="pt-2">
+                <h3>{`Input hints`}</h3>
+                <p>{`You can add a hint to the input field to help visitors to fill it out. For example, 'Search ANU' in the Explore Bar search. To ensure that the hint is properly styled and that it clears when the visitor starts to enter text, please use the `}<code>{`placeholder`}</code>{` attribute. For example:`}</p>
+                <div className="row">
+                  <div className="col-lg-5 col-md-5 col-sm-12">
+                    <pre className="mb-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+<div className="field">
+    <label class="req" for="requester">Name</label>
+    <span>
+        <input type="text" class="text tfull" id="requester" name="requester" placeholder="Your name"/>
+    </span>
+</div>
+                      `}</code>
+                    </pre>
+                  </div>
+                  <div className="col-lg-7 col-md-7 col-sm-12">
+                    <form className="anuform pb-0">
+                      <fieldset>
+                        <div className="field">
+                          <label className="req" htmlFor="requester-hint">{`Name`}</label>
+                          <span>
+                            <input className="text tfull" id="requester-hint" name="requester" placeholder="Your name" type="text" />
+                          </span>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold">{' '}</div>
+              {/* buttons */}
+              <div className="pt-2" id="buttons">
+                <h3>{`Form buttons`}</h3>
+                <p>{`We've introduced 3 button styles. You can add either `}<code>{`anu-btn`}</code>{`, `}<code>{`anu-btn-black`}</code>{` or `}<code>{`anu-btn-white`}</code>{` to an `}<code>{`<input>`}</code>{` tag. View specifications about individual button styles on `}<a href="https://webpublishing.anu.edu.au/web-style-guide/buttons" target="_blank">{`Buttons page`}</a>{`.`}</p>
+                <div className="row">
+                  <div className="col-lg-3 col-md-4 col-sm-12">
+                    <form className="anuform pb-0">
+                      <input className="anu-btn" type="button" value="GO" />{' '}
+                    </form>
+                    <p className="small mt-0">{`.anu-btn`}</p>
+                  </div>
+                  <div className="col-lg-3 col-md-4 col-sm-12">
+                    <form className="anuform pb-0">
+                      <input className="anu-btn-black" type="button" value="GO" />{' '}
+                    </form>
+                    <p className="small mt-0">{`.anu-btn-black`}</p>
+                  </div>
+                  <div className="col-lg-3 col-md-4 col-sm-12">
+                    <form className="anuform pb-0 w100">
+                      <input className="anu-btn-white" type="button" value="GO" />{' '}
+                    </form>
+                    <p className="small mt-0">{`.anu-btn-white`}</p>
+                  </div>
+                </div>
+                {/* button size */}
+                <h4 className="mt-3 box bdr-left-gold bdr-thick">{`Button size`}</h4>
+                <p>{`If you wish to specify a button size, you can use any of the following classes.`}</p>
+                <div>
+                  <p>{`Buttons can be used without specifying a size, as in the examples above. However, if you wish to specify a button size, you can use class `}<code>{`btn-tiny`}</code>{`, `}<code>{`btn-small`}</code>{`, `}<code>{`btn-medium`}</code>{`, `}<code>{`btn-large`}</code>{` or `}<code>{`btn-xlarge`}</code>{` as shown below.`}</p>
+                  <form className="anuform p-0">
+                    <input className="anu-btn btn-tiny" type="button" value="GO" />{' '}
+                  </form>
+                  <p><code>{`<input class="anu-btn btn-tiny" type="button" value="GO">`}</code></p>
+                  <form className="anuform p-0">
+                    <input className="anu-btn btn-small" type="button" value="Save" />{' '}
+                  </form>
+                  <p><code>{`<input class="anu-btn btn-small" type="button" value="Save">`}</code></p>
+                  <form className="anuform p-0">
+                    <input className="anu-btn btn-medium" type="button" value="Search" />{' '}
+                  </form>
+                  <p><code>{`<input class="anu-btn btn-medium" type="button" value="Search">`}</code></p>
+                  <form className="anuform p-0">
+                    <input className="anu-btn btn-large" type="button" value="Update" />{' '}
+                  </form>
+                  <p><code>{`<input class="anu-btn btn-large" type="button" value="Update">`}</code></p>
+                  <form className="anuform p-0">
+                    <input className="anu-btn btn-xlarge" type="button" value="Log in" />{' '}
+                  </form>
+                  <p><code>{`<input class="anu-btn btn-xlarge" type="button" value="Log in">`}</code></p>
+                </div>
+              </div>
+              <div className="divider-gold">{' '}</div>
+              {/* Radio buttons */}
+              <div className="pt-2" id="radio">
+                <h3>{`Radio buttons`}</h3>
+                <p>{`If your form has radio buttons, they need to be grouped in a fieldset, even if your form is already in a fieldset, due to accessibility requirements. Each radio button should have a corresponding `}<code>{`label`}</code>{`. The fieldset `}<code>{`legend`}</code>{` is used as the overall label for the group of buttons.`}</p>
+                <div className="row">
+                  <div className="col-lg-5 col-md-5 col-sm-12">
+                    <pre className="mb-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+<fieldset class="radiofield">
+   <legend>Some radio buttons</legend>
+   <div className="radiobox">
+        <input type="radio" id="bob" name="rad" value="bob">
+        <label for="bob">Bob this is a long title</label>
+        <input type="radio" id="bill" name="rad" value="bill">
+        <label for="bill">Bill</label>
+        ...
+   </div>
+                      `}</code>
+                    </pre>
+                  </div>
+                  <div className="col-lg-7 col-md-7 col-sm-12">
+                    <form className="anuform pb-0">
+                      <fieldset className="radiofield">
+                        <legend>{`Some radio buttons`}</legend>
+                        <div className="radiobox">
+                          <input id="bob" name="rad" type="radio" value="bob" /><label htmlFor="bob">{`Bob this is a long title`}</label>
+                          <input id="bill" name="rad" type="radio" value="bill" /><label htmlFor="bill">{`Bill`}</label>
+                          <input id="jill" name="rad" type="radio" value="jill" /><label htmlFor="jill">{`Jill`}</label>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold">{' '}</div>
+              {/* Shorter field */}
+              <div className="pt-2" id="shortfields">
+                <h3>{`Shorter field`}</h3>
+                <p className="msg-warn"><strong>{`Please note:`}</strong>{` this feature is only available on `}<code>{`.anuform-inline-tint`}</code>{` and `}<code>{`.anuform-inline-black`}</code></p>
+                <p>{`Sometimes, we don't need one input field to take up the entire row. In this case, we can add the width class `}<code>{`.w45`}</code>{` to the div tag of the whole field:`}</p>
+                <div className="row">
+                  <div className="col-lg-5 col-md-5 col-sm-12">
+                    <pre style={{"overflowX": "auto"}}>
+                      <code>{`
+<fieldset>
+    <div className="field w45">
+        <label class="req" for="requester-name"><strong>Short 1</strong></label>
+        <span>
+            <input type="text" class="text tfull" id="requester-name" name="requester-name"
+            placeholder="Short 1 text" aria-required="true" required="">
+        </span>
+    </div>
+    ...
+</fieldset>
+                      `}</code>
+                    </pre>
+                  </div>
+                  <div className="col-lg-7 col-md-7 col-sm-12">
+                    <form className="anuform-inline-black pb-0">
+                      <fieldset>
+                        <div className="field w45">
+                          <label className="req" htmlFor="requester-name-short"><strong>{`Short 1`}</strong></label>
+                          <span>
+                            <input aria-required="true" className="text tfull" id="requester-name-short" name="requester-name" placeholder="Short 1 text" required type="text" />
+                          </span>
+                        </div>
+                        <div className="field w45">
+                          <label className="req" htmlFor="requester-email-short">{`Short 2`}</label>
+                          <span>
+                            <input aria-required="true" className="text tfull" id="requester-email-short" name="requester-email" placeholder="Short 2 text" required type="text" />
+                          </span>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Use cases">
+              <h2 className="pt-2">{`Use cases`}</h2>
+              <p>{`In the sections below, we included 3 completed form examples, 1 for each form theme.`}</p>
+              {/* anuform */}
+              <div className="pt-2">
+                <h3>{`Example 1: form theme with class `}<code>{`.anuform`}</code>{` (default style)`}</h3>
+                <form action="#" className="anuform" method="post">
+                  <fieldset>
+                    <legend>{`First heading`}</legend>
+                    <div className="field">
+                      <label className="req" htmlFor="uc-requester-name"><strong>{`Name`}</strong></label>
+                      <div className="field-span">
+                        <input aria-required="true" className="text tfull" id="uc-requester-name" name="requester-name" placeholder="Your full name" required type="text" />
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label className="req" htmlFor="uc-requester-email">{`Email address`}</label>
+                      <div className="field-span">
+                        <input aria-required="true" className="text tfull" id="uc-requester-email" name="requester-email" placeholder="example@example.com.au" required type="text" />
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>{`2nd section heading`}</legend>
+                    <div className="field">
+                      <label htmlFor="uc-sitename">{`Something`}</label>
+                      <div className="field-span">
+                        <input className="text tfull" id="uc-sitename" name="sitename" type="text" />
+                        <p className="instruction">{`some instructions about this something`}</p>
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label htmlFor="uc-siteurl">{`URL`}</label>
+                      <div className="field-span">
+                        <input className="text tfull" id="uc-siteurl" name="siteurl" type="text" />
+                        <p className="instruction">{`do not include http://`}</p>
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label htmlFor="uc-sub1name">{`Something else`}</label>
+                      <div className="field-span">
+                        <input className="text tfull" id="uc-sub1name" name="sub1name" type="text" />
+                        <p className="instruction">{`some instructions about this `}<a href="#">{`something else`}</a></p>
+                      </div>
+                    </div>
+                    <fieldset className="radiofield">
+                      <legend>{`Some radio buttons`}</legend>
+                      <div className="radiobox">
+                        <input id="uc-bob" name="uc-rad" type="radio" value="bob" /><label htmlFor="uc-bob">{`Bob this is a long title`}</label>
+                        <input id="uc-bill" name="uc-rad" type="radio" value="bill" /><label htmlFor="uc-bill">{`Bill`}</label>
+                        <input id="uc-jan" name="uc-rad" type="radio" value="jan" /><label htmlFor="uc-jan">{`Jan`}</label>
+                        <input id="uc-jill" name="uc-rad" type="radio" value="jill" /><label htmlFor="uc-jill">{`Jill`}</label>
+                      </div>
+                    </fieldset>
+                    <div className="field">
+                      <label htmlFor="uc-tareaname">{`A text area`}</label>
+                      <textarea className="tfull" id="uc-tareaname" name="tareaname" rows="4"></textarea>
+                    </div>
+                  </fieldset>
+                  <small>{`Please note that by submitting this form you are agreeing to receive information about ANU related to studying here. View our privacy policy.`}</small>
+                  <p className="text-right">
+                    <input className="anu-btn btn-small" name="savedraft" type="submit" value="Save draft" />{' '}
+                    <input className="anu-btn btn-small" name="submit" type="submit" value="Submit" />
+                  </p>
+                </form>
+                {/* code structure */}
+                <div>
+                  <h2 className="accordion" tabIndex="0">{`View code structure for `}<code>{`.anuform`}</code></h2>
+                  <div className="panel" tabIndex="0">
+                    <pre style={{"overflowX": "auto"}}>
+                      <code>{`
+<form class="anuform" action="#" method="post">
+    <fieldset>
+        <legend>First heading</legend>
+        <div className="field">
+            <label class="req" for="requester-name"><strong>Name</strong></label>
+            <span>
+                <input type="text" class="text tfull" id="requester-name" name="requester-name"
+                    placeholder="Your full name" aria-required="true" required="">
+            </span>
+        </div>
+        <div className="field">
+            <label class="req" for="requester-email">Email address</label>
+            <span>
+                <input type="text" class="text tfull" id="requester-email" name="requester-email"
+                    placeholder="example@example.com.au" aria-required="true" required="">
+            </span>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>2nd section heading</legend>
+        <div className="field">
+            <label for="sitename">Something</label>
+            <span>
+                <input type="text" class="text tfull" id="sitename" name="sitename">
+                <p class="instruction"> some instructions about this something </p>
+            </span>
+        </div>
+        <div className="field">
+            <label for="siteurl">URL</label>
+            <span>
+                <input type="text" class="text tfull" id="siteurl" name="siteurl">
+                <p class="instruction">do not include http://</p>
+            </span>
+        </div>
+        <div className="field">
+            <label for="sub1name">Something else</label>
+            <span>
+                <input type="text" class="text tfull" id="sub1name" name="sub1name">
+                <p class="instruction"> some instructions about this <a href="#">something else</a> </p>
+            </span>
+        </div>
+        <fieldset class="radiofield">
+            <legend>Some radio buttons</legend>
+            <div className="radiobox">
+                <input type="radio" id="bob" name="rad" value="bob"><label for="bob">Bob this is a long title</label>
+                <input type="radio" id="bill" name="rad" value="bill"><label for="bill">Bill</label>
+                <input type="radio" id="jan" name="rad" value="jan"><label for="jan">Jan</label>
+                <input type="radio" id="jill" name="rad" value="jill"><label for="jill">Jill</label>
+            </div>
+        </fieldset>
+        <div className="field">
+            <label for="tareaname">A text area</label>
+            <textarea class="tfull" id="tareaname" name="tareaname" rows="4"></textarea>
+        </div>
+    </fieldset>
+    <small>
+        Please note that by submitting this form you are agreeing to receive information about ANU related to studying
+        here. View our privacy policy.
+    </small>
+    <p class="text-right">
+        <input type="submit" name="savedraft" value="Save draft" class="anu-btn btn-small">&nbsp;
+        <input type="submit" name="submit" value="Submit" class="anu-btn btn-small">
+    </p>
+</form>
+                      `}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold">{' '}</div>
+              {/* anuform-inline-tint */}
+              <div className="pt-2">
+                <h3>{`Example 2: form theme with class `}<code>{`.anuform-inline-tint`}</code></h3>
+                <form action="#" className="anuform-inline-tint" method="post">
+                  <fieldset>
+                    <legend>{`Form`}</legend>
+                    <div className="field">
+                      <label className="req" htmlFor="tint-requester-name"><strong>{`Name`}</strong></label>
+                      <div className="field-span">
+                        <input aria-required="true" className="text tfull" id="tint-requester-name" name="requester-name" placeholder="Your full name" required type="text" />
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label className="req" htmlFor="tint-requester-email">{`Email address`}</label>
+                      <div className="field-span">
+                        <input aria-required="true" className="text tfull" id="tint-requester-email" name="requester-email" placeholder="example@example.com.au" required type="text" />
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <div className="field">
+                      <label htmlFor="tint-sitename">{`Something`}</label>
+                      <div className="field-span">
+                        <input className="text tfull" id="tint-sitename" name="sitename" type="text" />
+                        <p className="instruction">{`some instructions about this something`}</p>
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label htmlFor="tint-siteurl">{`URL`}</label>
+                      <div className="field-span">
+                        <input className="text tfull" id="tint-siteurl" name="siteurl" type="text" />
+                        <p className="instruction">{`do not include http://`}</p>
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label htmlFor="tint-sub1name">{`Something else`}</label>
+                      <div className="field-span">
+                        <input className="text tfull" id="tint-sub1name" name="sub1name" type="text" />
+                        <p className="instruction">{`some instructions about this `}<a href="#">{`something else`}</a></p>
+                      </div>
+                    </div>
+                    <fieldset className="radiofield">
+                      <div className="radiobox">
+                        <input id="tint-bob" name="tint-rad" type="radio" value="bob" /><label htmlFor="tint-bob">{`Bob this is a long title`}</label>
+                        <input id="tint-bill" name="tint-rad" type="radio" value="bill" /><label htmlFor="tint-bill">{`Bill`}</label>
+                        <input id="tint-jan" name="tint-rad" type="radio" value="jan" /><label htmlFor="tint-jan">{`Jan`}</label>
+                        <input id="tint-jill" name="tint-rad" type="radio" value="jill" /><label htmlFor="tint-jill">{`Jill`}</label>
+                      </div>
+                    </fieldset>
+                    <div className="field">
+                      <label htmlFor="tint-tareaname">{`A text area`}</label>
+                      <textarea className="tfull" id="tint-tareaname" name="tareaname" rows="4"></textarea>
+                    </div>
+                  </fieldset>
+                  <small>{`Please note that by submitting this form you are agreeing to receive information about ANU related to studying here. View our privacy policy.`}</small>
+                  <p className="text-right">
+                    <input className="anu-btn-white btn-small" name="savedraft" type="submit" value="Save draft" />{' '}
+                    <input className="anu-btn-black btn-small" name="submit" type="submit" value="Submit" />
+                  </p>
+                </form>
+              </div>
+              <div className="divider-gold mt-2">{' '}</div>
+              {/* anuform-inline-black */}
+              <div className="pt-2">
+                <h3>{`Example 3: form theme with class `}<code>{`.anuform-inline-black`}</code></h3>
+                <form action="#" className="anuform-inline-black" method="post">
+                  <fieldset>
+                    <legend>{`Form`}</legend>
+                    <div className="field">
+                      <label className="req" htmlFor="black-requester-name"><strong>{`Name`}</strong></label>
+                      <div className="field-span">
+                        <input aria-required="true" className="text tfull" id="black-requester-name" name="requester-name" placeholder="Your full name" required type="text" />
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label className="req" htmlFor="black-requester-email">{`Email address`}</label>
+                      <div className="field-span">
+                        <input aria-required="true" className="text tfull" id="black-requester-email" name="requester-email" placeholder="example@example.com.au" required type="text" />
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <div className="field">
+                      <label htmlFor="black-sitename">{`Something`}</label>
+                      <div className="field-span">
+                        <input className="text tfull" id="black-sitename" name="sitename" type="text" />
+                        <p className="instruction">{`some instructions about this something`}</p>
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label htmlFor="black-siteurl">{`URL`}</label>
+                      <div className="field-span">
+                        <input className="text tfull" id="black-siteurl" name="siteurl" type="text" />
+                        <p className="instruction">{`do not include http://`}</p>
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label htmlFor="black-sub1name">{`Something else`}</label>
+                      <div className="field-span">
+                        <input className="text tfull" id="black-sub1name" name="sub1name" type="text" />
+                        <p className="instruction">{`some instructions about this `}<a href="#">{`something else`}</a></p>
+                      </div>
+                    </div>
+                    <fieldset className="radiofield">
+                      <div className="radiobox">
+                        <input id="black-bob" name="black-rad" type="radio" value="bob" /><label htmlFor="black-bob">{`Bob this is a long title`}</label>
+                        <input id="black-bill" name="black-rad" type="radio" value="bill" /><label htmlFor="black-bill">{`Bill`}</label>
+                        <input id="black-jan" name="black-rad" type="radio" value="jan" /><label htmlFor="black-jan">{`Jan`}</label>
+                        <input id="black-jill" name="black-rad" type="radio" value="jill" /><label htmlFor="black-jill">{`Jill`}</label>
+                      </div>
+                    </fieldset>
+                    <div className="field">
+                      <label htmlFor="black-tareaname">{`A text area`}</label>
+                      <textarea className="tfull" id="black-tareaname" name="tareaname" rows="4"></textarea>
+                    </div>
+                  </fieldset>
+                  <small>{`Please note that by submitting this form you are agreeing to receive information about ANU related to studying here. View our privacy policy.`}</small>
+                  <p className="text-right">
+                    <input className="anu-btn-white btn-small" name="savedraft" type="submit" value="Save draft" />{' '}
+                    <input className="anu-btn-black btn-small" name="submit" type="submit" value="Submit" />
+                  </p>
+                </form>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

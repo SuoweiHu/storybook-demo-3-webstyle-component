@@ -1,0 +1,471 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Graphics/Image" />
+
+
+<Unstyled>
+
+# Image
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <div className="row equal">
+              <div className="col-lg-8">
+                <div>
+                  <p className="msg-info mt-0">
+                    {`Please refer to the Image use checklist to ensure your image use is compliant and appropriate.`}
+                  </p>
+                  <div className="pt-1">
+                    <h3>{`Appropriate image use`}</h3>
+                    <p>
+                      {`The ANU website should be a content-rich site that provides our readers with valuable information. As such, images for purely decorative purposes should be kept to a minimum. Images should also:`}
+                    </p>
+                    <ul>
+                      <li>{`be relevant to the content and audience`}</li>
+                      <li>{`not clutter the page`}</li>
+                      <li>{`contain a single picture, not a collage or collection of pictures within the one image`}</li>
+                      <li>{`be high-quality imagery (not sourced from clip art libraries or scanned from print sources)`}</li>
+                    </ul>
+                  </div>
+                  <div className="pt-1">
+                    <h3>{`Image quality`}</h3>
+                    <p>
+                      {`For mobile browsers, where users might zoom in on your content, or on computers with high-resolution screens, you should consider uploading your images at twice the resolution of the space that you want to fill on the screen. For example, if your image is to be displayed at 200 x 200 pixels, you would upload a file to the server which is 400 x 400 pixels. When the image is placed inside a width or grid class, it will be scaled down automatically.`}
+                    </p>
+                  </div>
+                  <div className="pt-1">
+                    <h3>{`Image libraries`}</h3>
+                    <p>
+                      {`Feel free to use any images from these 2 libraries, they are license-free, as they are owned by ANU. *If you are using images from the internet, please keep in mind about the copyright issue.`}
+                    </p>
+                    <ul className="mb-0">
+                      <li>
+                        <a href="https://www.flickr.com/photos/anu-image-library/" target="_blank">
+                          {`ANU Flickr`}
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://anuphotos.photoshelter.com/galleries" target="_blank">
+                          {`ANU Photoshelter`}
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="pt-1 pb-1">
+                    <h3>{`Icons`}</h3>
+                    <p>
+                      {`A `}
+                      <a href="https://webpublishing.anu.edu.au/web-style-guide/icons">{`standard set of icons`}</a>
+                      {` is available for use in ANU applications and websites which includes social media, RSS and icons reserved for specific uses. Please `}
+                      <a href="https://webpublishing.anu.edu.au/contact-support/">{`contact us`}</a>
+                      {` to organise a set of icons suitable for your needs.`}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="box bg-tint p-2">
+                  <h4 className="fw-medium">{`Image use checklist`}</h4>
+                  <ul className="list-circle">
+                    <li>{`Verify the image has necessary copyright or licensing permissions.`}</li>
+                    <li>{`Ensure proper attribution is given if required by the license.`}</li>
+                    <li>{`Confirm that anyone featured in the image has given explicit consent for its use.`}</li>
+                    <li>{`Remove the image if consent is withdrawn.`}</li>
+                    <li>{`Check the resolution: avoid pixelated or blurred images.`}</li>
+                    <li>{`Use appropriate formats (e.g., JPEG, PNG) and optimised size.`}</li>
+                    <li>{`Identify the focal point to prevent key details from being cut off on different screen sizes (e.g., mobile, tablet, desktop.)`}</li>
+                    <li>{`Provide descriptive alt text for the image to improve SEO and accessibility for screen readers.`}</li>
+                    <li>{`Enable lazy loading to improve page speed.`}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`General settings`}</h2>
+              <p>
+                {`By default, images will be inline with no borders. You can make images display as a block using the `}
+                <code>{`block`}</code>
+                {` class (eg `}
+                <code>{`img class="block"`}</code>
+                {`).`}
+              </p>
+              <h3 className="pt-1">{`Borders`}</h3>
+              <p className="mb-0">
+                {`To add borders use the relevant border class. For example, to add a border around an image, use`}
+              </p>
+              <pre className="m-0">
+                <code>{`<img class="bdr-solid bdr-grey"...`}</code>
+              </pre>
+              <p>
+                {`View more border classes `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/borders">{`here`}</a>
+                {`.`}
+              </p>
+              <div className="divider-gold mb-1">{`\u00A0`}</div>
+              <h3>{`Spacing`}</h3>
+              <p className="mb-0">
+                {`You can add spacing around images by using the relevant `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/spacing">{`spacing`}</a>
+                {` classes. For example, to add a 30px padding to the top of an image, use`}
+              </p>
+              <pre className="m-0">
+                <code>{`<img class="pt-3"...`}</code>
+              </pre>
+              <p>
+                {`The `}
+                <code>{`3`}</code>
+                {` in `}
+                <code>{`pt-3`}</code>
+                {` can also be replaced by other figures between `}
+                <code>{`0`}</code>
+                {` - `}
+                <code>{`5`}</code>
+                {`, which refers to the padding from 0 to 50 px.`}
+              </p>
+              <div className="divider-gold mb-1">{`\u00A0`}</div>
+              <h3>{`Alignment`}</h3>
+              <p className="mb-0">
+                {`To align images, use the relevant `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/alignment">{`alignment`}</a>
+                {` classes. For example, to put an image on the right, use`}
+              </p>
+              <pre className="m-0">
+                <code>{`<img class="right"...`}</code>
+              </pre>
+            </Tab>
+            <Tab label="Customisation">
+              <h2 className="pt-2">{`Image sizes`}</h2>
+              <h3 className="pt-1" id="responsive-image">{`Responsive image`}</h3>
+              <p>
+                {`Responsive images will automatically adjust to fit the size of the `}
+                <code>{`<div> `}</code>
+                {` that contains the image. This means you should not specify `}
+                <code>{`width`}</code>
+                {` and `}
+                <code>{`height`}</code>
+                {` properties in the <img/> tag.`}
+              </p>
+              <p>
+                {`As we covered in the `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/grid-layouts">{`Grid layouts`}</a>
+                {`: we build our pages based on the grid system, and it is fully responsive. This makes the content (in this case it's an image) inside these columns fully responsive too. Below is an example:`}
+              </p>
+              <div className="row equal">
+                <div className="col-6">
+                  <pre className="mb-0" style={{ overflowX: "auto" }}>
+                    <code>{`<div class="row">
+    <div className="col-4">
+        <img src="myimage.jpg" alt="description">
+    </div>
+</div>`}</code>
+                  </pre>
+                </div>
+                <div className="col-6">
+                  <p className="p-2 bg-tint">
+                    {`In this example, the width of the image called 'myimage.jpg' will take up a 4-column size (the image ratio maintains, which makes the height of this image auto), and since the viewport is divided into 12 columns, this image takes up 1/3 of the viewport.`}
+                  </p>
+                </div>
+              </div>
+              <div className="divider-gold mt-2 mb-1">{`\u00A0`}</div>
+              <h3>{`Fixed image size`}</h3>
+              <p>
+                {`Although we recommend you use responsive images as much as possible, there are certain cases you might still want to have fixed-size images, such as buttons and portraits. In this case, you can use special width classes for images which will keep the image the same width (in pixels) on all responsive screen sizes. Classes are available for use in <img>, <div> and <video> tags.`}
+              </p>
+              <div className="pb-2">
+                <img className="w240px" src="https://picsum.photos/seed/placeholder/800/450" />
+                <code>{` <img class="w240px" src="myimage.jpg" alt="description"> `}</code>
+              </div>
+              <div className="box-bdr-gold">
+                <h4>{`Available fixed width classes`}</h4>
+                <p>
+                  {`Classes are available for the following pixel widths by adding 'w' in front and 'px' behind (e.g. `}
+                  <code>{`class="w16px"`}</code>
+                  {`) :`}
+                  <br />
+                  {`10, 12, 16, 20, 24, 32, 48, 50, 64, 75, 80, 100, 120, 150, 180, 200, 220, 240, 280, 320, 360, 440`}
+                </p>
+              </div>
+              <h2 className="pt-3">{`Image ratios & dimensions`}</h2>
+              <p>
+                {`Images should adhere to the following image ratios to ensure they fit well with the web design grid and have visual balance. We introduced a set of ratio classes. they are `}
+                <code>{`ratio-16-9`}</code>
+                {`, `}
+                <code>{`ratio-4-3`}</code>
+                {`, `}
+                <code>{`ratio-2-1`}</code>
+                {`, `}
+                <code>{`ratio-4-1`}</code>
+                {`, `}
+                <code>{`ratio-1`}</code>
+                {`, `}
+                <code>{`ratio-2-3`}</code>
+                {`.`}
+                <br />
+                {`You might need width sizing classes, such as `}
+                <code>{`w100`}</code>
+                {` to make above classes work.`}
+              </p>
+              <div className="row g-4">
+                <div className="col-md-2 col-sm-4">
+                  <div className="overlap">
+                    <img
+                      alt="placeholder-ratio-16-9"
+                      className="ratio-16-9 w100"
+                      src="https://picsum.photos/seed/placeholder/800/450"
+                    />
+                    <p className="bg-black p-1 overlap-child w100">{`ratio-16-9`}</p>
+                  </div>
+                </div>
+                <div className="col-md-2 col-sm-4">
+                  <div className="overlap">
+                    <img
+                      alt="placeholder-ratio-4-3"
+                      className="ratio-4-3 w100"
+                      src="https://picsum.photos/seed/placeholder/800/450"
+                    />
+                    <p className="bg-black p-1 overlap-child w100">{`ratio-4-3`}</p>
+                  </div>
+                </div>
+                <div className="col-md-2 col-sm-4">
+                  <div className="overlap">
+                    <img
+                      alt="placeholder-ratio-2-1"
+                      className="ratio-2-1 w100"
+                      src="https://picsum.photos/seed/placeholder/800/450"
+                    />
+                    <p className="bg-black p-1 overlap-child w100">{`ratio-2-1`}</p>
+                  </div>
+                </div>
+                <div className="col-md-2 col-sm-4">
+                  <div className="overlap">
+                    <img
+                      alt="placeholder-ratio-4-1"
+                      className="ratio-4-1 w100"
+                      src="https://picsum.photos/seed/placeholder/800/450"
+                    />
+                    <p className="bg-black p-1 overlap-child w100">{`ratio-4-1`}</p>
+                  </div>
+                </div>
+                <div className="col-md-2 col-sm-4">
+                  <div className="overlap">
+                    <img
+                      alt="placeholder-ratio-1"
+                      className="ratio-1 w100"
+                      src="https://picsum.photos/seed/placeholder/800/450"
+                    />
+                    <p className="bg-black p-1 overlap-child w100">{`ratio-1`}</p>
+                  </div>
+                </div>
+                <div className="col-md-2 col-sm-4">
+                  <div className="overlap">
+                    <img
+                      alt="placeholder-ratio-2-3"
+                      className="ratio-2-3 w100"
+                      src="https://picsum.photos/seed/placeholder/800/450"
+                    />
+                    <p className="bg-black p-1 overlap-child w100">{`ratio-2-3`}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-3">
+                <h3>{`Small images & pictograms`}</h3>
+                <p>
+                  {`All small images (100px wide or less) should follow a 1:1 ratio - no smaller than 50px by 50px. Images smaller than 100px are not very legible and so should only be used for abstract images, icons or pictograms.`}
+                </p>
+                <p>{`Pictograms should have a solid dark background with a white image.`}</p>
+                <p>{`The following are examples of small images, but other sizes are acceptable.`}</p>
+                <div className="row">
+                  <div className="col">
+                    <p>{`100x100px`}</p>
+                    <p>
+                      <img
+                        alt="example of a 100 x 100px image"
+                        className="w100px"
+                        src="https://picsum.photos/seed/square/400/400"
+                      />
+                    </p>
+                  </div>
+                  <div className="col">
+                    <p>{`75x75px`}</p>
+                    <p>
+                      <img
+                        alt="example of a 75 x 75px image"
+                        className="w75px"
+                        src="https://picsum.photos/seed/square/400/400"
+                      />
+                    </p>
+                  </div>
+                  <div className="col">
+                    <p>{`50x50px`}</p>
+                    <p>
+                      <img
+                        alt="example of a 50 x 50px image"
+                        className="w50px"
+                        src="https://picsum.photos/seed/square/400/400"
+                      />
+                    </p>
+                  </div>
+                  <div className="col">
+                    <p>{`Pictogram`}</p>
+                    <p>
+                      <img
+                        alt="example of a pictogram"
+                        src="https://picsum.photos/seed/icon/24/24"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-0 mt-2">
+                <div className="box-header-tint">
+                  <span className="large">{`Ratio exemptions`}</span>
+                </div>
+                <div className="box-bdr-gold">
+                  <p>
+                    {`Adhering to the ratio rules is not possible for all image types. In these cases, only the width of the image should be set to the `}
+                    <a href="#responsive-image">{`relevant grid class`}</a>
+                    {`. Examples include:`}
+                  </p>
+                  <ul>
+                    <li>{`portrait photography`}</li>
+                    <li>{`diagrams and scientific illustrations`}</li>
+                    <li>{`book covers`}</li>
+                    <li>{`flags`}</li>
+                    <li>{`artistic works (such as paintings)`}</li>
+                  </ul>
+                  <p>
+                    <a href="https://webpublishing.anu.edu.au/contact-support/">{`Contact us`}</a>
+                    {` if you are unsure about the applicable ratio.`}
+                  </p>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Accessibility">
+              <h2 className="pt-2">{`Image accessibility`}</h2>
+              {/* Alt tags */}
+              <p>
+                {`Images and graphics make content more pleasant and easier to understand for many people, and it is important to make your images accessible.`}
+              </p>
+              <div>
+                <h3>{`Alt tags`}</h3>
+                <p>
+                  {`All images must have an `}
+                  <code>{`alt`}</code>
+                  {` attribute in the `}
+                  <code>{`<img>`}</code>
+                  {` tag. Where the image is used for decoration only (or contains content already described in the surrounding text) the `}
+                  <code>{`alt`}</code>
+                  {` attribute should be empty.`}
+                </p>
+                <p className="mb-0">{`For example, a decorative image would have the code`}</p>
+                <pre className="mb-0" style={{ overflowX: "auto" }}>
+                  <code>{`<img class="right" src="frogs.jpg" alt="" ...`}</code>
+                </pre>
+                <p className="mb-0">{`while a descriptive image would have the code`}</p>
+                <pre className="mb-0" style={{ overflowX: "auto" }}>
+                  <code>{`<img alt="Screenshot of setting a blank alt attribute in Dreamweaver" ...`}</code>
+                </pre>
+                <img
+                  alt="Screenshot of setting a blank alt attribute in Dreamweaver"
+                  src="https://picsum.photos/seed/alt/600/400"
+                />
+                <p className="caption">
+                  {`In Dreamweaver, you can set up an empty alt attribute using the <empty> attribute in the Properties section.`}
+                </p>
+                <p>
+                  {`An `}
+                  <code>{`alt`}</code>
+                  {` attribute should be short and concise. If you would like to provide a longer description, consider adding this to the page content or using a `}
+                  <a href="#captions">{`caption`}</a>
+                  {`.`}
+                </p>
+                <p>
+                  {`If an image contains text or information, this should be reflected in the `}
+                  <code>{`alt`}</code>
+                  {` attribute.`}
+                </p>
+              </div>
+              <div className="divider-gold mt-2 mb-1">{`\u00A0`}</div>
+              {/* Linked images */}
+              <div>
+                <h3>{`Linked images`}</h3>
+                <p className="mb-0">
+                  {`Whenever an image is a link, the function of the image must be presented in the alternative text that reflects the link. An image within a link should never have an empty or null alt attribute (`}
+                  <code>{`alt=""`}</code>
+                  {`) unless the function of the link is provided in text within the same link, such as a `}
+                  <a href="#captions">{`caption`}</a>
+                  {`.`}
+                </p>
+                <p>
+                  {`This is because a screen reader must read something to identify the link, and might read the file location and name of the image if an alt attribute is not provided. And remember that the link may be read out of context of the surrounding text.`}
+                </p>
+                <p className="msg-info">
+                  {`When possible, avoid using 'link to' or 'click this image' or similar wording in the alt attribute. This is redundant as `}
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/links">{`links`}</a>
+                  {` are identified as links by screen readers and should be visually apparent to sighted users.`}
+                </p>
+                <p>
+                  {`Take the following picture as an example, once the image is linked to a url by determining its `}
+                  <code>{`src`}</code>
+                  {` attribute, it makes the image clickable.`}
+                </p>
+                <div className="row equal">
+                  <div className="col-6">
+                    <a href="#">
+                      <img
+                        alt="New ANU Services website is here"
+                        src="https://picsum.photos/seed/placeholder/800/450"
+                      />
+                    </a>
+                  </div>
+                  <div className="col-6">
+                    <pre className="mb-0" style={{ overflowX: "auto" }}>
+                      <code>{`<a href="#">
+    <img alt="New ANU Services website is here" src="..."/>
+</a>`}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold mt-2 mb-1">{`\u00A0`}</div>
+              {/* Captions */}
+              <div id="captions">
+                <h3>{`Captions`}</h3>
+                <p className="mb-0">
+                  {`To add a visible caption, add a paragraph beneath the image with the caption style`}
+                </p>
+                <pre className="mb-0" style={{ overflowX: "auto" }}>
+                  <code>{`<p class="caption"...`}</code>
+                </pre>
+                <p>
+                  {`You may need to group the image and caption in a `}
+                  <code>{`<div>`}</code>
+                  {` to make sure they stay together. Or, if accompanying text is used, the image and text can be placed into the one `}
+                  <code>{`<a>`}</code>
+                  {` tag.`}
+                </p>
+                <p>
+                  {`A caption should provide more detail of an image than an `}
+                  <code>{`alt`}</code>
+                  {` attribute - the caption and `}
+                  <code>{`alt`}</code>
+                  {` attribute should not be the same.`}
+                </p>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

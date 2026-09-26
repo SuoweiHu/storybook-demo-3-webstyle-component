@@ -1,0 +1,188 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from './TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Layout/Equal Column Height" />
+
+# Equal Column Height
+
+<Unstyled>
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>{`When we are using `}<a href="https://webpublishing.anu.edu.au/web-style-guide/grid-layouts">{`grid system`}</a>{` to structure our web elements, we can place more than one column items on the same horizontal level. It is easy to control the width of each column item, but it may not be the same for the height.`}</p>
+            <p>{`The height of each column item depends on its content length. Different content lengths will lead to different container heights and sometimes it will make our webpage not visually pleasing.`}</p>
+            <p>{`If you are having multiple column items on the same horizontal level, it is important to make all columns equal height.`}</p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Overview`}</h2>
+              <p>{`We created a class called `}<code>{`.equal`}</code>{` which will make all column items that were presented in the same `}<code>{`.row`}</code>{` equal height. Please see below as an example:`}</p>
+              {/* 3 column without equal height */}
+              <div className="pt-2">
+                <h3>{`3-column row `}<strong>{`without`}</strong>{` equal height`}</h3>
+                <div className="row">
+                  <div className="col-md-6 col-lg-4 col-12">
+                    <div className="bg-tint p-1 mb-2">
+                      <h2 className="pt-1">{`What is Lorem Ipsum?`}</h2>
+                      <p>{`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}</p>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-4 col-12">
+                    <div className="bg-tint p-1 mb-2">
+                      <h2 className="pt-1">{`What is Lorem Ipsum?`}</h2>
+                      <p>{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}</p>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-4 col-12">
+                    <div className="bg-tint p-1 mb-2">
+                      <h2 className="pt-1">{`What is Lorem Ipsum?`}</h2>
+                      <p>{`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* 3 column with equal height */}
+              <div className="pt-2">
+                <h3>{`3-column row `}<strong>{`with`}</strong>{` equal height (using .equal class)`}</h3>
+                <div className="row equal">
+                  <div className="col-md-6 col-lg-4 col-12">
+                    <div className="bg-tint p-1 mb-2">
+                      <h2 className="pt-1">{`What is Lorem Ipsum?`}</h2>
+                      <p>{`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}</p>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-4 col-12">
+                    <div className="bg-tint p-1 mb-2">
+                      <h2 className="pt-1">{`What is Lorem Ipsum?`}</h2>
+                      <p>{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}</p>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-4 col-12">
+                    <div className="bg-tint p-1 mb-2">
+                      <h2 className="pt-1">{`What is Lorem Ipsum?`}</h2>
+                      <p>{`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Code structure */}
+              <div className="row pt-2">
+                <div className="col-12 col-lg-6">
+                  <div className="box-header-black">
+                    <span className="large">{`Code structure: without .equal`}</span>
+                  </div>
+                  <div className="box-bdr-black">
+                    <pre style={{ overflowX: "auto" }}>
+                      <code>{`<div class="container">
+    <div className="row">
+        <div className="col">...</div>
+        <div className="col">...</div>
+        <div className="col">...</div>
+    </div>
+</div>`}</code>
+                    </pre>
+                  </div>
+                </div>
+                <div className="col-12 col-lg-6">
+                  <div className="box-header-black">
+                    <span className="large">{`Code structure: with .equal`}</span>
+                  </div>
+                  <div className="box-bdr-black">
+                    <pre style={{ overflowX: "auto" }}>
+                      <code>{`<div class="container">
+    <div className="row equal">
+        <div className="col">...</div>
+        <div className="col">...</div>
+        <div className="col">...</div>
+    </div>
+</div>`}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Style usage">
+              <h2 className="pt-2">{`Style usage`}</h2>
+              {/* 3-column (equal height) with description */}
+              <div className="container">
+                <h3>{`1. 3-column (equal height) with description`}</h3>
+                <div className="row equal g-4">
+                  <div className="col-md-6 col-lg-4 col-12">
+                    <div className="shadow-light">
+                      <img className="w100" src="https://picsum.photos/seed/baker/400/600" alt="" />
+                      <div className="pt-2 pb-2 pl-3 pr-3">
+                        <p className="mt-0 small text-unigrey"><strong>{`July 2022 - Present`}</strong></p>
+                        <h4>{`Marie Reay in Papua New Guinea: Exploring Cultures Through Objects`}</h4>
+                        <p className="small uppercase text-unigrey">{`Online exhibition`}</p>
+                        <p className="text-right readmore"><a href="#">{`Read More `}</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-4 col-12">
+                    <div className="shadow-light">
+                      <img className="w100" src="https://picsum.photos/seed/baker/400/600" alt="" />
+                      <div className="pt-2 pb-2 pl-3 pr-3">
+                        <p className="mt-0 small text-unigrey"><strong>{`July 2022 - Present`}</strong></p>
+                        <h4>{`Marie Reay in Papua New Guinea: Exploring Cultures Through Objects`}</h4>
+                        <p className="small uppercase text-unigrey">{`Online exhibition`}</p>
+                        <p className="text-right readmore"><a href="#">{`Read More `}</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-4 col-12">
+                    <div className="shadow-light">
+                      <img className="w100" src="https://picsum.photos/seed/baker/400/600" alt="" />
+                      <div className="pt-2 pb-2 pl-3 pr-3">
+                        <p className="mt-0 small text-unigrey"><strong>{`July 2022 - Present`}</strong></p>
+                        <h4>{`Marie Reay in Papua New Guinea: Exploring Cultures Through Objects`}</h4>
+                        <p className="small uppercase text-unigrey">{`Online exhibition`}</p>
+                        <p className="text-right readmore"><a href="#">{`Read More `}</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* 3-column (equal height) with title only */}
+              <div className="container pt-2">
+                <h3>{`2. 3-column (equal height) with title only`}</h3>
+                <div className="row equal g-4">
+                  <div className="col-md-6 col-lg-4 col-sm-12">
+                    <div className="bg-black">
+                      <img className="w100" src="https://picsum.photos/seed/wharf/400/600" alt="" />
+                      <div className="pt-2 pb-2 pl-3 pr-3">
+                        <h3 className="my-0"><a href="#" tabIndex={-1}>{`Noel Butlin Archives`}</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-4 col-sm-12">
+                    <div className="bg-black">
+                      <img className="w100" src="https://picsum.photos/seed/baker/400/600" alt="" />
+                      <div className="pt-2 pb-2 pl-3 pr-3">
+                        <h3 className="my-0"><a href="#" tabIndex={-1}>{`University Archives`}</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-4 col-sm-12">
+                    <div className="bg-black">
+                      <img className="w100" src="https://picsum.photos/seed/nakamal/400/600" alt="" />
+                      <div className="pt-2 pb-2 pl-3 pr-3">
+                        <h3 className="my-0"><a href="#" tabIndex={-1}>{`Pacific Research Archives `}</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</Unstyled>

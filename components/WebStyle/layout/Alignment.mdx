@@ -1,0 +1,338 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from './TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Layout/Alignment" />
+
+
+<Unstyled>
+
+# Alignment
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>
+              {`We've introduced a large set of classes that allow you to align your elements, such as texts, boxes, pull quotes, tables and images, etc.`}
+              <br />
+              {`
+If you'd like to add whitespaces to your elements, please read our documentation on `}
+              <a href="https://dp9-sandbox-dev.anu.edu.au/web-style-guide/spacing">{`Spacing`}</a>
+              {`.`}
+            </p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Overview`}</h2>
+              <h3>{`Text alignment`}</h3>
+              <p>{`You can use a set of text alignment classes to align the inner content of a block element. Text is left-aligned by default, but there are additional classes that you can apply.`}</p>
+              <ul>
+                <li>
+                  <code>{`<text-left>`}</code>
+                  {`: Content aligns along the left side.`}
+                </li>
+                <li>
+                  <code>{`<text-right>`}</code>
+                  {`: Content aligns along the right side.`}
+                </li>
+                <li>
+                  <code>{`<text-center>`}</code>
+                  {`: Content are center-aligned between the left and right edges.`}
+                </li>
+              </ul>
+              <p>{`Justified text is not included in the ANU web style because inappropriate use can cause difficulty in reading.`}</p>
+              <div className="divider-gold mt-1">{`\u00A0`}</div>
+              <h3 className="pt-2">{`Float`}</h3>
+              <p>
+                {`The set of float classes can be used for positioning and formatting your content. Please note: text alignment classes apply to the `}
+                <em>{`content`}</em>
+                {` of a container, while float classes apply to the container itself. Generally speaking, float classes are widely used to wrap text around images.`}
+              </p>
+              <ul>
+                <li>
+                  <code>{`<left>`}</code>
+                  {`: the element floats to the left of its container.`}
+                </li>
+                <li>
+                  <code>{`<right>`}</code>
+                  {`: the element floats to the right of its container.`}
+                </li>
+              </ul>
+              <div className="divider-gold mt-1">{`\u00A0`}</div>
+              <h3 className="pt-2">{`Clear & noclear`}</h3>
+              <p>{`When we use the float classes, we need to consider where we want to place the next element. These classes specify what would happen with the element next to the floating element. You can either use:`}</p>
+              <ul>
+                <li>
+                  <code>{`<clear>`}</code>
+                  {`: force the element goes to the next line.`}
+                </li>
+                <li>
+                  <code>{`<noclear`}</code>
+                  {`>: force the element stays on the same line.`}
+                </li>
+              </ul>
+              <div className="divider-gold mt-1">{`\u00A0`}</div>
+              <h3 className="pt-2">{`Justify content`}</h3>
+              <p>
+                {`If you don't want to wrap text around images, you can: put the image in a grid column, and text in another column (using a `}
+                <a href="https://dp9-sandbox-dev.anu.edu.au/web-style-guide/grid-layouts">{`grid`}</a>
+                {` class). You can apply the following classes in the parent element to justify your content.`}
+              </p>
+              <ul>
+                <li>
+                  <code>{`<justify-content-start>`}</code>
+                  {`: All elements inside will align along the left side of this current container.`}
+                </li>
+                <li>
+                  <code>{`<justify-content-center>`}</code>
+                  {`: All elements inside will be center-aligned within this current container.`}
+                </li>
+                <li>
+                  <code>{`<justify-content-end>`}</code>
+                  {`: All elements inside will align along the right side of this current container.`}
+                </li>
+              </ul>
+              <div className="divider-gold mt-1">{`\u00A0`}</div>
+              <h3 className="pt-2">{`Horizontal center alignment`}</h3>
+              <p>{`In order to center align an element, please use the following class:`}</p>
+              <ul>
+                <li>
+                  <code>{`<center>`}</code>
+                  {`: horizontally center an element.`}
+                </li>
+              </ul>
+              <div className="divider-gold mt-1">{`\u00A0`}</div>
+              <h3 className="pt-2">{`Vertical alignment`}</h3>
+              <p>{`Use the following class to vertical-align an image to a line of text, Useful for small icons and other inline images.`}</p>
+              <ul>
+                <li>
+                  <code>{`<absmiddle>`}</code>
+                  {`: align the vertical centre of an image only to the vertical centre of a line of text`}
+                </li>
+              </ul>
+            </Tab>
+            <Tab label="Use cases">
+              <h2 className="pt-2">{`Use cases`}</h2>
+              {/*Text alignment*/}
+              <div className="pt-2">
+                <h3>{`Text alignment`}</h3>
+                <p className="text-left bg-tint p-2">{`<p class="text-left">Left-aligned text</p>`}</p>
+                <p className="text-right bg-tint p-2">{`<p class="text-right">Right-aligned text</p>`}</p>
+                <p className="text-center bg-tint p-2">{`<p class="text-center">Centre-aligned text</p>`}</p>
+              </div>
+              <div className="divider-gold mt-1">{`\u00A0`}</div>
+              {/*Float*/}
+              <div className="pt-2">
+                <h3>{`Float`}</h3>
+                <div className="row">
+                  <div className="col-sm-4">
+                    <img alt="icon float to the left of the text" className="left pr-1" src="https://picsum.photos/seed/icon/24/24" />
+                    <p>{`In this example, the image floats to the left-hand side of the text, and we add 10px padding to the right-hand side of the image.`}</p>
+                  </div>
+                  <div className="col-sm-8">
+                    <pre className="mb-0 pt-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+                          <div>
+                              <img class="left pr-1" src="myimage.jpg" / >
+                              <p>
+                              In this example, the image floats to the left-hand side of the text,
+                              and we add 10px padding to the right-hand side of the image.
+                              </p>
+                          </div>
+
+                          `}</code>
+                    </pre>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-sm-4">
+                    <img alt="icon float to the right of the text" className="right pl-1" src="https://picsum.photos/seed/icon/24/24" />
+                    <p>{`In this example, the image floats to the right-hand side of the text, and we add 10px padding to the left-hand side of the image.`}</p>
+                  </div>
+                  <div className="col-sm-8">
+                    <pre className="mb-0 pt-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+                          <div>
+                              <img class="right pl-1" src="myimage.jpg" / >
+                              <p>
+                              In this example, the img floats to the right-hand side of the text,
+                              and we add 10px padding to the left-hand side of the image.
+                              </p>
+                          </div>
+                          `}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold mt-1">{`\u00A0`}</div>
+              {/*Clear & noclear*/}
+              <div className="pt-2">
+                <h3>{`Clear & noclear`}</h3>
+                <div className="row">
+                  <div className="col-sm-4">
+                    <img alt="text appears below the icon" className="left pr-1" src="https://picsum.photos/seed/icon/24/24" />
+                    <p className="clear">{`In this example, the text appears below the icon by using the clear class.`}</p>
+                  </div>
+                  <div className="col-sm-8">
+                    <pre className="mb-0 pt-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+                          <div>
+                              <img class="left pr-1" src="myimage.jpg" / >
+                              <p class="clear">
+                              In this example, the text appears below the icon by using the clear class.
+                              </p>
+                          </div>
+
+                          `}</code>
+                    </pre>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-sm-4">
+                    <img alt="text appears below the icon" className="left pr-1" src="https://picsum.photos/seed/icon/24/24" />
+                    <p className="noclear">{`In this example, the text still appears on the right-hand side of the icon by using the noclear class.`}</p>
+                  </div>
+                  <div className="col-sm-8">
+                    <pre className="mb-0 pt-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+                          <div>
+                              <img class="left pr-1" src="myimage.jpg" / >
+                              <p class="noclear">
+                              In this example, the text still appears on the right-hand side of the icon by using the noclear class.
+                              </p>
+                          </div>
+
+                          `}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold mt-1">{`\u00A0`}</div>
+              {/*Justify content*/}
+              <div className="pt-2">
+                <h3>{`Justify content`}</h3>
+                <div className="row">
+                  <div className="col-sm-6 bg-tint">
+                    <div className="row justify-content-start">
+                      <div className="col-2">
+                        <img className="left pr-1" src="https://picsum.photos/seed/icon/24/24" />
+                      </div>
+                      <div className="col-6">
+                        <p>{`In this example, the icon and the text are aligned along the left side of their parent container.`}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-6">
+                    <pre className="mb-0 pt-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+                      <div className="row justify-content-start" >
+                          <div className="col-2">
+                              <img src=".../>
+                          </div>
+                          <div className="col-6">
+                              <p>Some text in here...</p>
+                          </div>
+                      </div>
+                      `}</code>
+                    </pre>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-sm-6 mt-4 bg-tint">
+                    <div className="row justify-content-center">
+                      <div className="col-2">
+                        <img className="left pr-1" src="https://picsum.photos/seed/icon/24/24" />
+                      </div>
+                      <div className="col-6">
+                        <p>{`In this example, the icon and the text are aligned to the centre of their parent container.`}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-6">
+                    <pre className="mb-0 pt-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+                      <div className="row justify-content-center" >
+                          <div className="col-2">
+                              <img src=".../>
+                          </div>
+                          <div className="col-6">
+                              <p>Some text in here...</p>
+                          </div>
+                      </div>
+                      `}</code>
+                    </pre>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-sm-6 mt-4 bg-tint">
+                    <div className="row justify-content-end">
+                      <div className="col-2">
+                        <img className="left pr-1" src="https://picsum.photos/seed/icon/24/24" />
+                      </div>
+                      <div className="col-6">
+                        <p>{`In this example, the icon and the text are aligned along the right side of their parent container.`}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-6">
+                    <pre className="mb-0 pt-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+                      <div className="row justify-content-end" >
+                          <div className="col-2">
+                              <img src=".../>
+                          </div>
+                          <div className="col-6">
+                              <p>Some text in here...</p>
+                          </div>
+                      </div>
+                      `}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold mt-1">{`\u00A0`}</div>
+              {/*Center alignment*/}
+              <div className="pt-2">
+                <h3 className="mb-2">{`Horizontal centre alignment`}</h3>
+                <div className="divider-black w60 center">{`\u00A0`}</div>
+                <p>{`In this example, this divider has been centre aligned by using the following class.`}</p>
+                <code>{`<div class="divider-gold w60 center" ></div> `}</code>
+              </div>
+              <div className="divider-gold mt-1">{`\u00A0`}</div>
+              {/*Vertical alignment*/}
+              <div className="pt-2">
+                <h3>{`Vertical alignment`}</h3>
+                <div className="row">
+                  <div className="col-sm-8">
+                    <p>
+                      <img className="absmiddle w100px pr-2" src="https://picsum.photos/seed/square/400/400" />
+                      {`In this example,the image is vertically centre-aligned to this line of text.`}
+                    </p>
+                  </div>
+                  <div className="col-sm-4">
+                    <pre className="mb-0 pt-0" style={{"overflowX": "auto"}}>
+                      <code>{`
+                      <div>
+                          <p>
+                          <img class="absmiddle pr-2" src="myimage.jpg"/>
+                          In this example, the image is vertically centre-aligned to this line of text.
+                          </p>
+                      </div>
+
+                      `}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

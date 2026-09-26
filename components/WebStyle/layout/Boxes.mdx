@@ -1,0 +1,352 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from './TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="Webstyle/Layout/Boxes"/>
+
+
+<Unstyled>
+# Boxes
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>{`There are several different box styles available. Box styles are most often applied to `}<code>{`<div> `}</code>{` elements, but can also be applied to `}<code>{`<p>`}</code>{` elements.`}</p>
+            <h3>{`Alignment & width`}</h3>
+            <p>{`Boxes inherit the size of their parent container 100% by default (eg `}<code>{`<div>`}</code>{` or `}<code>{`<span>`}</code>{`). You can use the `}<a href="https://webpublishing.anu.edu.au/alignment">{`standard alignment`}</a>{` and `}<a href="https://webpublishing.anu.edu.au/width">{`width`}</a>{` classes on the parent containers to adjust where boxes sit and their width, or you can put boxes into columns that were created by `}<a href="https://webpublishing.anu.edu.au/grid-layouts">{`grid class`}</a>{`.`}</p>
+            <p>{`Do `}<strong>{`not`}</strong>{` apply alignment or width classes directly to boxes as this will cause problems with paddings and margins.`}</p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Available classes`}</h2>
+              <p>{`The basic `}<code>{`.box`}</code>{` style has no border or background-size, it only has 10px padding on all four sides and a 10px margin at the bottom. Besides the basic style, we offer various box styles that contain different border colours and background colours.`}</p>
+              {/* Box-solid */}
+              <div className="pt-2">
+                <h3 className="mb-0">{`Box with solid border`}</h3>
+                <p className="mt-0 mb-0">{`Box with a coloured 1px-wide border`}</p>
+                <div className="fullwidthscroll">
+                  <table className="tbl-cell-bdr">
+                    <tbody>
+                      <tr>
+                        <th>{`Class name`}</th>
+                        <th>{`Border colour`}</th>
+                        <th>{`Border width`}</th>
+                        <th>{`Background colour`}</th>
+                        <th>{`Note`}</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box`}</code>
+                        </td>
+                        <td>{`N/A`}</td>
+                        <td>{`N/A`}</td>
+                        <td>{`#ffffff`}</td>
+                        <td>{`\u00a0`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box-bdr-gold`}</code>
+                        </td>
+                        <td>{`#be830e`}</td>
+                        <td>{`1px`}</td>
+                        <td>{`#ffffff`}</td>
+                        <td>{`\u00a0`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box-bdr-black`}</code>
+                        </td>
+                        <td>{`#000000`}</td>
+                        <td>{`1px`}</td>
+                        <td>{`#ffffff`}</td>
+                        <td>{`\u00a0`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box-bdr-white`}</code>
+                        </td>
+                        <td>{`#ffffff`}</td>
+                        <td>{`1px`}</td>
+                        <td>{`#000000`}</td>
+                        <td>{`Should only be used on dark background.`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box-bdr2`}</code>
+                        </td>
+                        <td>{`#be830e`}</td>
+                        <td>{`top, bottom: 1px`}</td>
+                        <td>{`#ffffff`}</td>
+                        <td>{`\u00a0`}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {/* Box with thick border */}
+              <div className="pt-2">
+                <h3 className="mb-0">{`Box with thick solid border`}</h3>
+                <p className="mt-0 mb-0">{`Box with a coloured 3px-wide border`}</p>
+                <div className="fullwidthscroll">
+                  <table className="tbl-cell-bdr">
+                    <tbody>
+                      <tr>
+                        <th>{`Class name`}</th>
+                        <th>{`Border colour`}</th>
+                        <th>{`Border width`}</th>
+                        <th>{`Background colour`}</th>
+                        <th>{`Note`}</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box-bdr-thick-gold`}</code>
+                        </td>
+                        <td>{`#be830e`}</td>
+                        <td>{`3px`}</td>
+                        <td>{`#000000`}</td>
+                        <td>{`\u00a0`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box-bdr-thick-black`}</code>
+                        </td>
+                        <td>{`#000000`}</td>
+                        <td>{`3px`}</td>
+                        <td>{`#ffffff`}</td>
+                        <td>{`\u00a0`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box-bdr-thick-white`}</code>
+                        </td>
+                        <td>{`#ffffff`}</td>
+                        <td>{`3px`}</td>
+                        <td>{`#000000`}</td>
+                        <td>{`Should only be used on dark background.`}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {/* Box header */}
+              <div className="pt-2">
+                <h3 className="mb-0">{`Box header`}</h3>
+                <p className="mt-0 mb-0">{`Designed for stacking on top of `}<code>{`.box-solid`}</code>{` as a header. 1px border width on top, right and left, 2px border width on bottom.`}</p>
+                <div className="fullwidthscroll">
+                  <table className="tbl-cell-bdr">
+                    <tbody>
+                      <tr>
+                        <th>{`Class name`}</th>
+                        <th>{`Border colour`}</th>
+                        <th>{`Border width`}</th>
+                        <th>{`Background colour`}</th>
+                        <th>{`Note`}</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box-header-black`}</code>
+                        </td>
+                        <td>{`#000000`}</td>
+                        <td>{`top,right,left: 1px; bottom: 2px`}</td>
+                        <td>{`#000000`}</td>
+                        <td>{`\u00a0`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box-header-tint`}</code>
+                        </td>
+                        <td>{`#be830e`}</td>
+                        <td>{`top,right,left: 1px; bottom: 2px`}</td>
+                        <td>{`#f5edde`}</td>
+                        <td>{`\u00a0`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.box-header-tint-bdrblack`}</code>
+                        </td>
+                        <td>{`#000000`}</td>
+                        <td>{`top,right,left: 1px; bottom: 2px`}</td>
+                        <td>{`#f5edde`}</td>
+                        <td>{`box with tint background and black border`}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>{`For more about how each box style looks like, please see the 'Customisation' tab.`}</p>
+              </div>
+            </Tab>
+            <Tab label="Customisation">
+              <h2 className="pt-2">{`Customisation`}</h2>
+              <div className="pt-2">
+                <h3>{`Box with solid border`}</h3>
+                <div className="row">
+                  <div className="col-sm-3">
+                    <div className="box-bdr-gold">
+                      <code>{`class="box-bdr-gold"`}</code>
+                    </div>
+                  </div>
+                  <div className="col-sm-3">
+                    <div className="box-bdr-black">
+                      <code>{`class="box-bdr-black"`}</code>
+                    </div>
+                  </div>
+                  <div className="col-sm-3">
+                    <div className="box-bdr-white">
+                      <code className="text-white">{`class="box-bdr-white"`}</code>
+                    </div>
+                  </div>
+                  <div className="col-sm-3">
+                    <div className="box-bdr2">
+                      <code>{`class="box-bdr2"`}</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-2">
+                <h3>{`Box with thick solid border`}</h3>
+                <div className="row">
+                  <div className="col-sm-3">
+                    <div className="box-bdr-thick-gold">
+                      <code>{`class="box-bdr-thick-gold"`}</code>
+                    </div>
+                  </div>
+                  <div className="col-sm-3">
+                    <div className="box-bdr-thick-black">
+                      <code>{`class="box-bdr-thick-black"`}</code>
+                    </div>
+                  </div>
+                  <div className="col-sm-3">
+                    <div className="box-bdr-thick-white bg-black">
+                      <code className="text-white">{`class="box-bdr-thick-white bg-black"`}</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-2">
+                <h3>{`Box header`}</h3>
+                <div className="row">
+                  <div className="col-sm-3">
+                    <div className="box-header-black">
+                      <code>{`class="box-header-black"`}</code>
+                    </div>
+                  </div>
+                  <div className="col-sm-3">
+                    <div className="box-header-tint">
+                      <code>{`class="box-header-tint"`}</code>
+                    </div>
+                  </div>
+                  <div className="col-sm-3">
+                    <div className="box-header-tint-bdrblack">
+                      <code>{`class="box-header-tint-bdrblack"`}</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Use cases">
+              <h2 className="pt-2">{`Use cases`}</h2>
+              {/* tint header with tint box */}
+              <div className="pt-2">
+                <h3>{`Combining box-header-tint with box-bdr-gold`}</h3>
+                <p>{`The box below has been created using `}<code>{`box-header-tint`}</code>{` and `}<code>{`box-bdr-gold`}</code>{`. When combining box styles, they 'fit' together better if you use `}<code>{`<div>`}</code>{` tags (rather than `}<code>{`<p>`}</code>{` tags). Rather than formatting the box header with heading tags, please apply `}<code>{`large`}</code>{` class to the text directly with a `}<code>{`<span>`}</code>{`. Or some unexpected margin can be added and you can add the `}<code>{`my-0`}</code>{` class to get rid of them.`}</p>
+                <div className="row">
+                  <div className="col-sm-6">
+                    <pre style={{ overflowX: "auto" }}>
+                      <code>{`
+                      <div>
+                      <div className="box-header-tint">
+                          <span class="large">Heading text</span>
+                      </div>
+                      <div className="box-bdr-gold">
+                          <p>Box text</p>
+                      </div>
+                      </div>
+                                              `}</code>
+                    </pre>
+                  </div>
+                  <div className="col-sm-6">
+                    <div>
+                      <div className="box-header-tint">
+                        <span className="large">{`Heading text`}</span>
+                      </div>
+                      <div className="box-bdr-gold">
+                        <p>{`Box text`}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* black header with black box */}
+              <div className="pt-2">
+                <h3>{`Combining box-header-black with box-bdr-black`}</h3>
+                <p>{`The box below has been created using `}<code>{`box-header-black`}</code>{` and `}<code>{`box-bdr-black`}</code>{`. When combining box styles, they 'fit' together better if you use `}<code>{`<div>`}</code>{` tags (rather than `}<code>{`<p>`}</code>{` tags). Rather than formatting the box header with heading tags, please apply `}<code>{`large`}</code>{` class to the text directly with a `}<code>{`<span>`}</code>{`. Or some unexpected margin can be added and you can add the `}<code>{`my-0`}</code>{` class to get rid of them.`}</p>
+                <div className="row">
+                  <div className="col-sm-6">
+                    <pre style={{ overflowX: "auto" }}>
+                      <code>{`
+                      <div>
+                      <div className="box-header-black">
+                          <span class="large">Heading text</span>
+                      </div>
+                      <div className="box-bdr-black">
+                          <p>Box text</p>
+                      </div>
+                      </div>
+                                              `}</code>
+                    </pre>
+                  </div>
+                  <div className="col-sm-6">
+                    <div>
+                      <div className="box-header-black">
+                        <span className="large">{`Heading text`}</span>
+                      </div>
+                      <div className="box-bdr-black">
+                        <p>{`Box text`}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* tint header black border with tint box */}
+              <div className="pt-2">
+                <h3>{`Combining box-header-tint-bdrblack with box-bdr-gold`}</h3>
+                <p>{`The box below has been created using `}<code>{`box-header-tint-bdrblack`}</code>{` and `}<code>{`box-bdr-gold`}</code>{`. When combining box styles, they 'fit' together better if you use `}<code>{`<div>`}</code>{` tags (rather than `}<code>{`<p>`}</code>{` tags). Rather than formatting the box header with heading tags, please apply `}<code>{`large`}</code>{` class to the text directly with a `}<code>{`<span>`}</code>{`. Or some unexpected margin can be added and you can add the `}<code>{`my-0`}</code>{` class to get rid of them.`}</p>
+                <div className="row">
+                  <div className="col-sm-6">
+                    <pre style={{ overflowX: "auto" }}>
+                      <code>{`
+                      <div>
+                      <div className="box-header-tint-bdrblack">
+                          <span class="large">Heading text</span>
+                      </div>
+                      <div className="box-bdr-gold">
+                          <p>Box text</p>
+                      </div>
+                      </div>
+                                              `}</code>
+                    </pre>
+                  </div>
+                  <div className="col-sm-6">
+                    <div>
+                      <div className="box-header-tint-bdrblack">
+                        <span className="large">{`Heading text`}</span>
+                      </div>
+                      <div className="box-bdr-gold">
+                        <p>{`Box text`}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

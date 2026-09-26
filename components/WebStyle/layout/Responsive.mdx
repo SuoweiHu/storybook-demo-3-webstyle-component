@@ -1,0 +1,100 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from './TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Layout/Responsive" />
+
+
+<Unstyled>
+
+# Responsive
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>
+              {`If you are not familiar with grid system, we recommend go through materials on `}
+              <a href="https://webpublishing.anu.edu.au/web-style-guide/grid-layouts">{`Grid layouts`}</a>
+              {` first.`}
+            </p>
+            <p>
+              {`But in short, the basic idea behind grid layout and responsive design are that we divided the viewport into 12 equal-width columns, and we can set different layouts under different screen sizes to make our web page more accessible. This process is known as responsive design: adjusting the page layout based on different screen sizes.`}
+            </p>
+            <h3>{`How your layout will adapt to different screen sizes`}</h3>
+            <p>
+              {`You may wonder how exactly we define different screen sizes, and the answer to that will be a series of `}
+              <em>{`'breakpoints'`}</em>
+              {`. The layout breaks/changes into another arrangement based on the rules you set with certain breakpoints. For example, `}
+              <code>{`<div class="col-md-8">`}</code>
+              {` means the element inside this container will take 8 out of 12 columns when the viewport is wider than 768px while it will occupies 12 out of 12 columns in other cases.`}
+            </p>
+            <p>
+              {`Adding different classes to your container, ensures the web page's content won't be 'shrunk' and the content remains readable and accessible with standard font size.`}
+            </p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Customised grid viewports`}</h2>
+              <p>{`Our grid system is built on the grid of Bootstrap v5. And the breakpoints are customised. Please find the specific data in this table:`}</p>
+              <table className="tbl-row-bdr">
+                <thead>
+                  <tr>
+                    <th>{`Breakpoint`}</th>
+                    <th>{`Class infix`}</th>
+                    <th>{`Dimensions`}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{`X-Small`}</td>
+                    <td><em>{`None`}</em></td>
+                    <td>{`<576px`}</td>
+                  </tr>
+                  <tr>
+                    <td>{`Small`}</td>
+                    <td><code>{`sm`}</code></td>
+                    <td>{`≥576px`}</td>
+                  </tr>
+                  <tr>
+                    <td>{`Medium`}</td>
+                    <td><code>{`md`}</code></td>
+                    <td>{`≥768px`}</td>
+                  </tr>
+                  <tr>
+                    <td>{`Large`}</td>
+                    <td><code>{`lg`}</code></td>
+                    <td>{`≥992px`}</td>
+                  </tr>
+                  <tr>
+                    <td>{`Extra large`}</td>
+                    <td><code>{`xl`}</code></td>
+                    <td>{`≥1200px`}</td>
+                  </tr>
+                  <tr>
+                    <td>{`Extra extra large`}</td>
+                    <td><code>{`xxl`}</code></td>
+                    <td>{`≥1400px`}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </Tab>
+            <Tab label="Use cases">
+              <h2 className="pt-2">{`Use cases`}</h2>
+              <p>
+                {`Please refer back to `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/grid-layouts">{`Grid layouts`}</a>
+                {` for more information.`}
+              </p>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</Unstyled>

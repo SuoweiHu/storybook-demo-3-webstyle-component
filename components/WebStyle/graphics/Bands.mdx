@@ -1,0 +1,712 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Graphics/Bands" />
+
+
+<Unstyled>
+
+# Bands
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>
+              {`Horizontal bands of colour can be used to separate distinct regions of content on websites. The colour will take up the whole viewport but we still want the content to keep aligned with others.`}
+            </p>
+            <p className="box-bdr-gold">
+              {`Please familiarise yourself with the webstyles and tools for ensuring accessible `}
+              <a href="https://webpublishing.anu.edu.au/web-style-guide/colours" target="_blank">
+                {`ANU colour`}
+              </a>
+              {` combinations before implementing bands.`}
+            </p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <div className="container">
+                <h2 className="pt-2">{`Overview`}</h2>
+                <p>
+                  {`The implementation of this style is not complex. What you need to do is to add a parent `}
+                  <code>{`<div>`}</code>
+                  {` with class `}
+                  <code>{`band-{colour}-wrap`}</code>
+                  {` to the `}
+                  <code>{`container`}</code>
+                  {` you are using. In other words, the band wrapper must be declared outside of the ANU grid styles.`}
+                </p>
+                <p>
+                  {`In order to use bands, you will need to replace `}
+                  <span className="bg-tint">{`{colour}`}</span>
+                  {` with white, tint and black which are defined in our `}
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/colours" target="_blank">
+                    {`colours page`}
+                  </a>
+                  {`. i.e. `}
+                  <code>{`band-black-wrap`}</code>
+                  {`.`}
+                </p>
+                <div className="row">
+                  <div className="col-sm-12 col-md-6 col-lg-7">
+                    <p>{`When choosing band colours, think about the content you are adding to this <div>:`}</p>
+                    <ul>
+                      <li>
+                        <code>{`band-white-wrap`}</code>
+                        {` for displaying large blocks of text content.`}
+                      </li>
+                      <li>
+                        <code>{`band-tint-wrap`}</code>
+                        {` can be used to display promoted information, e.g. events, videos, etc.`}
+                      </li>
+                    </ul>
+                    <p>
+                      <strong>{`Please note:`}</strong>
+                      {` Font colour will automatically change based on the band background (text colour will change to white on `}
+                      <code>{`band-black-wrap`}</code>
+                      {` by default, no extra classes need to apply).`}
+                    </p>
+                  </div>
+                  <div className="col-sm-12 col-md-6 col-lg-5 box-bdr-gold">
+                    <pre className="m-0" style={{ overflowX: "auto" }}>
+                      <code>{`<div class="band-black-wrap">
+    <div className="container">
+    ...content
+    </div>
+</div>`}</code>
+                    </pre>
+                  </div>
+                </div>
+                <div className="divider-gold mt-2">{`\u00A0`}</div>
+                {/*BANNER*/}
+                <div className="pt-1">
+                  <h2>{`Banner`}</h2>
+                  <p>
+                    {`Banners can be used at the top of website home pages and the first hierarchical level of landing pages to provide featured messages or as a visual key to display the uniqueness of high-level pages.`}
+                  </p>
+                  <p>
+                    {`The dimension of a banner image is very wide (2000 x 500px - 4:1 ratio), it is important that we need to take different screen sizes into consideration. When visitors are using smaller screen size devices (e.g. tablets, phones) to visit our website, the sides of the banner image will be cropped off.`}
+                  </p>
+                  <p>
+                    {`It can be difficult to source appropriate banner images. It's best to `}
+                    <span className="bg-tint">
+                      {`maintain the key focal point in the third quarter of the frame`}
+                    </span>
+                    {`. As the display screen gets smaller, the background image shifts further to the left of centre — This ensures that the subject can still be seen regardless of the screen size (see the example below).`}
+                  </p>
+                  <img
+                    alt="Keep subject in third quarter of the frame"
+                    className="w100"
+                    src="https://picsum.photos/seed/banner/1200/400"
+                  />
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Customisation">
+              <div className="container">
+                <h2 className="pt-2">{`Customisation`}</h2>
+                <p>{`Options for colour bands include:`}</p>
+                <ul>
+                  <li>
+                    <code>{`band-black-wrap`}</code>
+                  </li>
+                  <li>
+                    <code>{`band-white-wrap`}</code>
+                  </li>
+                  <li>
+                    <code>{`band-tint-wrap`}</code>
+                  </li>
+                </ul>
+              </div>
+            </Tab>
+            <Tab label="Use cases">
+              <div className="container">
+                <h2 className="pt-2">{`Use cases`}</h2>
+                <p>{`Below are examples of different bands with different coloured boxes.`}</p>
+              </div>
+              {/*Black band with white box*/}
+              <div className="container">
+                <h3 className="pt-3">{`Black band with white box:`}</h3>
+              </div>
+              <div className="band-black-wrap">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-sm-8">
+                      <p>
+                        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere ac ut consequat semper viverra nam libero. Quam nulla porttitor massa id. Ultrices dui sapien eget mi. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Tellus at urna condimentum mattis. Sagittis orci a scelerisque purus. Donec enim diam vulputate ut pharetra sit amet. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Nulla pharetra diam sit amet. Nisl nisi scelerisque eu ultrices. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Bibendum enim facilisis gravida neque. Urna nunc id cursus metus. Viverra adipiscing at in tellus integer feugiat scelerisque. Sit amet purus gravida quis.`}
+                      </p>
+                    </div>
+                    <div className="col-sm-4 box bg-white">
+                      <h3>
+                        <a className="text-black" href="#">
+                          {`H3 Etiam tincidunt`}
+                        </a>
+                      </h3>
+                      <p>
+                        {`Text in bg-white and `}
+                        <a className="text-linkgold" href="#">
+                          {`regular link`}
+                        </a>
+                      </p>
+                      <div>
+                        <p>{`Buttons:`}</p>
+                        <a className="anu-btn" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-black" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-white" href="#">
+                          {`OK`}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/*Black band with tint box*/}
+              <div className="container">
+                <h3 className="pt-3">{`Black band with tint box:`}</h3>
+              </div>
+              <div className="band-black-wrap">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-sm-8">
+                      <p>
+                        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere ac ut consequat semper viverra nam libero. Quam nulla porttitor massa id. Ultrices dui sapien eget mi. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Tellus at urna condimentum mattis. Sagittis orci a scelerisque purus. Donec enim diam vulputate ut pharetra sit amet. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Nulla pharetra diam sit amet. Nisl nisi scelerisque eu ultrices. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Bibendum enim facilisis gravida neque. Urna nunc id cursus metus. Viverra adipiscing at in tellus integer feugiat scelerisque. Sit amet purus gravida quis.`}
+                      </p>
+                    </div>
+                    <div className="col-sm-4 box bg-tint">
+                      <h3>
+                        <a href="#">{`H3 Etiam tincidunt`}</a>
+                      </h3>
+                      <p>
+                        {`Text in bg-tint and `}
+                        <a href="#">{`regular link`}</a>
+                      </p>
+                      <div>
+                        <p>{`Buttons:`}</p>
+                        <a className="anu-btn" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-black" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-white" href="#">
+                          {`OK`}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/*White band with tint box*/}
+              <div className="container">
+                <h3 className="pt-3">{`White band with tint box:`}</h3>
+              </div>
+              <div className="band-white-wrap">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-sm-8">
+                      <p>
+                        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere ac ut consequat semper viverra nam libero. Quam nulla porttitor massa id. Ultrices dui sapien eget mi. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Tellus at urna condimentum mattis. Sagittis orci a scelerisque purus. Donec enim diam vulputate ut pharetra sit amet. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Nulla pharetra diam sit amet. Nisl nisi scelerisque eu ultrices. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Bibendum enim facilisis gravida neque. Urna nunc id cursus metus. Viverra adipiscing at in tellus integer feugiat scelerisque. Sit amet purus gravida quis.`}
+                      </p>
+                    </div>
+                    <div className="col-sm-4 box bg-tint">
+                      <h3>
+                        <a href="#">{`H3 Etiam tincidunt`}</a>
+                      </h3>
+                      <p>
+                        {`Text in bg-tint and `}
+                        <a href="#">{`regular link`}</a>
+                      </p>
+                      <div>
+                        <p>{`Buttons:`}</p>
+                        <a className="anu-btn" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-black" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-white" href="#">
+                          {`OK`}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="divider-solid">{`\u00A0`}</div>
+                </div>
+              </div>
+              {/*White band with black box*/}
+              <div className="container">
+                <h3 className="pt-3">{`White band with black box:`}</h3>
+              </div>
+              <div className="band-white-wrap">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-sm-8">
+                      <p>
+                        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere ac ut consequat semper viverra nam libero. Quam nulla porttitor massa id. Ultrices dui sapien eget mi. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Tellus at urna condimentum mattis. Sagittis orci a scelerisque purus. Donec enim diam vulputate ut pharetra sit amet. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Nulla pharetra diam sit amet. Nisl nisi scelerisque eu ultrices. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Bibendum enim facilisis gravida neque. Urna nunc id cursus metus. Viverra adipiscing at in tellus integer feugiat scelerisque. Sit amet purus gravida quis.`}
+                      </p>
+                    </div>
+                    <div className="col-sm-4 box bg-black">
+                      <h3>
+                        <a href="#">{`H3 Etiam tincidunt`}</a>
+                      </h3>
+                      <p>
+                        {`Text in bg-black and `}
+                        <a href="#">{`regular link`}</a>
+                      </p>
+                      <div>
+                        <p>{`Buttons:`}</p>
+                        <a className="anu-btn" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-black" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-white" href="#">
+                          {`OK`}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="divider-solid">{`\u00A0`}</div>
+                </div>
+              </div>
+              {/*Tint band with white box*/}
+              <div className="container">
+                <h3 className="pt-3">{`Tint band with white box:`}</h3>
+              </div>
+              <div className="band-tint-wrap">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-sm-8">
+                      <p>
+                        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere ac ut consequat semper viverra nam libero. Quam nulla porttitor massa id. Ultrices dui sapien eget mi. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Tellus at urna condimentum mattis. Sagittis orci a scelerisque purus. Donec enim diam vulputate ut pharetra sit amet. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Nulla pharetra diam sit amet. Nisl nisi scelerisque eu ultrices. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Bibendum enim facilisis gravida neque. Urna nunc id cursus metus. Viverra adipiscing at in tellus integer feugiat scelerisque. Sit amet purus gravida quis.`}
+                      </p>
+                    </div>
+                    <div className="col-sm-4 box bg-white">
+                      <h3>
+                        <a href="#">{`H3 Etiam tincidunt`}</a>
+                      </h3>
+                      <p>
+                        {`Text in bg-white and `}
+                        <a href="#">{`regular link`}</a>
+                      </p>
+                      <div>
+                        <p>{`Buttons:`}</p>
+                        <a className="anu-btn" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-black" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-white" href="#">
+                          {`OK`}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/*Tint band with black box*/}
+              <div className="container">
+                <h3 className="pt-3">{`Tint band with black box:`}</h3>
+              </div>
+              <div className="band-tint-wrap">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-sm-8">
+                      <p>
+                        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere ac ut consequat semper viverra nam libero. Quam nulla porttitor massa id. Ultrices dui sapien eget mi. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Tellus at urna condimentum mattis. Sagittis orci a scelerisque purus. Donec enim diam vulputate ut pharetra sit amet. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Nulla pharetra diam sit amet. Nisl nisi scelerisque eu ultrices. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Bibendum enim facilisis gravida neque. Urna nunc id cursus metus. Viverra adipiscing at in tellus integer feugiat scelerisque. Sit amet purus gravida quis.`}
+                      </p>
+                    </div>
+                    <div className="col-sm-4 box bg-black">
+                      <h3>
+                        <a className="text-white" href="#">
+                          {`H3 Etiam tincidunt`}
+                        </a>
+                      </h3>
+                      <p>
+                        {`Text in bg-black and `}
+                        <a className="text-gold" href="#">
+                          {`regular link`}
+                        </a>
+                      </p>
+                      <div>
+                        <p>{`Buttons:`}</p>
+                        <a className="anu-btn" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-black" href="#">
+                          {`OK`}
+                        </a>
+                        <a className="anu-btn-white" href="#">
+                          {`OK`}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Accessibility">
+              <div className="container">
+                <h2 className="pt-2">{`Bands with different applicable font sizes`}</h2>
+                <p>
+                  {`For more information on web accessibility, please see the `}
+                  <a href="https://webpublishing.anu.edu.au/web-style-guide/accessibility" target="_blank">
+                    {`Accessibility page`}
+                  </a>
+                  {`.`}
+                </p>
+                <p className="msg-info">
+                  {`We have only listed out the approved combination of background colour, font size and text colour. DO NOT use combinations that were not listed here, because they either not pass Web Accessibility or don't follow our University branding.`}
+                </p>
+                {/*Black band with white text*/}
+                <h3 className="mt-2 box bdr-left-gold bdr-thick">{`Black band with white text:`}</h3>
+                <p>
+                  {`By default, the font colour on a black background will automatically convert to white. No extra class is needed.`}
+                </p>
+              </div>
+              <div className="band-black-wrap">
+                <div className="container">
+                  <div className="row">
+                    <h1>
+                      <a href="#">{`H1: Lorem ipsum`}</a>
+                      {` dolor sit amet`}
+                    </h1>
+                    <h2>
+                      <a href="#">{`H2: Maecenas tempor`}</a>
+                      {` nisl nec neque luctus`}
+                    </h2>
+                    <h3>
+                      <a href="#">{`H3: Aut expedita necessitatibus`}</a>
+                      {` et quia consequuntur?`}
+                    </h3>
+                    <h4>
+                      <a href="#">{`H4: Non natus`}</a>
+                      {` voluptatem et soluta possimus.`}
+                    </h4>
+                    <h5>
+                      <a href="#">{`H5: Qui consequatur`}</a>
+                      {` quia et corporis expedita!`}
+                    </h5>
+                    <h6>
+                      <a href="#">{`H6: sed do eiusmod`}</a>
+                      {` tempor incididunt ut labore et dolore magna aliqua.`}
+                    </h6>
+                    <p>
+                      {`P: band-black-wrap `}
+                      <a href="#">{`regular link`}</a>
+                    </p>
+                    <p className="large">
+                      <a href="#">{`Large: Quam`}</a>
+                      {` nulla porttitor massa id.`}
+                    </p>
+                    <p className="semi-large">
+                      <a href="#">{`Semi-large: Ultrices dui`}</a>
+                      {` sapien eget mi.`}
+                    </p>
+                    <p className="small">
+                      <a href="#">{`Small: Eget magna`}</a>
+                      {` fermentum iaculis eu non diam phasellus vestibulum.`}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/*Black band with gold text*/}
+              <div className="container">
+                <h3 className="mt-3 box bdr-left-gold bdr-thick">{`Black band with gold text:`}</h3>
+                <p>
+                  {`The link colour for text buttons on black background by default is white, but since we are appending `}
+                  <code>{`.text-gold`}</code>
+                  {` to the header tags, it's overriding the default colour setting.`}
+                </p>
+              </div>
+              <div className="band-black-wrap">
+                <div className="container">
+                  <div className="row">
+                    <h1 className="text-gold">
+                      <a href="#">{`H1: Lorem ipsum`}</a>
+                      {` dolor sit amet`}
+                    </h1>
+                    <h2 className="text-gold">
+                      <a href="#">{`H2: Maecenas tempor`}</a>
+                      {` nisl nec neque luctus`}
+                    </h2>
+                    <h3 className="text-gold">
+                      <a href="#">{`H3: Aut expedita`}</a>
+                      {` necessitatibus et quia consequuntur?`}
+                    </h3>
+                    <h4 className="text-gold">
+                      <a href="#">{`H4: Non natus`}</a>
+                      {` voluptatem et soluta possimus.`}
+                    </h4>
+                    <h5 className="text-gold">
+                      <a href="#">{`H5: Qui consequatur`}</a>
+                      {` quia et corporis expedita!`}
+                    </h5>
+                    <h6 className="text-gold">
+                      <a href="#">{`H6: sed do eiusmod`}</a>
+                      {` tempor incididunt ut labore et dolore magna aliqua.`}
+                    </h6>
+                    <p className="text-gold">
+                      {`P: band-black-wrap `}
+                      <a href="#">{`regular link`}</a>
+                    </p>
+                    <p className="large text-gold">
+                      <a href="#">{`Large: Quam`}</a>
+                      {` nulla porttitor massa id.`}
+                    </p>
+                    <p className="semi-large text-gold">
+                      <a href="#">{`Semi-large: Ultrices`}</a>
+                      {` dui sapien eget mi.`}
+                    </p>
+                    <p className="small text-gold">
+                      <a href="#">{`Small: Eget magna`}</a>
+                      {` fermentum iaculis eu non diam phasellus vestibulum.`}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/*White band with black text*/}
+              <div className="container">
+                <h3 className="mt-3 box bdr-left-gold bdr-thick">{`White band with black text:`}</h3>
+                <p>
+                  {`By default, the font colour on white/no background is black. No extra class is needed.`}
+                </p>
+              </div>
+              <div className="band-white-wrap">
+                <div className="container">
+                  <div className="row">
+                    <div className="divider-solid">{`\u00A0`}</div>
+                    <h1>
+                      <a href="#">{`H1: Lorem ipsum`}</a>
+                      {` dolor sit amet`}
+                    </h1>
+                    <h2>
+                      <a href="#">{`H2: Maecenas tempor`}</a>
+                      {` nisl nec neque luctus`}
+                    </h2>
+                    <h3>
+                      <a href="#">{`H3: Aut expedita`}</a>
+                      {` necessitatibus et quia consequuntur?`}
+                    </h3>
+                    <h4>
+                      <a href="#">{`H4: Non natus`}</a>
+                      {` voluptatem et soluta possimus.`}
+                    </h4>
+                    <h5>
+                      <a href="#">{`H5: Qui consequatur`}</a>
+                      {` quia et corporis expedita!`}
+                    </h5>
+                    <h6>
+                      <a href="#">{`H6: sed do eiusmod`}</a>
+                      {` tempor incididunt ut labore et dolore magna aliqua.`}
+                    </h6>
+                    <p>
+                      {`P: band-white-wrap `}
+                      <a href="#">{`regular link`}</a>
+                    </p>
+                    <p className="large">
+                      <a href="#">{`Large: Quam`}</a>
+                      {` nulla porttitor massa id.`}
+                    </p>
+                    <p className="semi-large">
+                      <a href="#">{`Semi-large: Ultrices`}</a>
+                      {` dui sapien eget mi.`}
+                    </p>
+                    <p className="small">
+                      <a href="#">{`Small: Eget magna`}</a>
+                      {` fermentum iaculis eu non diam phasellus vestibulum.`}
+                    </p>
+                    <div className="divider-solid">{`\u00A0`}</div>
+                  </div>
+                </div>
+              </div>
+              {/*White band with gold text*/}
+              <div className="container">
+                <h3 className="mt-3 box bdr-left-gold bdr-thick">{`White band with gold text:`}</h3>
+              </div>
+              <div className="band-white-wrap">
+                <div className="container">
+                  <div className="row">
+                    <div className="divider-solid">{`\u00A0`}</div>
+                    <h1 className="text-gold">
+                      <a href="#">{`H1: Lorem ipsum`}</a>
+                      {` dolor sit amet`}
+                    </h1>
+                    <h2 className="text-gold">
+                      <a href="#">{`H2: Maecenas tempor`}</a>
+                      {` nisl nec neque luctus`}
+                    </h2>
+                    <div className="divider-solid">{`\u00A0`}</div>
+                  </div>
+                </div>
+              </div>
+              {/*White band with unigrey text*/}
+              <div className="container">
+                <h3 className="mt-3 box bdr-left-gold bdr-thick">{`White band with unigrey text:`}</h3>
+              </div>
+              <div className="band-white-wrap">
+                <div className="container">
+                  <div className="row">
+                    <div className="divider-solid">{`\u00A0`}</div>
+                    <h1 className="text-unigrey">
+                      <a href="#">{`H1: Lorem ipsum`}</a>
+                      {` dolor sit amet`}
+                    </h1>
+                    <h2 className="text-unigrey">
+                      <a href="#">{`H2: Maecenas tempor`}</a>
+                      {` nisl nec neque luctus`}
+                    </h2>
+                    <h3 className="text-unigrey">
+                      <a href="#">{`H3: Aut expedita`}</a>
+                      {` necessitatibus et quia consequuntur?`}
+                    </h3>
+                    <h4 className="text-unigrey">
+                      <a href="#">{`H4: Non natus`}</a>
+                      {` voluptatem et soluta possimus.`}
+                    </h4>
+                    <h5 className="text-unigrey">
+                      <a href="#">{`H5: Qui consequatur`}</a>
+                      {` quia et corporis expedita!`}
+                    </h5>
+                    <h6 className="text-unigrey">
+                      <a href="#">{`H6: sed do eiusmod`}</a>
+                      {` tempor incididunt ut labore et dolore magna aliqua.`}
+                    </h6>
+                    <p className="text-unigrey">
+                      {`P: band-white-wrap `}
+                      <a href="#">{`regular link`}</a>
+                    </p>
+                    <p className="large text-unigrey">
+                      <a href="#">{`Large: Quam nulla`}</a>
+                      {` porttitor massa id.`}
+                    </p>
+                    <p className="semi-large text-unigrey">
+                      <a href="#">{`Semi-large: Ultrices`}</a>
+                      {` dui sapien eget mi.`}
+                    </p>
+                    <p className="small text-unigrey">
+                      <a href="#">{`Small Eget magna`}</a>
+                      {` fermentum iaculis eu non diam phasellus vestibulum.`}
+                    </p>
+                    <div className="divider-solid">{`\u00A0`}</div>
+                  </div>
+                </div>
+              </div>
+              {/*Tint band with black text*/}
+              <div className="container">
+                <h3 className="mt-3 box bdr-left-gold bdr-thick">{`Tint band with black text:`}</h3>
+              </div>
+              <div className="band-tint-wrap">
+                <div className="container">
+                  <div className="row">
+                    <h1>
+                      <a href="#">{`H1: Lorem ipsum`}</a>
+                      {` dolor sit amet`}
+                    </h1>
+                    <h2>
+                      <a href="#">{`H2: Maecenas tempor`}</a>
+                      {` nisl nec neque luctus`}
+                    </h2>
+                    <h3>
+                      <a href="#">{`H3: Aut expedita`}</a>
+                      {` necessitatibus et quia consequuntur?`}
+                    </h3>
+                    <h4>
+                      <a href="#">{`H4: Non natus`}</a>
+                      {` voluptatem et soluta possimus.`}
+                    </h4>
+                    <h5>
+                      <a href="#">{`H5: Qui consequatur`}</a>
+                      {` quia et corporis expedita!`}
+                    </h5>
+                    <h6>
+                      <a href="#">{`H6: sed do eiusmod`}</a>
+                      {` tempor incididunt ut labore et dolore magna aliqua.`}
+                    </h6>
+                    <p>
+                      {`P: band-white-wrap `}
+                      <a href="#">{`regular link`}</a>
+                    </p>
+                    <p className="large">
+                      <a href="#">{`Large: Quam nulla`}</a>
+                      {` porttitor massa id.`}
+                    </p>
+                    <p className="semi-large">
+                      <a href="#">{`Semi-large: Ultrices`}</a>
+                      {` dui sapien eget mi.`}
+                    </p>
+                    <p className="small">
+                      <a href="#">{`Small: Eget magna`}</a>
+                      {` fermentum iaculis eu non diam phasellus vestibulum.`}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/*Tint band with unigrey text*/}
+              <div className="container">
+                <h3 className="mt-3 box bdr-left-gold bdr-thick">{`Tint band with unigrey text:`}</h3>
+              </div>
+              <div className="band-tint-wrap">
+                <div className="container">
+                  <div className="row">
+                    <h1 className="text-unigrey">
+                      <a href="#">{`H1: Lorem ipsum`}</a>
+                      {` dolor sit amet`}
+                    </h1>
+                    <h2 className="text-unigrey">
+                      <a href="#">{`H2: Maecenas tempor`}</a>
+                      {` nisl nec neque luctus`}
+                    </h2>
+                    <h3 className="text-unigrey">
+                      <a href="#">{`H3: Aut expedita`}</a>
+                      {` necessitatibus et quia consequuntur?`}
+                    </h3>
+                    <h4 className="text-unigrey">
+                      <a href="#">{`H4: Non natus`}</a>
+                      {` voluptatem et soluta possimus.`}
+                    </h4>
+                    <h5 className="text-unigrey">
+                      <a href="#">{`H5: Qui consequatur`}</a>
+                      {` quia et corporis expedita!`}
+                    </h5>
+                    <h6 className="text-unigrey">
+                      <a href="#">{`H6: sed do eiusmod`}</a>
+                      {` tempor incididunt ut labore et dolore magna aliqua.`}
+                    </h6>
+                    <p className="text-unigrey">
+                      {`P: band-white-wrap `}
+                      <a href="#">{`regular link`}</a>
+                    </p>
+                    <p className="large text-unigrey">
+                      <a href="#">{`Large: Quam`}</a>
+                      {` nulla porttitor massa id.`}
+                    </p>
+                    <p className="semi-large text-unigrey">
+                      <a href="#">{`Semi-large: Ultrices dui`}</a>
+                      {` sapien eget mi.`}
+                    </p>
+                    <p className="small text-unigrey">
+                      <a href="#">{`Small Eget magna`}</a>
+                      {` fermentum iaculis eu non diam phasellus vestibulum.`}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

@@ -1,0 +1,634 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Graphics/Carousel" />
+
+
+<Unstyled>
+
+# Carousel
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Overview`}</h2>
+              <p>
+                {`To integrate the carousel into your website, you need to include the following CSS and JS.`}
+              </p>
+              <pre className="m-0">
+                <code>{`<link rel="stylesheet" href="https://webstyle.anu.edu.au/libs/bootstrap/css/bootstrap-carousel.min.css">
+<script src="https://webstyle.anu.edu.au/libs/bootstrap/js/bootstrap-carousel.min.js"></script>`}</code>
+              </pre>
+              <p>
+                {`The carousel consists of three parts: 1) indicators, 2) sliders, and 3) prev/next buttons. Among them, the second part (items) is compulsory while the other two parts are optional.`}
+              </p>
+              <table className="tbl-cell-bdr">
+                <tbody>
+                  <tr>
+                    <th>{`Skeleton`}</th>
+                    <th>{`Example`}</th>
+                  </tr>
+                  <tr>
+                    <td className="tbl50">
+                      <pre>
+                        <code>{`<div id="anu-doc-carousel" class="carousel slide" data-bs-ride="false">
+    <!-- Part 1: indicators -->
+    <div className="carousel-indicators">
+        <button type="button" data-bs-target="#anu-doc-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#anu-doc-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#anu-doc-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Part 2: sliders -->
+    <div className="carousel-inner">
+        <div className="carousel-item active"> ... </div>
+        <div className="carousel-item"> ...  </div>
+        <div className="carousel-item"> ...  </div>
+    </div>
+
+    <!-- Part 3: prev/next buttons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#anu-doc-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true">&nbsp;</span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#anu-doc-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true">&nbsp;</span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>`}</code>
+                      </pre>
+                    </td>
+                    <td className="tbl50">
+                      <div className="carousel slide" data-bs-ride="false" id="anu-doc-carousel">
+                        <div className="carousel-indicators">
+                          <button
+                            aria-current="true"
+                            aria-label="Slide 1"
+                            className="active"
+                            data-bs-slide-to="0"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          />
+                          <button
+                            aria-label="Slide 2"
+                            data-bs-slide-to="1"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          />
+                          <button
+                            aria-label="Slide 3"
+                            data-bs-slide-to="2"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          />
+                        </div>
+                        <div className="carousel-inner">
+                          <div className="carousel-item active">
+                            <img
+                              alt="carousel-slider-1"
+                              className="d-block w100"
+                              src="https://picsum.photos/seed/carousel1/1200/600"
+                            />
+                            <div className="carousel-caption d-none d-md-block">
+                              <h5>{`First slide label`}</h5>
+                              <p>{`Some representative placeholder content for the first slide.`}</p>
+                            </div>
+                          </div>
+                          <div className="carousel-item">
+                            <img
+                              alt="carousel-slider-2"
+                              className="d-block w100"
+                              src="https://picsum.photos/seed/carousel2/1200/600"
+                            />
+                            <div className="carousel-caption d-none d-md-block">
+                              <h5>{`Second slide label`}</h5>
+                              <p>{`Some representative placeholder content for the second slide.`}</p>
+                            </div>
+                          </div>
+                          <div className="carousel-item">
+                            <img
+                              alt="carousel-slider-3"
+                              className="d-block w100"
+                              src="https://picsum.photos/seed/carousel3/1200/600"
+                            />
+                            <div className="carousel-caption d-none d-md-block">
+                              <h5>{`Third slide label`}</h5>
+                              <p>{`Some representative placeholder content for the third slide.`}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          className="carousel-control-prev"
+                          data-bs-slide="prev"
+                          data-bs-target="#anu-doc-carousel"
+                          type="button"
+                        >
+                          <span aria-hidden="true" className="carousel-control-prev-icon">
+                            {`\u00A0`}
+                          </span>
+                          <span className="visually-hidden">{`Previous`}</span>
+                        </button>
+                        <button
+                          className="carousel-control-next"
+                          data-bs-slide="next"
+                          data-bs-target="#anu-doc-carousel"
+                          type="button"
+                        >
+                          <span aria-hidden="true" className="carousel-control-next-icon">
+                            {`\u00A0`}
+                          </span>
+                          <span className="visually-hidden">{`Next`}</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </Tab>
+            <Tab label="Customisation">
+              <h2 className="pt-2">{`Customisation`}</h2>
+              <div>
+                <table className="tbl-cell-bdr">
+                  <tbody>
+                    <tr>
+                      <th>{`Effect`}</th>
+                      <th>{`Code`}</th>
+                    </tr>
+                    {/* Auto play off */}
+                    <tr>
+                      <td className="tbl50">
+                        <h3 id="anu-carousel-customisation-c1-1">{`C1-1: Auto play is off`}</h3>
+                        <p>
+                          {`Set `}
+                          <code>{`data-bs-ride="false"`}</code>
+                          {` on the element with classname `}
+                          <code>{`carousel slide`}</code>
+                        </p>
+                        <p className="box bdr-left-gold bdr-thick">{`For clarification, below is the code snippet`}</p>
+                        <pre className="m-0">
+                          <code>{`<div id="anu-doc-carousel" class="carousel slide" `}<span className="bg-tint">{`data-bs-ride="false"`}</span>{`>
+    <div className="carousel-indicators">
+    ...
+    </div>
+    <div className="carousel-inner">
+    ...
+    </div>
+    ...
+</div>`}</code>
+                        </pre>
+                      </td>
+                      <td className="tbl50">
+                        <div className="carousel slide" data-bs-ride="false" id="anu-doc-carousel">
+                          <div className="carousel-indicators">
+                            <button
+                              aria-current="true"
+                              aria-label="Slide 1"
+                              className="active"
+                              data-bs-slide-to="0"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                            <button
+                              aria-label="Slide 2"
+                              data-bs-slide-to="1"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                            <button
+                              aria-label="Slide 3"
+                              data-bs-slide-to="2"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                          </div>
+                          <div className="carousel-inner">
+                            <div className="carousel-item active">
+                              <img
+                                alt="carousel-slider-1"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel1/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`First slide label`}</h5>
+                                <p>{`Some representative placeholder content for the first slide.`}</p>
+                              </div>
+                            </div>
+                            <div className="carousel-item">
+                              <img
+                                alt="carousel-slider-2"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel2/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`Second slide label`}</h5>
+                                <p>{`Some representative placeholder content for the second slide.`}</p>
+                              </div>
+                            </div>
+                            <div className="carousel-item">
+                              <img
+                                alt="carousel-slider-3"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel3/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`Third slide label`}</h5>
+                                <p>{`Some representative placeholder content for the third slide.`}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <button
+                            className="carousel-control-prev"
+                            data-bs-slide="prev"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          >
+                            <span aria-hidden="true" className="carousel-control-prev-icon">
+                              {`\u00A0`}
+                            </span>
+                            <span className="visually-hidden">{`Previous`}</span>
+                          </button>
+                          <button
+                            className="carousel-control-next"
+                            data-bs-slide="next"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          >
+                            <span aria-hidden="true" className="carousel-control-next-icon">
+                              {`\u00A0`}
+                            </span>
+                            <span className="visually-hidden">{`Next`}</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    {/* Auto play on */}
+                    <tr>
+                      <td className="tbl50">
+                        <h3 id="anu-carousel-customisation-c1-2">{`C1-2: Auto play is on`}</h3>
+                        <p>
+                          {`Set `}
+                          <code>{`data-bs-ride="carousel"`}</code>
+                          {` on the element with classname `}
+                          <code>{`carousel slide`}</code>
+                        </p>
+                        <p className="box bdr-left-gold bdr-thick">{`For clarification, below is the code snippet`}</p>
+                        <pre className="m-0">
+                          <code>{`<div id="anu-doc-carousel" class="carousel slide" `}<span className="bg-tint">{`data-bs-ride="carousel"`}</span>{`>
+        <div className="carousel-indicators">
+        ...
+        </div>
+        <div className="carousel-inner">
+        ...
+        </div>
+    ...
+</div>`}</code>
+                        </pre>
+                      </td>
+                      <td className="tbl50">
+                        <div className="carousel slide" data-bs-ride="carousel" id="anu-doc-carousel">
+                          <div className="carousel-indicators">
+                            <button
+                              aria-current="true"
+                              aria-label="Slide 1"
+                              className="active"
+                              data-bs-slide-to="0"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                            <button
+                              aria-label="Slide 2"
+                              data-bs-slide-to="1"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                            <button
+                              aria-label="Slide 3"
+                              data-bs-slide-to="2"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                          </div>
+                          <div className="carousel-inner">
+                            <div className="carousel-item active" data-bs-interval="1000">
+                              <img
+                                alt="carousel-slider-1"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel1/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`First slide label`}</h5>
+                                <p>{`Some representative placeholder content for the first slide.`}</p>
+                              </div>
+                            </div>
+                            <div className="carousel-item" data-bs-interval="1000">
+                              <img
+                                alt="carousel-slider-2"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel2/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`Second slide label`}</h5>
+                                <p>{`Some representative placeholder content for the second slide.`}</p>
+                              </div>
+                            </div>
+                            <div className="carousel-item" data-bs-interval="1000">
+                              <img
+                                alt="carousel-slider-3"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel3/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`Third slide label`}</h5>
+                                <p>{`Some representative placeholder content for the third slide.`}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <button
+                            className="carousel-control-prev"
+                            data-bs-slide="prev"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          >
+                            <span aria-hidden="true" className="carousel-control-prev-icon">
+                              {`\u00A0`}
+                            </span>
+                            <span className="visually-hidden">{`Previous`}</span>
+                          </button>
+                          <button
+                            className="carousel-control-next"
+                            data-bs-slide="next"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          >
+                            <span aria-hidden="true" className="carousel-control-next-icon">
+                              {`\u00A0`}
+                            </span>
+                            <span className="visually-hidden">{`Next`}</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    {/* Time interval general*/}
+                    <tr>
+                      <td className="tbl50">
+                        <h3 id="anu-carousel-customisation-c2-1">{`C2-1: Change time interval in general`}</h3>
+                        <p>
+                          {`Step 1: open auto play, see `}
+                          <a href="#anu-carousel-customisation-c1-2">{`C1-2: Auto play is on `}</a>
+                        </p>
+                        <p>
+                          {`Step 2: set `}
+                          <code>{`data-bs-interval="3000"`}</code>
+                          {` on the element with classname `}
+                          <code>{`carousel slide`}</code>
+                        </p>
+                        <p>{`The default interval is 5s (`}<code>{`data-bs-interval="5000"`}</code>{`)`}</p>
+                        <p>{`The unit of interval is milisecond. For example, 1000 is 1s.`}</p>
+                        <p className="box bdr-left-gold bdr-thick">{`For clarification, below is the code snippet`}</p>
+                        <pre className="m-0">
+                          <code>{`<div id="anu-doc-carousel" class="carousel slide" `}<span className="bg-tint">{`data-bs-ride="carousel" data-bs-interval="3000"`}</span>{`>
+        <div className="carousel-indicators">
+        ...
+        </div>
+        <div className="carousel-inner">
+        ...
+        </div>
+    ...
+</div>`}</code>
+                        </pre>
+                      </td>
+                      <td className="tbl50">
+                        <div
+                          className="carousel slide"
+                          data-bs-interval="3000"
+                          data-bs-ride="carousel"
+                          id="anu-doc-carousel"
+                        >
+                          <div className="carousel-indicators">
+                            <button
+                              aria-current="true"
+                              aria-label="Slide 1"
+                              className="active"
+                              data-bs-slide-to="0"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                            <button
+                              aria-label="Slide 2"
+                              data-bs-slide-to="1"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                            <button
+                              aria-label="Slide 3"
+                              data-bs-slide-to="2"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                          </div>
+                          <div className="carousel-inner">
+                            <div className="carousel-item active">
+                              <img
+                                alt="carousel-slider-1"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel1/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`First slide label`}</h5>
+                                <p>{`Some representative placeholder content for the first slide.`}</p>
+                              </div>
+                            </div>
+                            <div className="carousel-item">
+                              <img
+                                alt="carousel-slider-2"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel2/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`Second slide label`}</h5>
+                                <p>{`Some representative placeholder content for the second slide.`}</p>
+                              </div>
+                            </div>
+                            <div className="carousel-item">
+                              <img
+                                alt="carousel-slider-3"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel3/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`Third slide label`}</h5>
+                                <p>{`Some representative placeholder content for the third slide.`}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <button
+                            className="carousel-control-prev"
+                            data-bs-slide="prev"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          >
+                            <span aria-hidden="true" className="carousel-control-prev-icon">
+                              {`\u00A0`}
+                            </span>
+                            <span className="visually-hidden">{`Previous`}</span>
+                          </button>
+                          <button
+                            className="carousel-control-next"
+                            data-bs-slide="next"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          >
+                            <span aria-hidden="true" className="carousel-control-next-icon">
+                              {`\u00A0`}
+                            </span>
+                            <span className="visually-hidden">{`Next`}</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    {/* Time interval specific */}
+                    <tr>
+                      <td className="tbl50">
+                        <h3 id="anu-carousel-customisation-c2-2">{`C2-2: Change time interval specific to each slider`}</h3>
+                        <p>
+                          {`Step 1: open auto play, see `}
+                          <a href="#anu-carousel-customisation-c1-2">{`C1-2: Auto play is on `}</a>
+                        </p>
+                        <p>
+                          {`Step 2: set `}
+                          <code>{`data-bs-interval="3000"`}</code>
+                          {` on the element with classname `}
+                          <code>{`carousel-item`}</code>
+                        </p>
+                        <p className="box bdr-left-gold bdr-thick">{`For clarification, below is the code snippet`}</p>
+                        <pre className="m-0">
+                          <code>{`<div id="anu-doc-carousel" class="carousel slide" `}<span className="bg-tint">{`data-bs-ride="carousel"`}</span>{`>
+        <div className="carousel-indicators">
+        ...
+        </div>
+        <div className="carousel-inner">
+            <div className="carousel-item active" `}<span className="bg-tint">{`data-bs-interval="1000" `}</span>{`> ... </div>
+            <div className="carousel-item" `}<span className="bg-tint">{`data-bs-interval="2000" `}</span>{`> ... </div>
+            <div className="carousel-item" `}<span className="bg-tint">{`data-bs-interval="3000" `}</span>{`> ... </div>
+        </div>
+    ...
+</div>`}</code>
+                        </pre>
+                      </td>
+                      <td className="tbl50">
+                        <div className="carousel slide" data-bs-ride="carousel" id="anu-doc-carousel">
+                          <div className="carousel-indicators">
+                            <button
+                              aria-current="true"
+                              aria-label="Slide 1"
+                              className="active"
+                              data-bs-slide-to="0"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                            <button
+                              aria-label="Slide 2"
+                              data-bs-slide-to="1"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                            <button
+                              aria-label="Slide 3"
+                              data-bs-slide-to="2"
+                              data-bs-target="#anu-doc-carousel"
+                              type="button"
+                            />
+                          </div>
+                          <div className="carousel-inner">
+                            <div className="carousel-item active" data-bs-interval="1000">
+                              <img
+                                alt="carousel-slider-1"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel1/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`First slide label`}</h5>
+                                <p>{`Some representative placeholder content for the first slide.`}</p>
+                              </div>
+                            </div>
+                            <div className="carousel-item" data-bs-interval="2000">
+                              <img
+                                alt="carousel-slider-2"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel2/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`Second slide label`}</h5>
+                                <p>{`Some representative placeholder content for the second slide.`}</p>
+                              </div>
+                            </div>
+                            <div className="carousel-item" data-bs-interval="3000">
+                              <img
+                                alt="carousel-slider-3"
+                                className="d-block w100"
+                                src="https://picsum.photos/seed/carousel3/1200/600"
+                              />
+                              <div className="carousel-caption d-none d-md-block">
+                                <h5>{`Third slide label`}</h5>
+                                <p>{`Some representative placeholder content for the third slide.`}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <button
+                            className="carousel-control-prev"
+                            data-bs-slide="prev"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          >
+                            <span aria-hidden="true" className="carousel-control-prev-icon">
+                              {`\u00A0`}
+                            </span>
+                            <span className="visually-hidden">{`Previous`}</span>
+                          </button>
+                          <button
+                            className="carousel-control-next"
+                            data-bs-slide="next"
+                            data-bs-target="#anu-doc-carousel"
+                            type="button"
+                          >
+                            <span aria-hidden="true" className="carousel-control-next-icon">
+                              {`\u00A0`}
+                            </span>
+                            <span className="visually-hidden">{`Next`}</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    {/* Lightbox */}
+                    <tr>
+                      <td className="tbl50">
+                        <h3 id="anu-carousel-customisation-c3-1">{`C3-1: Lightbox`}</h3>
+                        {`Coming soon`}
+                      </td>
+                      <td className="tbl50">{`\u00A0`}</td>
+                    </tr>
+                    {/* Many items in one slider */}
+                    <tr>
+                      <td className="tbl50">
+                        <h3 id="anu-carousel-customisation-c4-1">{`C4-1: Many items in one slider`}</h3>
+                        {`Coming soon`}
+                      </td>
+                      <td className="tbl50">{`\u00A0`}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>

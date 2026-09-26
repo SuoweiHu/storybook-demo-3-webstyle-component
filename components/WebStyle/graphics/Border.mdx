@@ -1,0 +1,332 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Graphics/Border" />
+
+
+<Unstyled>
+
+# Border
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>
+              {`Borders come in different thicknesses and colours, and they can be applied to elements like boxes, tables, images and paragraphs.`}
+            </p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Overview`}</h2>
+              <p>
+                {`The default border styles are solid borders on all sides. Therefore, we are using the same class names as the `}
+                <a href="https://webpublishing.anu.edu.au/web-style-guide/boxes" target="_blank">
+                  {`boxes`}
+                </a>
+                {`.`}
+              </p>
+              {/*Standard border*/}
+              <div className="pt-2">
+                <h3 className="mb-0">{`Standard border`}</h3>
+                <p className="mt-0 mb-0">{`Box with a coloured 1px-wide border`}</p>
+                <table className="tbl-cell-bdr">
+                  <tbody>
+                    <tr>
+                      <th>{`Class name`}</th>
+                      <th>{`Border colour`}</th>
+                      <th>{`Border width`}</th>
+                      <th>{`Background colour`}</th>
+                      <th>{`Note`}</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`.box-bdr-gold`}</code>
+                      </td>
+                      <td>{`#be830e`}</td>
+                      <td>{`1px`}</td>
+                      <td>{`#ffffff`}</td>
+                      <td>{`\u00A0`}</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`.box-bdr-black`}</code>
+                      </td>
+                      <td>{`#000000`}</td>
+                      <td>{`1px`}</td>
+                      <td>{`#ffffff`}</td>
+                      <td>{`\u00A0`}</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`.box-bdr-white`}</code>
+                      </td>
+                      <td>{`#ffffff`}</td>
+                      <td>{`1px`}</td>
+                      <td>{`#000000`}</td>
+                      <td>{`Should only be used on dark background.`}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              {/*Thick border*/}
+              <div className="pt-2">
+                <h3 className="mb-0">{`Thick border`}</h3>
+                <p className="mt-0 mb-0">{`Box with a coloured 3px-wide border`}</p>
+                <table className="tbl-cell-bdr">
+                  <tbody>
+                    <tr>
+                      <th>{`Class name`}</th>
+                      <th>{`Border colour`}</th>
+                      <th>{`Border width`}</th>
+                      <th>{`Background colour`}</th>
+                      <th>{`Note`}</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`.box-bdr-thick-gold`}</code>
+                      </td>
+                      <td>{`#be830e`}</td>
+                      <td>{`3px`}</td>
+                      <td>{`#000000`}</td>
+                      <td>{`\u00A0`}</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`.box-bdr-thick-black`}</code>
+                      </td>
+                      <td>{`#000000`}</td>
+                      <td>{`3px`}</td>
+                      <td>{`#ffffff`}</td>
+                      <td>{`\u00A0`}</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>{`.box-bdr-thick-white`}</code>
+                      </td>
+                      <td>{`#ffffff`}</td>
+                      <td>{`3px`}</td>
+                      <td>{`#000000`}</td>
+                      <td>{`Should only be used on dark background.`}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="divider-gold mt-2">{`\u00A0`}</div>
+              {/*Top, bottom and side borders*/}
+              <div className="pt-2">
+                <h3>{`Top, bottom & side borders`}</h3>
+                <p>
+                  {`Borders can be applied to just one side of an element, these classes can also be combined to apply borders to multiple sides.`}
+                </p>
+                <p>
+                  {`The classes are named using the format `}
+                  <code>{`bdr-{side}-{colour}`}</code>
+                  {`. For example, `}
+                  <strong>
+                    <code>{`.bdr-left-gold`}</code>
+                  </strong>
+                </p>
+                <p>
+                  {`Where `}
+                  <em>{`side`}</em>
+                  {` is one of:`}
+                </p>
+                <ul>
+                  <li>
+                    <code>{`top`}</code>
+                    {`: top border with 1px width`}
+                  </li>
+                  <li>
+                    <code>{`left`}</code>
+                    {`: left border with 1px width`}
+                  </li>
+                  <li>
+                    <code>{`right`}</code>
+                    {`: right border with 1px width`}
+                  </li>
+                  <li>
+                    <code>{`bottom`}</code>
+                    {`: bottom border with 1px width`}
+                  </li>
+                </ul>
+                <p>
+                  {`Where `}
+                  <em>{`colour`}</em>
+                  {` is one of:`}
+                </p>
+                <ul>
+                  <li>
+                    <code>{`black`}</code>
+                    {`: #000000`}
+                  </li>
+                  <li>
+                    <code>{`gold`}</code>
+                    {`: #BE830E`}
+                  </li>
+                  <li>
+                    <code>{`white`}</code>
+                    {`: #FFFFFF`}
+                  </li>
+                </ul>
+                <p className="p-2 bg-tint">
+                  {`If you wish to have a side border with 3px width, please use `}
+                  <code>{`.bdr-thick`}</code>
+                  {`. For example, `}
+                  <strong>{`<p class= "bdr-left-gold bdr-thick">`}</strong>
+                </p>
+              </div>
+              <div className="divider-gold mt-2">{`\u00A0`}</div>
+              {/*No border*/}
+              <div className="pt-2">
+                <h3>{`No borders`}</h3>
+                <p>{`If you wish to remove the border from one side of an element, please use the classes below:`}</p>
+                <ul>
+                  <li>
+                    <code>{`noborder`}</code>
+                    {`: remove borders on all sides`}
+                  </li>
+                  <li>
+                    <code>{`noborder-top`}</code>
+                    {`: remove top border`}
+                  </li>
+                  <li>
+                    <code>{`noborder-left`}</code>
+                    {`: remove left border`}
+                  </li>
+                  <li>
+                    <code>{`noborder-right`}</code>
+                    {`: remove right border`}
+                  </li>
+                  <li>
+                    <code>{`noborder-bottom`}</code>
+                    {`: remove bottom border`}
+                  </li>
+                </ul>
+              </div>
+            </Tab>
+            <Tab label="Use cases">
+              <h2 className="pt-2">{`Use cases`}</h2>
+              {/*1px border example*/}
+              <h3 className="pt-2">{`Standard border - 1px width`}</h3>
+              <div className="row">
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-gold">
+                    <code>{`class="box-bdr-gold"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-black">
+                    <code>{`class="box-bdr-black"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-white text-white">{`class="box-bdr-white text-white"`}</div>
+                </div>
+              </div>
+              {/*3px border example*/}
+              <h3 className="pt-2">{`Thick border - 3px width`}</h3>
+              <div className="row g-4">
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-thick-gold">
+                    <code>{`class="box-bdr-thick-gold"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-thick-black">
+                    <code>{`class="box-bdr-thick-black"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="bg-black box-bdr-thick-white">{`class="box-bdr-thick-white"`}</div>
+                </div>
+              </div>
+              {/*side border example*/}
+              <h3 className="pt-2">{`Side border`}</h3>
+              <p className="msg-info">
+                {`We also have variations in black and white border, change `}
+                <code>{`gold`}</code>
+                {` to `}
+                <code>{`black`}</code>
+                {` or `}
+                <code>{`white`}</code>
+                {`.`}
+              </p>
+              <div className="row g-4">
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box bdr-top-gold">
+                    <code>{`class="bdr-top-gold"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box bdr-left-gold">
+                    <code>{`class="bdr-left-gold"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box bdr-right-gold">
+                    <code>{`class="bdr-right-gold"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box bdr-bottom-gold bdr-thick">
+                    <code>{`class="bdr-bottom-gold bdr-thick"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box bdr-right-gold bdr-bottom-gold">
+                    <code>{`class="bdr-right-gold bdr-bottom-gold"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box bdr-top-gold bdr-left-gold bdr-bottom-gold">
+                    <code>{`class="bdr-top-gold bdr-left-gold bdr-bottom-gold"`}</code>
+                  </div>
+                </div>
+              </div>
+              {/*no border*/}
+              <h3 className="pt-2">{`No border`}</h3>
+              <div className="row g-4">
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-black noborder">
+                    <code>{`class="box-bdr-black noborder"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-black noborder-top">
+                    <code>{`class="box-bdr-black noborder-top"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-black noborder-left">
+                    <code>{`class="box-bdr-black noborder-left"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-black noborder-right">
+                    <code>{`class="box-bdr-black noborder-right"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-black noborder-bottom">
+                    <code>{`class="box-bdr-black noborder-bottom"`}</code>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-6">
+                  <div className="box-bdr-black noborder-top noborder-bottom">
+                    <code>{`class="box-bdr-black noborder-top noborder-bottom"`}</code>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>
