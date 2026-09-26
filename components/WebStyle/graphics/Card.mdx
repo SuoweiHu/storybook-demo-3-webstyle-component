@@ -1,0 +1,588 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Tab, TabGroup } from '../layout/TabGroup';
+import { Unstyled } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="WebStyle/Graphics/Card" />
+
+
+<Unstyled>
+
+# Card
+
+<div className="row">
+  <div className="col">
+    <div className="layout__region layout__region--first">
+      <div className="block-template-default">
+        <div className="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div className="container pb-2">
+            <p>{`Cards are used to display content in a structured, visually appealing format. They typically combine an image, a date overlay, a title, and a short description. Cards are ideal for showcasing events, news articles, or featured stories in grid layouts.`}</p>
+            <p className="msg-info">
+              {`Cards leverage the `}
+              <code>{`.overlap`}</code>
+              {` and `}
+              <code>{`.overlap-child`}</code>
+              {` positioning classes to overlay the dateblock on top of the image. For more details, see the `}
+              <a href="https://webpublishing.anu.edu.au/web-style-guide/overlap-positioning" target="_blank">
+                {`Overlap Positioning`}
+              </a>
+              {` documentation.`}
+            </p>
+          </div>
+          <TabGroup>
+            <Tab label="General">
+              <h2 className="pt-2">{`Card Structure`}</h2>
+              <p>{`A card is composed of the following parts:`}</p>
+              <div className="row pb-2">
+                <div className="col-lg-4 col-12">
+                  <p className="mt-0 mb-1">{`Example card`}</p>
+                  <div className="divider-gold w20">{`\u00A0`}</div>
+                  <div className="bg-tint mb-1">
+                    <div className="overlap">
+                      <img
+                        alt="Placeholder image"
+                        className="w100 ratio-16-9"
+                        height="518"
+                        loading="lazy"
+                        src="https://picsum.photos/seed/card-demo/800/450"
+                        width="920"
+                      />
+                      <div className="bg-black p-2 dateblock b-0 overlap-child">
+                        <div className="day">{`15`}</div>
+                        <div className="month">{`Jan`}</div>
+                      </div>
+                    </div>
+                    <div className="pt-2 pb-2 pl-3 pr-3">
+                      <h4>
+                        <a>{`Card title goes here`}</a>
+                      </h4>
+                      <p className="my-0">
+                        {`A short description or summary text for the card content.`}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-8 col-12">
+                  <table className="tbl-cell-bdr">
+                    <tbody>
+                      <tr>
+                        <th>{`Class / Element`}</th>
+                        <th>{`Description`}</th>
+                        <th>{`Required`}</th>
+                        <th>{`Note`}</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.bg-tint`}</code>
+                        </td>
+                        <td>{`Card container with tinted background`}</td>
+                        <td className="msg-success">{`Required`}</td>
+                        <td>{`Wraps the entire card. Provides the light grey background.`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.overlap`}</code>
+                        </td>
+                        <td>{`Image container with overlap positioning`}</td>
+                        <td className="msg-success">{`Required`}</td>
+                        <td>
+                          {`Enables child elements to be positioned over the image using `}
+                          <code>{`.overlap-child`}</code>
+                          {`.`}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`img`}</code>
+                        </td>
+                        <td>{`Card image`}</td>
+                        <td className="msg-success">{`Required`}</td>
+                        <td>
+                          {`Use `}
+                          <code>{`.w100`}</code>
+                          {` for full width and `}
+                          <code>{`.ratio-16-9`}</code>
+                          {` for consistent aspect ratio.`}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`.bg-black .dateblock .b-0 .overlap-child`}</code>
+                        </td>
+                        <td>{`Date overlay badge`}</td>
+                        <td className="msg-warn">{`Optional`}</td>
+                        <td>
+                          {`Positioned over the image at bottom-left. Uses `}
+                          <code>{`.dateblock`}</code>
+                          {` classes (`}
+                          <code>{`.day`}</code>
+                          {`, `}
+                          <code>{`.month`}</code>
+                          {`) inside a black background container.`}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`h4 > a`}</code>
+                        </td>
+                        <td>{`Card title (linked)`}</td>
+                        <td className="msg-success">{`Required`}</td>
+                        <td>{`The main heading for the card, typically wrapped in a link.`}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>{`p`}</code>
+                        </td>
+                        <td>{`Card description`}</td>
+                        <td className="msg-warn">{`Optional`}</td>
+                        <td>{`A brief summary or excerpt displayed below the title.`}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <h2 className="pt-2">{`Background Variants`}</h2>
+              <p>
+                {`The card container can use different background classes to change appearance:`}
+              </p>
+              <table className="tbl-cell-bdr">
+                <tbody>
+                  <tr>
+                    <th>{`Class`}</th>
+                    <th>{`Description`}</th>
+                  </tr>
+                  <tr>
+                    <td><code>{`.bg-tint`}</code></td>
+                    <td>{`Light grey background (default card style)`}</td>
+                  </tr>
+                  <tr>
+                    <td><code>{`.bg-white`}</code></td>
+                    <td>{`White background`}</td>
+                  </tr>
+                  <tr>
+                    <td><code>{`.bg-black`}</code></td>
+                    <td>{`Dark background (use with light-coloured text)`}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 className="pt-2">{`Tips & Tricks`}</h3>
+              <div>
+                <h2 className="accordion" tabIndex={0} aria-expanded="false">
+                  {`Using cards in responsive grid layouts`}
+                </h2>
+                <div className="panel">
+                  <p>
+                    {`Cards should be placed inside Bootstrap grid columns (e.g. `}
+                    <code>{`.col-md-6`}</code>
+                    {`, `}
+                    <code>{`.col-lg-4`}</code>
+                    {`) to create responsive grids. Common layouts include:`}
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>{`2 columns:`}</strong>
+                      {` Use `}
+                      <code>{`.col-md-6`}</code>
+                      {` for each card.`}
+                    </li>
+                    <li>
+                      <strong>{`3 columns:`}</strong>
+                      {` Use `}
+                      <code>{`.col-md-6 .col-lg-4`}</code>
+                      {` for each card.`}
+                    </li>
+                  </ul>
+                  <p>
+                    {`Always wrap cards in a `}
+                    <code>{`.row`}</code>
+                    {` container for proper alignment and gutters.`}
+                  </p>
+                </div>
+                <h2 className="accordion" tabIndex={0} aria-expanded="false">
+                  {`Ensuring consistent card heights`}
+                </h2>
+                <div className="panel">
+                  <p>
+                    {`To ensure cards in a row have equal height, add the `}
+                    <code>{`.equal`}</code>
+                    {` class to the parent `}
+                    <code>{`.row`}</code>
+                    {` element. Use `}
+                    <code>{`.ratio-16-9`}</code>
+                    {` on images for consistent aspect ratios across cards.`}
+                  </p>
+                </div>
+              </div>
+            </Tab>
+            <Tab label="Use cases">
+              <h2 className="pt-2">{`Use cases`}</h2>
+              {/*Example 1: 2-column event grid*/}
+              <h3 className="pb-1">{`Example 1: Event grid with date overlay (2 columns)`}</h3>
+              <div className="row pb-1">
+                <div className="col-lg-8 col-12">
+                  <div className="row">
+                    <div className="col-md-6 col-12">
+                      <div className="bg-tint">
+                        <div className="overlap">
+                          <img
+                            alt="Placeholder image"
+                            height="518"
+                            loading="lazy"
+                            src="https://picsum.photos/seed/vanuatu/800/450"
+                            width="920"
+                          />
+                          <div className="bg-black p-2 dateblock b-0 overlap-child">
+                            <div className="day">{`15`}</div>
+                            <div className="month">{`Jan`}</div>
+                          </div>
+                        </div>
+                        <div className="pt-2 pb-2 pl-3 pr-3">
+                          <h4>
+                            <a>{`Lorem ipsum dolor sit amet`}</a>
+                          </h4>
+                          <p className="my-0">
+                            {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 col-12">
+                      <div className="bg-tint">
+                        <div className="overlap">
+                          <img
+                            alt="Placeholder image"
+                            height="518"
+                            loading="lazy"
+                            src="https://picsum.photos/seed/samoa/800/450"
+                            width="920"
+                          />
+                          <div className="bg-black p-2 dateblock b-0 overlap-child">
+                            <div className="day">{`22`}</div>
+                            <div className="month">{`Feb`}</div>
+                          </div>
+                        </div>
+                        <div className="pt-2 pb-2 pl-3 pr-3">
+                          <h4>
+                            <a>{`Ut enim ad minim veniam`}</a>
+                          </h4>
+                          <p className="my-0">
+                            {`Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-12">
+                  <div className="box-header-black">
+                    <span className="large">{`Code structure`}</span>
+                  </div>
+                  <div className="box-bdr-black">
+                    <pre style={{ overflowX: "auto" }}>
+                      <code>{`<div class="row">
+  <div class="col-md-6 col-12">
+    <div class="bg-tint">
+      <div class="overlap">
+        <img alt="..." src="..." />
+        <div class="bg-black p-2 dateblock b-0 overlap-child">
+          <div class="day">15</div>
+          <div class="month">Jan</div>
+        </div>
+      </div>
+      <div class="pt-2 pb-2 pl-3 pr-3">
+        <h4><a href="#">Card title</a></h4>
+        <p class="my-0">Description text.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-12">
+    ...
+  </div>
+</div>`}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold pt-2">{`\u00A0`}</div>
+              {/*Example 2: 3-column event grid*/}
+              <h3 className="pb-1">{`Example 2: Event grid with date overlay (3 columns)`}</h3>
+              <div className="row pb-1">
+                <div className="col-12">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-4 col-12 pb-2">
+                      <div className="bg-tint">
+                        <div className="overlap">
+                          <img
+                            alt="Placeholder image"
+                            className="w100 ratio-16-9"
+                            height="518"
+                            loading="lazy"
+                            src="https://picsum.photos/seed/pacific/800/1100"
+                            width="920"
+                          />
+                          <div className="bg-black p-2 dateblock b-0 overlap-child">
+                            <div className="day">{`15`}</div>
+                            <div className="month">{`Jan`}</div>
+                          </div>
+                        </div>
+                        <div className="pt-2 pb-2 pl-3 pr-3">
+                          <h4>
+                            <a>{`Lorem ipsum dolor sit amet`}</a>
+                          </h4>
+                          <p className="my-0">
+                            {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 col-lg-4 col-12 pb-2">
+                      <div className="bg-tint">
+                        <div className="overlap">
+                          <img
+                            alt="Placeholder image"
+                            className="w100 ratio-16-9"
+                            height="518"
+                            loading="lazy"
+                            src="https://picsum.photos/seed/island/800/1100"
+                            width="920"
+                          />
+                          <div className="bg-black p-2 dateblock b-0 overlap-child">
+                            <div className="day">{`22`}</div>
+                            <div className="month">{`Feb`}</div>
+                          </div>
+                        </div>
+                        <div className="pt-2 pb-2 pl-3 pr-3">
+                          <h4>
+                            <a>{`Ut enim ad minim veniam`}</a>
+                          </h4>
+                          <p className="my-0">
+                            {`Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 col-lg-4 col-12 pb-2">
+                      <div className="bg-tint">
+                        <div className="overlap">
+                          <img
+                            alt="Placeholder image"
+                            className="w100 ratio-16-9"
+                            height="518"
+                            loading="lazy"
+                            src="https://picsum.photos/seed/ocean/800/1100"
+                            width="920"
+                          />
+                          <div className="bg-black p-2 dateblock b-0 overlap-child">
+                            <div className="day">{`10`}</div>
+                            <div className="month">{`Mar`}</div>
+                          </div>
+                        </div>
+                        <div className="pt-2 pb-2 pl-3 pr-3">
+                          <h4>
+                            <a>{`Duis aute irure dolor`}</a>
+                          </h4>
+                          <p className="my-0">
+                            {`Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 pb-2">
+                <div className="box-header-black">
+                  <span className="large">{`Code structure`}</span>
+                </div>
+                <div className="box-bdr-black">
+                  <pre style={{ overflowX: "auto" }}>
+                    <code>{`<div class="row">
+  <div class="col-md-6 col-lg-4 col-12 pb-2">
+    <div class="bg-tint">
+      <div class="overlap">
+        <img alt="..." class="w100 ratio-16-9" src="..." />
+        <div class="bg-black p-2 dateblock b-0 overlap-child">
+          <div class="day">15</div>
+          <div class="month">Jan</div>
+        </div>
+      </div>
+      <div class="pt-2 pb-2 pl-3 pr-3">
+        <h4><a href="#">Card title</a></h4>
+        <p class="my-0">Description text.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat for more cards -->
+</div>`}</code>
+                  </pre>
+                </div>
+              </div>
+              <div className="divider-gold pt-2">{`\u00A0`}</div>
+              {/*Example 3: Card without date overlay*/}
+              <h3 className="pb-1">{`Example 3: Card without date overlay`}</h3>
+              <div className="row pb-1">
+                <div className="col-lg-8 col-12">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-4 col-12 pb-2">
+                      <div className="bg-tint">
+                        <img
+                          alt="Placeholder image"
+                          className="w100 ratio-16-9"
+                          height="518"
+                          loading="lazy"
+                          src="https://picsum.photos/seed/mountain/800/1100"
+                          width="920"
+                        />
+                        <div className="pt-2 pb-2 pl-3 pr-3">
+                          <h4>
+                            <a>{`Card without date`}</a>
+                          </h4>
+                          <p className="my-0">
+                            {`A simpler card variant without the date overlay, suitable for general content or features that don't have date information.`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 col-lg-4 col-12 pb-2">
+                      <div className="bg-tint">
+                        <img
+                          alt="Placeholder image"
+                          className="w100 ratio-16-9"
+                          height="518"
+                          loading="lazy"
+                          src="https://picsum.photos/seed/forest/800/1100"
+                          width="920"
+                        />
+                        <div className="pt-2 pb-2 pl-3 pr-3">
+                          <h4>
+                            <a>{`Another card example`}</a>
+                          </h4>
+                          <p className="my-0">
+                            {`Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 col-lg-4 col-12 pb-2">
+                      <div className="bg-tint">
+                        <img
+                          alt="Placeholder image"
+                          className="w100 ratio-16-9"
+                          height="518"
+                          loading="lazy"
+                          src="https://picsum.photos/seed/river/800/1100"
+                          width="920"
+                        />
+                        <div className="pt-2 pb-2 pl-3 pr-3">
+                          <h4>
+                            <a>{`Third card example`}</a>
+                          </h4>
+                          <p className="my-0">
+                            {`Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-12">
+                  <div className="box-header-black">
+                    <span className="large">{`Code structure`}</span>
+                  </div>
+                  <div className="box-bdr-black">
+                    <pre style={{ overflowX: "auto" }}>
+                      <code>{`<div class="bg-tint">
+  <img alt="..." class="w100 ratio-16-9" src="..." />
+  <div class="pt-2 pb-2 pl-3 pr-3">
+    <h4><a href="#">Card title</a></h4>
+    <p class="my-0">Description text.</p>
+  </div>
+</div>`}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-gold pt-2">{`\u00A0`}</div>
+              {/*Example 4: News sidebar cards*/}
+              <h3 className="pb-1">{`Example 4: News sidebar with dateblock cards`}</h3>
+              <div className="row equal pb-2">
+                <div className="col-lg-9 col-12 bg-tint mb-1">
+                  <p>
+                    {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`}
+                  </p>
+                </div>
+                <div className="col-lg-3 col-12">
+                  <div className="pb-2">
+                    <h2 className="mb-2">{`News`}</h2>
+                    {/*news 1*/}
+                    <div className="clear left pb-1">
+                      <div className="dateblock-line">
+                        <div className="day">{`15`}</div>
+                        <div className="month">{`Jan`}</div>
+                        <div className="year">{`2022`}</div>
+                      </div>
+                      <div className="datetext">
+                        <a>{`Update on hail repairs - Chifley Library »`}</a>
+                      </div>
+                    </div>
+                    {/*news 2*/}
+                    <div className="clear left pb-1">
+                      <div className="dateblock-line">
+                        <div className="day">{`22`}</div>
+                        <div className="month">{`Feb`}</div>
+                        <div className="year">{`2022`}</div>
+                      </div>
+                      <div className="datetext">
+                        <a>{`New research database now available »`}</a>
+                      </div>
+                    </div>
+                    {/*news 3*/}
+                    <div className="clear left pb-1">
+                      <div className="dateblock-line">
+                        <div className="day">{`10`}</div>
+                        <div className="month">{`Mar`}</div>
+                        <div className="year">{`2022`}</div>
+                      </div>
+                      <div className="datetext">
+                        <a>{`Library opening hours change »`}</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 pb-2">
+                <div className="box-header-black">
+                  <span className="large">{`Code structure`}</span>
+                </div>
+                <div className="box-bdr-black">
+                  <pre style={{ overflowX: "auto" }}>
+                    <code>{`<div class="row equal">
+  <div class="col-lg-9 col-12 bg-tint">
+    <p>Main content area...</p>
+  </div>
+  <div class="col-lg-3 col-12">
+    <h2>News</h2>
+    <div class="clear left pb-1">
+      <div class="dateblock-line">
+        <div class="day">15</div>
+        <div class="month">Jan</div>
+        <div class="year">2022</div>
+      </div>
+      <div class="datetext">
+        <a href="#">News headline »</a>
+      </div>
+    </div>
+    <!-- Repeat for more news items -->
+  </div>
+</div>`}</code>
+                  </pre>
+                </div>
+              </div>
+            </Tab>
+          </TabGroup>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Unstyled>
