@@ -179,6 +179,14 @@ After generating both files:
 
 ---
 
+## Prohibited commands
+
+> **Do NOT** run `npx tsc`, `npx tsc --noEmit`, or any TypeScript compilation / type-checking
+> command after generating component or stories files. The project handles type-checking
+> through its own build pipeline. Running these commands is unnecessary and should be avoided.
+
+---
+
 ## Reference: Existing examples
 
 | Component | Source MDX | Key patterns extracted |
